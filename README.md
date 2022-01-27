@@ -13,10 +13,11 @@ I want to design a map that allows the vizualization of high burn probability lo
 [Annual Burn Probability](https://storymaps.arcgis.com/stories/32de73f1cfb040c79f80c189ccefe061)  
 [U.S. Census Data](https://data.census.gov/)  
 
-### **Topic 3: Dashboard of fuel treatment from 1975 - 2019 in Marin Count, California**  
+### **Topic 3: Dashboard of fuel treatment from 1975 - 2019 in Marin County, California**  
 I want to design a map / dashboard that allows the display of fuel treatments with associated statistics by treatment type and with filtering capability. I would like to map this data because the Marin Safe Fire Council is constantly performing new treatment but they lack a single location / data repository where they can find out where work has been done historically. I think this could be a particularly helpful tool for policy makers and resource managers in helping them plan fuel treatments, whether certain social services may be required (rides for the disabled in an emergency etc.) fire mitigation strategies and simply where need is greatest.  
 
-**Sample screenshot of a beta ArcGIS Online Dashboard with the same goal:**  
-C:\NewMapsPlus\Map698\nmp-final\image\dashboard.JPG
+![Sample screenshot of a beta ArcGIS Online Dashboard with the same goal:](image/dashboard.JPG)
+
+
 
 
