@@ -13,7 +13,7 @@
      - If using raster for fire probability convert pixels to points
      - use some undertermined method to come up with a vulnerability score for census designated places being vulnerable
         - **something like renters, access to transportation, median income, disabilities in a household, language barriers \(primary language spoken in households\)**
-            - this will require literature review
+            - this will require literature review  
 
 
 
