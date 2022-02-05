@@ -16,7 +16,7 @@
         - what platform or js library will be used to accomplish this?
             - **mapbox or leaflet most likely**
 2. #### Methodology
-     - If using raster for fire probability convert pixels to points
+     - If using raster for fire probability convert pixels to points?
      - use some undetermined method to come up with a vulnerability score/index for census designated places being vulnerable
         - *something like above average population of renters, access to transportation, age \(old and young\), education, above average poverty, disabilities in a household, mental illness, language barriers \(primary language spoken in households, can't understand evacuation warnings etc.\), those who have been incarcerated*
             - this will require literature review  
@@ -28,6 +28,11 @@
       -  Centers for Disease Control and Prevention (CDC) states that vulnerable populations may include anyone who has difficulty communicating, has difficulty accessing medical care, may need help maintaining independence, requires constant supervision, or may need help accessing transportation.
       - One that won't be in census data *social realm, vulnerable populations include those living in abusive families, the homeless, immigrants, and refugees*
         - this can maybe be addressed in my write up
+3. #### For collecting Cenus Tabular Data
+      - filter by, US, All places and year is 2019
+4. #### Calculations that need to be made from raw census data to develope vulnerability index: 
+      - poverty rate  - based on median earnings compared to national average
+      
 
 
 
