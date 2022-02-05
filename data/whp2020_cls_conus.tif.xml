@@ -1,0 +1,496 @@
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Dillon, Gregory K.</origin>
+        <origin>Gilbertson-Day, Julie W.</origin>
+        <pubdate>2020</pubdate>
+        <title>Wildfire Hazard Potential for the United States (270-m), version 2020</title>
+        <geoform>raster digital data</geoform>
+        <pubinfo>
+          <pubplace>Fort Collins, CO</pubplace>
+          <publish>Forest Service Research Data Archive</publish>
+        </pubinfo>
+        <othercit>This dataset is the classified WHP for the conterminous United States (CONUS). It has been classified into discrete hazard potential classes based on percentile breaks in the continuous WHP index.</othercit>
+        <edition>3rd</edition>
+		<onlink>https://doi.org/10.2737/RDS-2015-0047-3</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <purpose>Federal wildfire managers often want to know, over large landscapes, where wildfires are likely to occur and how intense they may be. To meet this need we developed a map that we call wildfire hazard potential (WHP) - a raster geospatial product that can help to inform evaluations of wildfire risk or prioritization of fuels management needs across very large spatial scales (millions of acres). Our specific objective with the WHP map was to depict the relative potential for wildfire that would be difficult for suppression resources to contain.</purpose>
+      <abstract>This dataset is the classified wildfire hazard potential (WHP) for the conterminous United States (CONUS). WHP is an index that quantifies the relative potential for wildfire that may be difficult to control, used as a measure to help prioritize where fuel treatments may be needed. In this dataset, we have classified continuous WHP values into very low, low, moderate, high, and very high WHP classes, with national wildland fire and fuels planning objectives in mind. 
+
+This 2020 version of WHP was created as part of the Wildfire Risk to Communities project (https://wildfirerisk.org) and this dataset is a 270-m resolution companion to the WHP published in Scott et al. (2020). Vegetation and wildland fuels data from LANDFIRE 2014 (version 1.4.0) form the foundation for this version of the WHP. As such, the data presented here reflect landscape conditions as of the end of 2014. National wildfire hazard datasets of annual burn probability and fire intensity were generated from the LANDFIRE 2014 data by the USDA Forest Service, Rocky Mountain Research Station (Short et al. 2020) using the large fire simulation system (FSim). We also used LANDFIRE 2014 vegetation and fuels data directly in the WHP mapping process, as well as point locations of fire occurrence ca. 1992 - 2015 (Short 2017). With these datasets as inputs, we produced an index of WHP for all of the conterminous United States at 270-m resolution. We present the final WHP map in two forms: 1) continuous integer values, and 2) five WHP classes of very low, low, moderate, high, and very high. On its own, WHP is not an explicit map of wildfire threat or risk, but when paired with spatial data depicting highly valued resources and assets such as structures or powerlines, it can approximate relative wildfire risk to those specific resources and assets. WHP is also not a forecast or wildfire outlook for any particular season, as it does not include any information on current or forecasted weather or fuel moisture conditions. It is instead intended for long-term strategic fuels management.</abstract>
+      <supplinf>This data publication is a third edition. Previous versions of this publication prior to 2014 were known as Wildland Fire Potential (WFP). These new data represent an update to all previous versions of WHP or WFP published by the USDA Forest Service. Previous versions have only covered the conterminous United States. This most recent version includes data for Hawaii and Alaska for the first time, as well as the conterminous United States, and data are provided as both continuous and classified in a single publication.
+	  
+To check for the latest version of the WHP geospatial data and map graphics, as well as documentation on the mapping process, see: https://www.firelab.org/project/wildfire-hazard-potential. 
+
+Details about the Wildfire Hazard Potential mapping process can be found in Dillon et al. (2015). Steps described in this paper about weighting for crown fire potential were dropped in the 2018 and 2020 versions due to changes to the FSim modeling products used as the primary inputs to WHP mapping.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <sngdate>
+          <caldate>20150101</caldate>
+        </sngdate>
+      </timeinfo>
+      <current>Ground condition</current>
+    </timeperd>
+    <status>
+      <update>As needed</update>
+      <progress>Complete</progress>
+    </status>
+    <spdom>
+      <bounding>
+        <eastbc>-65.26221</eastbc>
+        <northbc>51.63280</northbc>
+        <westbc>-127.97220</westbc>
+        <southbc>22.76568</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Categories</themekt>
+        <themekey>environment</themekey>
+        <themekey>geoscientificInformation</themekey>
+        <themekey>society</themekey>
+        <themekey>structure</themekey>
+      </theme>
+      <theme>
+        <themekt>National Research &amp; Development Taxonomy</themekt>
+        <themekey>Ecology, Ecosystems, &amp; Environment</themekey>
+        <themekey>Fire</themekey>
+        <themekey>Fire detection</themekey>
+        <themekey>Fire ecology</themekey>
+        <themekey>Fire effects on environment</themekey>
+        <themekey>Fire suppression, pre-suppression</themekey>
+        <themekey>Prescribed fire</themekey>
+        <themekey>Environment and People</themekey>
+        <themekey>Forest management</themekey>
+        <themekey>Landscape management</themekey>
+      </theme>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>burn probability</themekey>
+        <themekey>hazard</themekey>
+        <themekey>fuels management</themekey>
+        <themekey>fire suppression</themekey>
+        <themekey>fire likelihood</themekey>
+        <themekey>fire planning</themekey>
+        <themekey>risk assessment</themekey>
+        <themekey>wildfire hazard potential</themekey>
+      </theme>
+      <place>
+        <placekt>None</placekt>
+        <placekey>conterminous United States</placekey>
+        <placekey>United States</placekey>
+        <placekey>CONUS</placekey>
+      </place>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>These data were collected using funding from the U.S. Government and can be used without additional permissions or fees. If you use these data in a publication, presentation, or other research product please use the following citation: 
+
+Dillon, Gregory K; Gilbertson-Day, Julie W. 2020. Wildfire Hazard Potential for the United States, version 2020 (270m). 3rd Edition. Fort Collins, CO: Forest Service Research Data Archive. https://doi.org/10.2737/RDS-2015-0047-3.
+
+The data presented here are the product of modeling, and as such carry an inherent degree of error and uncertainty. Users are strongly encouraged to read and fully comprehend the metadata and other available documentation prior to data use. No warranty is made by the Originator as to the accuracy, reliability, or completeness of these data for individual use or aggregate use with other data, or for purposes not intended by the Originator. These datasets are intended to provide nationally-consistent information for the purpose of comparing relative wildfire risk among communities nationally or within a state or county. Data included here are not intended to replace locally-calibrated state, regional, or local risk assessments where they exist. It is the responsibility of the user to be familiar with the value, assumptions, and limitations of these national data publications. Managers and planners must evaluate these data according to the scale and requirements specific to their needs. Spatial information may not meet National Map Accuracy Standards. This information may be updated without notification.</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Gregory K. Dillon</cntper>
+          <cntorg>USDA Forest Service, Fire Modeling Institute (FMI)</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Missoula Fire Sciences Laboratory</address>
+          <address>5775 US Hwy 10 W</address>
+          <city>Missoula</city>
+          <state>MT</state>
+          <postal>59808</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>406-829-6783</cntvoice>
+        <cntpos>Spatial Fire Analyst</cntpos>
+        <cntemail>greg.dillon@usda.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>Funding for this project provided by USDA Forest Service, Fire and Aviation Management. Funding also provided by USDA Forest Service, Fire Modeling Institute, which is part of the Rocky Mountain Research Station, Fire, Fuel and Smoke Science Program. Work on dataset development was primarily completed by Pyrologix, LLC under contract with the USDA Forest Service, Fire Modeling Institute.</datacred>
+    <crossref>
+      <citeinfo>
+        <origin>Scott, Joe H.</origin>
+        <origin>Gilbertson-Day, Julie W.</origin>
+        <origin>Moran, Christopher</origin>
+        <origin>Dillon, Gregory K.</origin>
+        <origin>Short, Karen C.</origin>
+        <origin>Vogler, Kevin C.</origin>
+        <pubdate>2020</pubdate>
+        <title>Wildfire Risk to Communities: Spatial datasets of landscape-wide wildfire risk components for the United States</title>
+        <geoform>raster digital data</geoform>
+        <pubinfo>
+          <pubplace>Fort Collins, CO</pubplace>
+          <publish>Forest Service Research Data Archive</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.2737/RDS-2020-0016</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Short, Karen C.</origin>
+        <origin>Finney, Mark A.</origin>
+        <origin>Vogler, Kevin C.</origin>
+        <origin>Scott, Joe H.</origin>
+        <origin>Gilbertson-Day, Julie W.</origin>
+        <origin>Grenfell, Isaac C.</origin>
+        <pubdate>2020</pubdate>
+        <title>Spatial dataset of probabilistic wildfire risk components for the United States (270m)</title>
+        <edition>2nd</edition>
+        <geoform>raster digital data</geoform>
+        <pubinfo>
+          <pubplace>Fort Collins, CO</pubplace>
+          <publish>Forest Service Research Data Archive</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.2737/RDS-2016-0034-2</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Short, Karen C.</origin>
+        <pubdate>2017</pubdate>
+        <title>Spatial wildfire occurrence data for the United States, 1992-2015 [FPA_FOD_20170508]</title>
+        <edition>4th</edition>
+        <geoform>raster digital data</geoform>
+        <pubinfo>
+          <pubplace>Fort Collins, CO</pubplace>
+          <publish>Forest Service Research Data Archive</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.2737/RDS-2013-0009.4</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Dillon, Gregory K.</origin>
+        <origin>Menakis, James</origin>
+        <origin>Fay, Frank</origin>
+        <pubdate>2015</pubdate>
+        <title>Wildland fire potential: A tool for assessing wildfire risk and fuels management needs</title>
+        <geoform>conference proceedings</geoform>
+        <othercit>p. 60-76</othercit>
+        <onlink>https://www.treesearch.fs.fed.us/pubs/49429</onlink>
+        <lworkcit>
+          <citeinfo>
+            <origin>Keane, Robert E.</origin>
+            <origin>Jolly, Matt</origin>
+            <origin>Parsons, Russell</origin>
+            <origin>Riley, Karin</origin>
+            <pubdate>2015</pubdate>
+            <title>Proceedings of the large wildland fires conference</title>
+            <geoform>conference proceedings</geoform>
+            <serinfo>
+              <sername>Proceedings</sername>
+              <issue>Proc. RMRS-P-73</issue>
+            </serinfo>
+            <pubinfo>
+              <pubplace>Fort Collins, CO</pubplace>
+              <publish>U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station</publish>
+            </pubinfo>
+            <othercit>May 19-23, 2014; Missoula, MT; 345 p.</othercit>
+            <onlink>https://www.treesearch.fs.fed.us/pubs/49166</onlink>
+          </citeinfo>
+        </lworkcit>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>The data described here are derived from wildfire simulation modeling, and their exact accuracy cannot be measured. They are intended to be relative measures of wildfire risk for planning purposes. The FSim datasets of burn probability and intensity used as primary inputs were objectively evaluated and calibrated against historic wildfire occurrence statistics within 136 distinct regions of contemporary wildfire activity (pyromes) across the United States (Short, Grenfell, Riley, and Vogler 2020). See Short et al. (2020) for a more detailed description of FSim calibration. Some LANDFIRE fuels and vegetation data used as inputs have also been evaluated for efficacy and calibrated to meet the objectives of LANDFIRE. More information can be found at: https://www.landfire.gov/lf_evaluation.php.
+	  
+Short, Karen C.; Grenfell, Isaac C.; Riley, Karin L.; Vogler, Kevin C. 2020. Pyromes of the conterminous United States. Fort Collins, CO: Forest Service Research Data Archive. https://doi.org/10.2737/RDS-2020-0020
+
+Short, Karen C.; Finney, Mark A.; Vogler, Kevin C.; Scott, Joe H.; Gilbertson-Day, Julie W.; Grenfell, Isaac C. 2020. Spatial datasets of probabilistic wildfire risk components for the United States (270m). 2nd Edition. Fort Collins, CO: Forest Service Research Data Archive. https://doi.org/10.2737/RDS-2016-0034-2	  
+	  </attraccr>
+      <qattracc>
+        <attraccv>Unknown</attraccv>
+        <attracce>Quantitative accuracy cannot be evaluated.</attracce>
+      </qattracc>
+    </attracc>
+    <logic>Values for non-burnable lands (6) and open water (7) were taken directly from a national mosaic of the FBFM40 layer in the landscape files used in national FSim modeling. The source for these landscape files was LANDFIRE 1.4.0 (2014) data resampled to 270-m resolution.</logic>
+    <complete>All pixels that are part of the land and water of the United States have valid non-zero values.</complete>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Short, Karen C.</origin>
+            <origin>Finney, Mark A.</origin>
+            <origin>Vogler, Kevin C.</origin>
+            <origin>Scott, Joe H.</origin>
+            <origin>Gilbertson-Day, Julie W.</origin>
+            <origin>Grenfell, Isaac C.</origin>
+            <pubdate>2020</pubdate>
+            <title>Spatial dataset of probabilistic wildfire risk components for the United States (270m)</title>
+            <edition>2nd</edition>
+            <geoform>raster digital data</geoform>
+            <pubinfo>
+              <pubplace>Fort Collins, CO</pubplace>
+              <publish>Forest Service Research Data Archive</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.2737/RDS-2016-0034-2</onlink>
+          </citeinfo>
+        </srccite>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20150101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Ground Condition</srccurr>
+        </srctime>
+        <srccitea>FSim BP and FLPs (FLP1, FLP2, FLP3, FLP4, FLP5, FLP6)</srccitea>
+        <typesrc>Online</typesrc>
+        <srccontr>Burn probability (BP) and/or flame-length probabilities (FLPs) modeled with FSim were primary spatial inputs to datasets presented here. BP provided information about the overall probability of any 270-meter pixel experiencing a large fire of any intensity. FLPs provided information about the conditional probability of particular fire intensity levels (i.e., likelihood of a particular intensity level, given a fire) for every 270-meter pixel.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>LANDFIRE, U.S. Department of the Interior, Geological Survey</origin>
+            <pubdate>2017</pubdate>
+            <title>LANDFIRE 1.4.0 40 Scott and Burgan Fire Behavior Fuel Models layer</title>
+            <edition>1.4.0</edition>
+            <geoform>raster digital data</geoform>
+            <othercit>Scott, Joe H.; Burgan, Robert E. 2005. Standard fire behavior fuel models: a comprehensive set for use with Rothermel's surface fire spread model. Gen. Tech. Rep. RMRS-GTR-153. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. 72 p. https://doi.org/10.2737/rmrs-gtr-153</othercit>
+            <onlink>https://landfire.cr.usgs.gov/viewer/</onlink>
+            <onlink>https://www.landfire.gov/fuel.php</onlink>
+          </citeinfo>
+        </srccite>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20150101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Ground Condition</srccurr>
+        </srctime>
+        <srccitea>LANDFIRE FBFM40</srccitea>
+        <typesrc>Online</typesrc>
+        <srccontr>The LANDFIRE Fire Behavior Fuel Models layer was a primary input to the FSim BP and FIL datasets.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Short, Karen C.</origin>
+            <pubdate>2017</pubdate>
+            <title>Spatial wildfire occurrence data for the United States, 1992-2015 [FPA_FOD_20170508]</title>
+            <edition>4th</edition>
+            <geoform>vector digital data</geoform>
+            <pubinfo>
+              <pubplace>Fort Collins, CO</pubplace>
+              <publish>Forest Service Research Data Archive</publish>
+            </pubinfo>
+            <othercit>Spatial wildfire occurrence Additional information is available in: Short, Karen C. 2014. A spatial database of wildfires in the United States, 1992-2011. Earth Systems Science Data 6:1-27. https://doi.org/10.5194/essd-6-1-2014</othercit>
+            <onlink>https://doi.org/10.2737/RDS-2013-0009.4</onlink>
+          </citeinfo>
+        </srccite>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>19920101</begdate>
+              <enddate>20151231</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>Observed</srccurr>
+        </srctime>
+        <srccitea>FPA FOD</srccitea>
+        <typesrc>Online</typesrc>
+        <srccontr>The FPA point fire occurrence database (FPA FOD) was used in the process of creating the burn probability (BP) and fire intensity level (FIL) rasters.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>LANDFIRE, U.S. Department of the Interior, Geological Survey</origin>
+            <pubdate>2017</pubdate>
+            <title>LANDFIRE 1.4.0 Existing Vegetation Type layer</title>
+            <edition>1.4.0</edition>
+            <geoform>raster digital data</geoform>
+            <othercit>Rollins, Matthew G. 2009. LANDFIRE: a nationally consistent vegetation, wildland fire, and fuel assessment. International Journal of Wildland Fire 18:235-249. https://doi.org/10.1071/wf08088</othercit>
+            <onlink>https://www.landfire.gov/vegetation.php</onlink>
+            <onlink>https://landfire.cr.usgs.gov/viewer/</onlink>
+          </citeinfo>
+        </srccite>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>20150101</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>Ground Condition</srccurr>
+        </srctime>
+        <srccitea>LANDFIRE EVT</srccitea>
+        <typesrc>Online</typesrc>
+        <srccontr>The LANDFIRE EVT layer was used to spatially apply resistance to control weights to create the final WHP.</srccontr>
+      </srcinfo>
+      <procstep>
+        <srcused>FSim BP and FLPs</srcused>
+        <procdesc>1. Using the nationally-available 270-m FSim BP and FLP data, multiply BP by each FLP to get the actual probabilities of fire occurrence in each flame length class.</procdesc>
+        <procdate>201912</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>2. Weight the probabilities in each flame length class by the potential hazard they represent and sum them to derive a measure of large wildfire potential. Weights used were: FLP1 and FLP2 - 1; FLP3 and FLP4 - 8; FLP5 - 25; FLP6 - 75.</procdesc>
+        <procdate>201912</procdate>
+      </procstep>
+      <procstep>
+        <srcused>FPA FOD</srcused>
+        <procdesc>3. Create a separate surface of small wildfire potential based on ignition locations for fires smaller than 300 acres (generally not accounted for in FSim).</procdesc>
+        <procdate>201912</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>4. Integrate the large wildfire potential created in process steps 1-2 with the small wildfire potential created in process step 3. This was done by weighting each according to its relative contribution to total wildfire potential, then adding the weighted values.</procdesc>
+        <procdate>201912</procdate>
+      </procstep>
+      <procstep>
+        <srcused>LANDFIRE FBFM40
+LANDFIRE EVT</srcused>
+        <procdesc>5. Apply a set of resistance to control weights based on fireline construction rates in different fuel types.</procdesc>
+        <procdate>201912</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>6. Convert WHP values to integers by multiplying by 10,000 and rounding to the nearest whole number (preserves four decimal places of precision).</procdesc>
+        <procdate>201912</procdate>
+      </procstep>
+      <procstep>
+        <srcused>LANDFIRE FBFM40</srcused>
+        <procdesc>7. Evaluate the statistical distribution of WHP values and classify them into five classes: very low, low, moderate, high, very high. Add in non-burnable and water from LANDFIRE FMFM40 layer to produce final classified version of WHP.</procdesc>
+        <procdate>20200702</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Raster</direct>
+    <rastinfo>
+      <rasttype>Pixel</rasttype>
+      <rowcount>10803</rowcount>
+      <colcount>17132</colcount>
+    </rastinfo>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <planar>
+        <mapproj>
+          <mapprojn>Albers Conical Equal Area</mapprojn>
+          <albers>
+            <stdparll>29.5</stdparll>
+            <stdparll>45.5</stdparll>
+            <longcm>-96</longcm>
+            <latprjo>23</latprjo>
+            <feast>0</feast>
+            <fnorth>0</fnorth>
+          </albers>
+        </mapproj>
+        <planci>
+          <coordrep>
+            <absres>270</absres>
+            <ordres>270</ordres>
+          </coordrep>
+          <plance>Coordinate Pair</plance>
+          <plandu>Meters</plandu>
+        </planci>
+      </planar>
+      <geodetic>
+        <ellips>Geodetic Reference System 80</ellips>
+        <semiaxis>6378137.0000</semiaxis>
+        <horizdn>North American Datum of 1983</horizdn>
+        <denflat>298.25722210</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <overview>
+      <eaover>This dataset represents wildlfire hazard potential (WHP) in six classes: 1) very low, 2) low, 3) moderate, 4) high, and 5) very high. In addition, non-burnable lands (6) and open water (7) are represented as separate classes.
+</eaover>
+      <eadetcit>Dillon, Gregory K.; Menakis, James; Fay, Frank. 2015. Wildland fire potential: A tool for assessing wildfire risk and fuels management needs. In: Keane, Robert E.; Jolly, Matt; Parsons, Russell; Riley, Karin. Proceedings of the large wildland fires conference; May 19-23, 2014; Missoula, MT. Proc. RMRS-P-73. Fort Collins, CO: U.S. Department of Agriculture, Forest Service, Rocky Mountain Research Station. p. 60-76. https://www.fs.usda.gov/treesearch/pubs/49429</eadetcit>
+    </overview>
+  </eainfo>
+  <distinfo>
+    <resdesc>RDS-2015-0047-3</resdesc>
+    <distrib>
+      <cntinfo>
+        <cntorgp>
+          <cntorg>USDA Forest Service, Research and Development</cntorg>
+        </cntorgp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>240 West Prospect Road</address>
+          <city>Fort Collins</city>
+          <state>CO</state>
+          <postal>80526</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>see Contact Instructions</cntvoice>
+        <cntpos>Research Data Archivist</cntpos>
+        <cntinst>This contact information was current as of November 2020. For current information see Contact Us page on: https://doi.org/10.2737/RDS.</cntinst>
+      </cntinfo>
+    </distrib>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formvern>2020</formvern>
+          <formname>TIFF</formname>
+          <formcont>8 Bit unsigned integer; LZW compression</formcont>
+          <filedec>Files zipped using 7-Zip version 19.00</filedec>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.2737/RDS-2015-0047-3</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <digform>
+        <digtinfo>
+          <formvern>2020</formvern>
+          <formname>GDB</formname>
+          <formcont>8 Bit unsigned integer; LZ77 compression</formcont>
+          <filedec>Files zipped with 7-Zip version 19.00</filedec>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.2737/RDS-2015-0047-3</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None</fees>
+    </stdorder>
+    <distliab>Metadata documents have been reviewed for accuracy and completeness. Unless otherwise stated, all data and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. However, neither the author, the Archive, nor any part of the federal government can assure the reliability or suitability of these data for a particular purpose. The act of distribution shall not constitute any such warranty, and no responsibility is assumed for a user's application of these data or related materials.
+
+The metadata, data, or related materials may be updated without notification. If a user believes errors are present in the metadata, data or related materials, please use the information in (1) Identification Information: Point of Contact, (2) Metadata Reference: Metadata Contact, or (3) Distribution Information: Distributor to notify the author or the Archive of the issues.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20201118</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Gregory K. Dillon</cntper>
+          <cntorg>USDA Forest Service, Fire Modeling Institute (FMI)</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Missoula Fire Sciences Laboratory</address>
+          <address>5775 US Hwy 10 W</address>
+          <city>Missoula</city>
+          <state>MT</state>
+          <postal>59808</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>406-829-6783</cntvoice>
+        <cntpos>Spatial Fire Analyst
+</cntpos>
+        <cntemail>greg.dillon@usda.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001.1-1999</metstdv>
+  </metainfo>
+</metadata>
