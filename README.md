@@ -16,6 +16,7 @@ There are two key datasets that will be used to perform analysis and visualize t
 
 1. [2020 wildfire Hazard Potential for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
+    1. Indented item
     1.  Very Low
     2.  Low
     3.  Moderate
