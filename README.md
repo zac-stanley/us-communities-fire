@@ -1,7 +1,7 @@
 # United States Communities in Harms Way:
-## **Where are the vulnerable in relation to fire risk**  
+## **Where are the Vulnerable in Relation to Wildfire Hazards**  
 ### *DRAFT* Project Description
-This project will attempt to visualize vulnerable communities throughout the United States that are at particular risk to wildfire. It will do so through *spatial analysis* and *web development*.  
+This project will attempt to visualize vulnerable communities throughout the United States that are at particular risk to wildfire. It will do so through *spatial analysis* and development of an interactive *web mapping application*.  
 
 The *spatial analysis* component will first look at [2020 wildfire Hazard Potential for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition) as the initial metric - areas with moderate to very high fire risk will determine what communities are futher analyzed. The results of this will then be intersected to   [U.S. Census Designated Places](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip) \(cdps\) polygons \(I need research an appropriate buffer distance that takes into account how far a fire can spread. The 900 m smoothing distance is consistent with work by Caggiano et al. \(2020\) showing that all home losses to wildfire from 2000 to 2018 were within 850 m of wildland vegetation\). The cdps will be joined to a series of statistics likely including: housing status \(rent or own\), car ownership, age \(senior or child\), education, poverty rate, disability rate, language barriers, incarceration rate. These metrics will be combined to create a vulberability index by which communities can be ranked.  
 
