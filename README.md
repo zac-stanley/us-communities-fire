@@ -18,11 +18,11 @@ There are two key datasets that will be used to perform analysis and visualize t
 
     * This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:  
        
-    1.  Very Low
-    2.  Low
-    3.  Moderate
-    4.  High
-    5.  Very High  
+1. Very Low
+2. Low
+3. Moderate
+4. High
+5. Very High  
 
    From the metadata: WHP is an index that quantifies the relative potential for wildfire that may be difficult to control, used as a measure to help prioritize where fuel treatments may be needed.  
 
