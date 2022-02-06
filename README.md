@@ -3,7 +3,7 @@
 ### *DRAFT* Project Description
 This project will attempt to visualize vulnerable communities throughout the United States that are at particular risk to wildfire. It will do so through *spatial analysis* and development of an interactive *web mapping application*.  
 
-The *spatial analysis* component will first look at 2020 wildfire Hazard Potential for the United States as the initial metric - areas with moderate to very high fire risk will determine what communities are futher analyzed. The results of this will then be overlayed [U.S. Census Designated Places](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip) \(cdps\) polygons \(I need research an appropriate buffer distance that takes into account how far a fire can spread, or if the there is a recommeneded distance at which communities are evacuated). The cdps will be joined to a series of statistics likely including: housing status \(rent or own\), car ownership, age \(senior or child\), education, poverty rate, disability rate, language barriers, incarceration rate. These metrics will be combined to create a vulberability index by which communities can be ranked.  
+The *spatial analysis* component will first look at 2020 Wildfire Hazard Potential (WHP) for the United States as the initial metric - areas with moderate to very high fire risk will determine what communities are futher analyzed. The results of this will then be overlayed [U.S. Census Designated Places](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip) \(CDPs\) polygons \(I need research an appropriate buffer distance that takes into account how far a fire can spread, or if the there is a recommeneded distance at which communities are evacuated). The CDPs will be joined to a series of statistics likely including: housing status \(rent or own\), car ownership, age \(senior or child\), education, poverty rate, disability rate, language barriers, incarceration rate. These metrics will be combined to create a vulberability index by which communities can be ranked.  
 
 The results of the *spatial analysis* will be visualized in an interactive *web mapping application* using a couple of different javascript libraries most likely Leaflet and D3, possibly Mapbox as well. The map will focus on vulnerable communities and their vulnerability score index value. Map will likely be represented at full zoom scale using bi-variate symbology with graduated symbol size representing vulnerability index score and the color representing wildfire hazard potential (moderate to very high). Some potential interactivity will include clicking on a community that triggers zooming to it, this will also trigger a popup describing both the wildfire risk to the community along with the individual score that macke up the vulnerability index as described above. While examining the same community there would be a chart in the sidebar comparing the individual metrics that comprise the vulnerability index compared with state or national averages ex. rate of disable folks in community vs. those at the state level \(this idea needs to fleshed out more\).  
 
@@ -14,13 +14,13 @@ In addition to helping locate areas where fuel treatment could occur there are m
 ### State of the Data
 There are two key datasets that will be used to perform analysis and visualize the results.
 
-1. [2020 wildfire Hazard Potential for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
+1. [2020 Wildfire Hazard Potential for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
     1. Very Low
-    2.  Low
-    3.  Moderate
-    4.  High
-    5.  Very High  
+    2. Low
+    3. Moderate
+    4. High
+    5. Very High  
 
    From the metadata: WHP is an index that quantifies the relative potential for wildfire that may be difficult to control, used as a measure to help prioritize where fuel treatments may be needed.  
 
@@ -30,7 +30,7 @@ There are two key datasets that will be used to perform analysis and visualize t
 
     This dataset will be the core spatial component of this project and will be repressented in the final product as graduated symbols based on the geometric center of the polygon at max scale and when zoomed in the map will display the full geometry of the polygon. These data will be loaded into the map as geoJSON files.
 
-3. 
+3. [U.S. Census American Community Survey](https://www.census.gov/programs-surveys/acs/data.html). Tabular data that will be joined to the final results of overlaying WHP and CDPs. This data will be analyzed and used to develop the vulnerability index described above. At this point I have only acquired tabular data on housing status, I still need to sort through American Community Survey (ACS) tables to acquire additional datasets that will be used to create the vulnerability index. 
 
 
     
