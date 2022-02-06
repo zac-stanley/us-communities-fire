@@ -18,6 +18,7 @@ There are two key datasets that will be used to perform analysis and visualize t
 
     * This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
+    
     1. Very Low
     2. Low
     3. Moderate
