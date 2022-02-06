@@ -21,7 +21,9 @@
         - *something like above average population of renters, access to transportation, age \(old and young\), education, above average poverty, disabilities in a household, mental illness, language barriers \(primary language spoken in households, can't understand evacuation warnings etc.\), those who have been incarcerated*
             - this will require literature review  
             - what other factors should be included in score 
-    - zonal stats or weighted mean analysis to calculate burn probability in hex bin or tract/communities/or counties   `
+    - zonal stats or weighted mean analysis to calculate burn probability in hex bin or tract/communities/or counties 
+    - buffers aroudn cdps - research an appropriate buffer distance that takes into account how far a fire can spread. The 900 m smoothing distance is consistent with work by Caggiano et al. \(2020\) showing that all home losses to wildfire from 2000 to 2018 were within 850 m of wildland vegetation
+        -  at what distance do evacuation warnings take place?
 
 2. #### Vulnerability Brain Dump
       - The World Health Organization defines vulnerable as “… the degree to which a population, individual or organization is unable to anticipate, cope with, resist and recover from the impacts of disasters.
