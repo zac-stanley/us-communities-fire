@@ -16,6 +16,7 @@
         - what platform or js library will be used to accomplish this?
             - **mapbox or leaflet most likely**
 2. #### Methodology
+     - **Vulberability Index - value will get a 1 if percentage is greater than the national average.
      - If using raster for fire probability convert pixels to points?
      - use some undetermined method to come up with a vulnerability score/index for census designated places being vulnerable
         - *something like above average population of renters, access to transportation, age \(old and young\), education, above average poverty, disabilities in a household, mental illness, language barriers \(primary language spoken in households, can't understand evacuation warnings etc.\), those who have been incarcerated*
