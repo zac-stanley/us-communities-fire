@@ -3,7 +3,7 @@
 ### *DRAFT* Project Description
 This project will attempt to visualize vulnerable communities throughout the United States that are at particular risk to wildfire. It will do so through *spatial analysis* and development of an interactive *web mapping application*.  
 
-The *spatial analysis* component will first look at 2020 Wildfire Hazard Potential (WHP) for the United States as the initial metric - areas with moderate to very high fire risk will determine what communities are futher analyzed. The results of this will then be overlayed U.S. Census Designated Places \(CDPs\) polygons \(I need research an appropriate buffer distance that takes into account how far a fire can spread, or if the there is a recommeneded distance at which communities are evacuated). The CDPs will be joined to a series of statistics as referenced in the table below. These metrics will be combined to create a non-weighted vulberability index by which communities will be ranked on a scale from 1-7 (1 being the least vulnerable and 7 being the most vulnerable) that will look something like the following:
+The *spatial analysis* component will first look at 2014 Wildfire Hazard Potential (WHP) for the United States as the initial metric - areas with moderate to very high fire risk will determine what communities are futher analyzed. The results of this will then be overlayed 2015 U.S. Census Designated Places \(CDPs\) polygons \(I need research an appropriate buffer distance that takes into account how far a fire can spread, or if the there is a recommeneded distance at which communities are evacuated). The CDPs will be joined to a series of statistics as referenced in the table below. These metrics will be combined to create a non-weighted vulberability index by which communities will be ranked on a scale from 1-7 (1 being the least vulnerable and 7 being the most vulnerable) that will look something like the following:
 
 | Vulnerability Measure (% is > national average) | Score       |
 | ------------------------------------------------| ----------- |
@@ -25,7 +25,7 @@ In addition to helping locate areas where fuel treatment could occur there are m
 ### State of the Data
 There are three key datasets that will be used to perform analysis and visualize the results.
 
-1. [2020 Wildfire Hazard Potential for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
+1. [2014 Wildfire Hazard Potential for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
     1. Very Low
     2. Low
