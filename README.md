@@ -14,8 +14,7 @@ The *spatial analysis* component will first look at 2020 Wildfire Hazard Potenti
 | People under 5                                  | 1           |
 | Disabled people                                 | 1           |
 | Difficulty speaking English                     | 1           |
-| ----------------------------------------------- | ----------- |
-| **Max Index Score Potential**                   | **7**
+| **Maximum Index Score Potential**               | **7**       |
 
 The results of the *spatial analysis* will be visualized in an interactive *web mapping application* using a couple of different javascript libraries most likely Leaflet and D3, possibly Mapbox as well. The map will focus on vulnerable communities and their vulnerability score index value. Map will likely be represented at full zoom scale using bi-variate symbology with graduated symbol size representing vulnerability index score and the color representing wildfire hazard potential (moderate to very high). Some potential interactivity will include clicking on a community that triggers zooming to it, this will also trigger a popup describing both the wildfire risk to the community along with the individual scores that sum to the vulnerability index as described above. While examining the same community there would be a chart in the sidebar comparing the individual metrics that comprise the vulnerability index compared with state or national averages ex. rate of disable folks in community vs. those at the state level \(this idea needs to fleshed out more\).  
 
