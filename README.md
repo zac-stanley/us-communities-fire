@@ -10,8 +10,8 @@ The *spatial analysis* component will first look at 2014 Wildfire Hazard Potenti
 | Households below poverty level                  | 1           |
 | Renters                                         | 1           |
 | Households w/out a car                          | 1           |
-| People 65 or older                              | 1           |
-| People under 5                                  | 1           |
+| People 65 years or older                        | 1           |
+| People 5 years or under                         | 1           |
 | Disabled people                                 | 1           |
 | Speak English less than very well               | 1           |
 | **Maximum Index Score Potential**               | **7**       |
