@@ -23,6 +23,16 @@
         - this can maybe be addressed in my write up
 3. #### Calculations that need to be made from raw census data to develop vulnerability index: 
       - poverty rate  - based on median earnings compared to national average
+
+4. #### Updated Methodology 02/19/2022
+    - Use [CDC SVI](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html) data at the tract level to acquire vulnerability score rather than creating my own
+    - This could be done with the following workflow:
+        1. ##### Assigning Wildfire Hazard Class to CDPs
+            - Run zonal statistics on CDPs and wildfire hazard potential raster and assign class that is the majority in each CDP
+            - Filter out values to only keep classes 3 (moderate), 4 (high), 5 (very high) 
+            - This results in 2,854 CDPs in the U.S.
+
+
       
 
 
