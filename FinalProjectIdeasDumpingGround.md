@@ -34,10 +34,14 @@
     2. ##### Calculating SVI at CDP level from tracts  
         - Use [CDC social vulnerability index (SVI)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html) data at the tract level to acquire vulnerability score rather than  creating my own
         - Intersect CDPs classed as 3,4,5 with tracts
-        - Use pandas/geopandas to summarize tract areas within CDPs polygons
-        - Filter out values to only keep classes 3 (moderate), 4 (high), 5 (very high) 
-        - This results in 2,854 CDPs in the U.S.
-      
+        - Use pandas/geopandas to summarize tract areas SVI mean scores weighted to area of tract inside CDP. This would make it so that a smaller area of a tract intersected in a CDP would have less impact on a CDPs overall SVI scores than a piece of a tract that takes up more area in the CDP. 
+        - The SVI scores are averages across a tract and the above process would effectively average the averages (arithmetic mean) for each score type in each CDP.
+        - The above would be calculated for 4 theme ranking variables:
+            - Socioeconmic
+            - Household Composition & Disability
+            - Minority Status & Language
+            - Housing Type & Transportation
+            - Overall Summary Ranking
 
 
 
