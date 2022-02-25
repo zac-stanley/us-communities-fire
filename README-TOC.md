@@ -56,7 +56,7 @@ This dataset will be the core spatial component of this project and will be repr
  
 As well as a summary ranking.
 
-[SVI Classes](images/CDC-SVI-Variables.jpg)
+![SVI Classes](images/CDC-SVI-Variables.jpg)
 
 
 ## Part III. Mapping and Visualization
