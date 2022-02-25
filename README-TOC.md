@@ -47,12 +47,17 @@ This dataset will be the core spatial component of this project and will be repr
 
 #### Social Vulnerability Index  
 
-[Centers for Disease Control Social Vulnerability Index (SVI)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is tract available at the tract level and has four individual vulnerability components:  
+[Centers for Disease Control Social Vulnerability Index (SVI)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability components:  
 
 - Socioeconmic
 - Household Composition & Disability
 - Minority Status & Language
 - Housing Type & Transportation
+ 
+As well as a summary ranking.
+
+[SVI Classes](images/CDC-SVI-Variables.jpg)
+
 
 ## Part III. Mapping and Visualization
 
