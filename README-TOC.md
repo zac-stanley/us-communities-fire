@@ -6,7 +6,7 @@
 ## Table of Contents
 - [Part I. *DRAFT* Project Proposal](#part-i-project-summary-proposal)  
 - [Part II. Data Sources](#part-ii-data-sources)  
-    - [HOLC Neighborhoods](#holc-neighborhoods)
+    - [Wildfire Hazard Potential ](#wildfire-hazard-potential)
     - [Aspects of Wealth](#aspects-of-wealth)
         - [Race & Segregation](#race-&-segregation)
         - [Median Household income](#median-houshold-income)
@@ -31,8 +31,7 @@ The *spatial analysis* component will first look at 2014 Wildfire Hazard Potenti
 ## Part II: Data Sources
 There are three key datasets that will be used to perform analysis and visualize the results.
 
-### Wildfire Hazrd Potential
-
+### Wildfire Hazard Potential  
 
 1. [2020 Wildfire Hazard Potential (WHP) for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
@@ -44,45 +43,24 @@ There are three key datasets that will be used to perform analysis and visualize
 
    From the metadata: WHP is an index that quantifies the relative potential for wildfire that may be difficult to control, used as a measure to help prioritize where fuel treatments may be needed.  
 
-   This data won't be displayed on the final map, it will simply be used as an input to define and refine communities that should be further analyzed based on their proxitmity to Wildfire Hazard Potential.
+   This data won't be displayed on the final map, it will simply be used as an input to define and refine communities that should be further analyzed based on their proxitmity to Wildfire Hazard Potential.  
 
-### Aspects of Wealth
-Exploring wealth under the umbrella of the ability to accumulate generational wealth through time.
+### United States Census Designated Places  
 
-#### Race & Segregation
-[*Race for the Population 18 years+ 2020*](https://data.census.gov/cedsci/table?q=p3&t=Race%20and%20Ethnicity&g=0500000US21067%241400000&y=2020)
-- Data available to download:
-    - CSV metadata
-    - CSV file data
-    - TXT file table title
+2. [U.S. Census Designated Places](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.  
+
+This dataset will be the core spatial component of this project and will be repressented in the final product as graduated symbols based on the geometric center of the polygon at max scale and when zoomed in the map will display the full geometry of the polygon. These data will be loaded into the map as geoJSON files.
+
+#### Centers for Disease Control Social Vulnerability Index  
+
+[CDC social vulnerability index (SVI)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is tract available at the tract level and has four individual vulnerability components:  
+
+- Socioeconmic
+- Household Composition & Disability
+- Minority Status & Language
+- Housing Type & Transportation
 
 
-#### Median Household income
-[*S1901 Income in the past 12 months (in 2019 inflation-adjusted dollars)*](https://data.census.gov/cedsci/table?q=income&g=0500000US21067%241400000&y=2019)
-- Data available to download: 
-    - CSV file metadata
-    - CSV file data
-    - TXT file table title
-    - 19.4 kb
-
-#### Percent of Population in Poverty
-[*S1701 Poverty Status in the past 12 months (ACS)*](https://data.census.gov/cedsci/table?q=s1701&g=0500000US21067%241400000&y=2019)
-- Data available to download:
-    - CSV File Metadata
-    - CSV file data
-    - TXT file table title
-    - 59.7 kb
-
-#### Mortgage Approval Rates through time 
-Looking through HMDA Home mortgage disclosure act data to find. Still needs a source.
-
-#### Percent Home Ownership today & Owner Reported Property Value Today
-[*US census bureau American Community Survey DP04 2019*](https://data.census.gov/cedsci/table?q=DP04&g=0500000US21067%241400000)
-- Data available to download:
-- CSV file metadata
-    - CSV file data
-    - TXT file table title
-    - 88.5 kb
 
 ## Part III. Proposed Visuals
 ### Mockup WireFrame 1
