@@ -7,7 +7,7 @@
 - [Part I. *DRAFT* Project Proposal](#part-i-project-summary-proposal)  
 - [Part II. Data Sources](#part-ii-data-sources)  
     - [Wildfire Hazard Potential ](#wildfire-hazard-potential)
-    - [Aspects of Wealth](#aspects-of-wealth)
+    - [Census Designated Places](#census-designated-places)
         - [Race & Segregation](#race-&-segregation)
         - [Median Household income](#median-houshold-income)
         - [Percent of Population in Poverty](#percent-of-population-in-poverty)
