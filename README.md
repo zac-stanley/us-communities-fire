@@ -30,10 +30,10 @@ There are three key datasets that will be used to perform analysis and visualize
 1. [2020 Wildfire Hazard Potential (WHP) for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
     - **Class 1:** Very Low
-    - **Class 2:**Low
-    - **Class 3:**Moderate
-    - **Class 4:**High
-    - **Class 5:**Very High  
+    - **Class 2:** Low
+    - **Class 3:** Moderate
+    - **Class 4:** High
+    - **Class 5:** Very High  
 
    From the metadata: WHP is an index that quantifies the relative potential for wildfire that may be difficult to control, used as a measure to help prioritize where fuel treatments may be needed.  
 
