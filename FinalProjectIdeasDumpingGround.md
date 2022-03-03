@@ -1,6 +1,10 @@
 # California Communities in Harms Way:
 ## **Where are the vulnerable in relation to fire risk**  
 
+#### Old Description
+The *spatial analysis* component will first look at 2014 Wildfire Hazard Potential (WHP) for the United States as the initial metric - areas with moderate to very high fire risk will determine what communities are futher analyzed. The results of this will then be overlayed 2015 U.S. Census Designated Places \(CDPs\) polygons using weighted averaging or zonal statistics to determine what hazard potential is assgined to a CDP. The CDPs will be joined to multiple tables of U.S. Census 5-year estimate American Community Survey Data profiles (ACS). From these raw ACS data, averages will be calculated for each CDP input into the vulnerability index and compared to the national average. If one of the CDP inputs has an average higher than that of the national average for a given it will be assigned a score of 1 on the vulnerability index. These results of each average calculation will be combined to create a non-weighted vulberability index by which communities will be ranked on a scale from 1-7 (1 being the least vulnerable and 7 being the most vulnerable) that will look something like the following:
+
+
 1. #### What questions need to be answered before zeroing in on data?
     - do we want to consider the after fire effects i.e. if people rent and they lose their home will they have to move and what are the long term effects of that? housing status and quality of? Could be in write-up.
     - what about tribes? Does the census even count them? address in write up
@@ -42,6 +46,7 @@
             - Minority Status & Language
             - Housing Type & Transportation
             - Overall Summary Ranking
+
 
 
 

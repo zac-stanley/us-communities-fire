@@ -4,7 +4,7 @@
 <!-- TOC -->
 
 ## Table of Contents
-- [Part I. *DRAFT* Project Proposal](#part-i-project-summary-proposal)  
+- [Part I. Project Description](#part-i-project-summary-proposal)  
 - [Part II. Data Sources](#part-ii-data-sources)  
     - [Wildfire Hazard Potential ](#wildfire-hazard-potential)
     - [Census Designated Places](#census-designated-places)
@@ -18,9 +18,8 @@
 
 <!-- /TOC -->
 
-## Part I: Project Summary Proposal
-
-The *spatial analysis* component will first look at 2014 Wildfire Hazard Potential (WHP) for the United States as the initial metric - areas with moderate to very high fire risk will determine what communities are futher analyzed. The results of this will then be overlayed 2015 U.S. Census Designated Places \(CDPs\) polygons \(I need research an appropriate buffer distance that takes into account how far a fire can spread, or if the there is a recommeneded distance at which communities are evacuated) using weighted averaging or zonal statistics to determine what hazard potential is assgined to a CDP. The CDPs will be joined to multiple tables of U.S. Census 5-year estimate American Community Survey Data profiles (ACS). From these raw ACS data, averages will be calculated for each CDP input into the vulnerability index and compared to the national average. If one of the CDP inputs has an average higher than that of the national average for a given it will be assigned a score of 1 on the vulnerability index. These results of each average calculation will be combined to create a non-weighted vulberability index by which communities will be ranked on a scale from 1-7 (1 being the least vulnerable and 7 being the most vulnerable) that will look something like the following:
+## Part I: Project Description 
+This project will be an interactive map that visualizes United States communities at moderate to very high potential of wildfire and rates of a set of social vulnerabilities that exist within those communities. The results of the analysis visualized in the map will help reveal at a general level specific communities that could benefit from additional emergency response planning efforts based on the combination of the input datasets. This map will also potentially reveal communities in locations not commonly thought to be at risk for wildfire. The result of this will serve to potentially change the perception that wildfire risks only exist in the western United States
 
 ## Part II: Data Sources
 There are three key datasets that will be used to perform analysis and visualize the results.
