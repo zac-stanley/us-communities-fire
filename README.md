@@ -29,7 +29,7 @@ At a general level the map will potentially reveal specific communities that cou
 ![Wire Frame 2](images/wireframe2.jpg)
 
 ## II: Methodology
-There are three key datasets that will be used to perform analysis and visualize the results.
+First provide a general statement summarizing the following subsections (one or two sentences).
 
 ### A. Data
 
@@ -50,6 +50,8 @@ There are three key datasets that will be used to perform analysis and visualize
     - **Minority Status & Language**
     - **Housing Type & Transportation**
     - **Overall Vulnerability**  
+
+The process for exploring, processing and ultimately analyzing the used the following used Python / Jupyter Notebooks withe the following libraries: Pandas, Matplotlib and GeoPandas.
 
 
 ![SVI Classes](images/CDC-SVI-Variables.jpg)
