@@ -51,10 +51,12 @@ First provide a general statement summarizing the following subsections (one or 
     - **Housing Type & Transportation**
     - **Overall Vulnerability**  
 
-The process for exploring, processing and ultimately analyzing the used the following used Python / Jupyter Notebooks withe the following libraries: Pandas, Matplotlib and GeoPandas.
-
-
 ![SVI Classes](images/CDC-SVI-Variables.jpg)
+
+The process for exploring, processing and ultimately analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was the first to be analyzed. To do so zonal statistics were employed
+
+
+
 
 ### B. Medium for Delivery
 ### C. Application Layout
