@@ -17,7 +17,11 @@
 <!-- /TOC -->
 
 ## I. Introduction
-This project will be an interactive map that visualizes United States communities at moderate to very high potential of wildfire and rates of a set of social vulnerabilities that exist within those communities. The results of the analysis visualized in the map will help reveal at a general level specific communities that could benefit from additional emergency response planning efforts based on the combination of the input datasets. This map will also potentially reveal communities in locations not commonly thought to be at risk for wildfire. The result of this will serve to potentially change the perception that wildfire risks only exist in the western United States
+This project examines where wildfire hazard potential intersects with socially vulnerable census designated places throughout the conterminous United States. The data sources span from 2018 to 2020. 
+
+The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of support both prior to and after wildland fires. 
+
+The user will be inspired to explore areas 
 
 ![Wire Frame 1](images/wireframe1.jpg)
 ![Wire Frame 2](images/wireframe2.jpg)
