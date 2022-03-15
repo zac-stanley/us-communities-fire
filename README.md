@@ -57,10 +57,11 @@ First provide a general statement summarizing the following subsections (one or 
 
 The process for exploring, processing and ultimately analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP. 
 
-![Majority](images/majority.jpg)
+![Majority](images/majority.jpg)  
 
+Classes 1, 2, 6, and 7 were removed so that only only CDPs with moderate to very high hazard potential were included in the final output.
 
-
+**STOPPED HERE ON 3/14/2022**
 
 ### B. Medium for Delivery
 ### C. Application Layout
