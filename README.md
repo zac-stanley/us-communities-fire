@@ -47,7 +47,7 @@ First provide a general statement summarizing the following subsections (one or 
 
 3. [Centers for Disease Control Social Vulnerability Index (SVI)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability components plus an aggregate score:  
 
-    - **Socioeconmic**
+    - **Socioeconomic**
     - **Household Composition & Disability**
     - **Minority Status & Language**
     - **Housing Type & Transportation**
