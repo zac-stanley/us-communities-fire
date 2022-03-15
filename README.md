@@ -64,7 +64,7 @@ Additionally, classes 1, 2, 6, and 7 were removed so that only only CDPs with mo
 CDPs were the minimum mapping unit for the analysis yet the SVI data is available only at the tract level which is too detailed. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the average SVI values for each individual vulnerability and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each individual SVI and for the overall SVI for each CDP with a WHP class of 3,4 or 5.
 
 **Sample results of analyzed and processed data:**  
-![Table](images/cleanedTable.jpg) 
+![Table](images\cleanedTable.JPG) 
 
 ### B. Medium for Delivery  
 
