@@ -45,7 +45,7 @@ First provide a general statement summarizing the following subsections (one or 
 
 2. [U.S. Census Designated Places (CDPs) ](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.    
 
-3. [Centers for Disease Control Social Vulnerability Index (SVI)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability components plus an aggregate score:  
+3. [Centers for Disease Control Social Vulnerability Index (SVIs)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability components plus an aggregate score:  
 
     - **Socioeconomic**
     - **Household Composition & Disability**
@@ -59,7 +59,12 @@ The process for exploring, processing and ultimately analyzing the data used Pyt
 
 ![Majority](images/majority.jpg)  
 
-Classes 1, 2, 6, and 7 were removed so that only only CDPs with moderate to very high hazard potential were included in the final output.  
+Additionally, classes 1, 2, 6, and 7 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) hazard potential were included in the final output.  
+
+CDPs were the minimum mapping unit for the analysis yet the SVI data is available only at the tract level which is too detailed. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the average SVI values for each individual vulnerability and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each individual SVI and for the overall SVI for each CDP with a WHP class of 3,4 or 5.
+
+Sample results of analyzed and processed data:
+![Table](images/cleanedTable.jpg) 
 
 ### B. Medium for Delivery  
 
