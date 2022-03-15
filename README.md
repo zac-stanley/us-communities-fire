@@ -16,7 +16,7 @@
    
 <!-- /TOC -->
 
-## I. Introduction
+## I. Introduction  
 This project examines where wildfire hazard potential intersects with socially vulnerable census designated places throughout the conterminous United States. The data sources span from 2018 to 2020. 
 
 The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of support both prior to and after wildland fires. 
@@ -28,10 +28,10 @@ At a general level the map will potentially reveal specific communities that cou
 ![Wire Frame 1](images/wireframe1.jpg)
 ![Wire Frame 2](images/wireframe2.jpg)
 
-## II: Methodology
+## II: Methodology  
 First provide a general statement summarizing the following subsections (one or two sentences).
 
-### A. Data
+### A. Data  
 
 1. [2020 Wildfire Hazard Potential (WHP) for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies Wildfire Hazard Potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
@@ -55,20 +55,23 @@ First provide a general statement summarizing the following subsections (one or 
 
 ![SVI Classes](images/CDC-SVI-Variables.jpg)
 
-The process for exploring, processing and ultimately analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP. 
+The process for exploring, processing and ultimately analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP.  
 
 ![Majority](images/majority.jpg)  
 
-Classes 1, 2, 6, and 7 were removed so that only only CDPs with moderate to very high hazard potential were included in the final output.
+Classes 1, 2, 6, and 7 were removed so that only only CDPs with moderate to very high hazard potential were included in the final output.  
 
-**STOPPED HERE ON 3/14/2022**
+### B. Medium for Delivery  
 
-### B. Medium for Delivery
-### C. Application Layout
-### D. Thematic Representation
-### E. User Interaction
-### F. Aesthetics and Design Considerations
-### G. Conclusion
+The map will be a browser-based application accessible across mobile and desktop devices.  
+
+The technology stack will include HTML/CSS/JS using a combination of Leaflet and Mapbox JavaScript libraries and will most likely use an Assembly.css responsive framework. In addition, the map will include search bar functionality geolocating CDPs.
+
+### C. Application Layout  
+### D. Thematic Representation  
+### E. User Interaction  
+### F. Aesthetics and Design Considerations  
+### G. Conclusion  
 
 ## References
 - [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf) ordered the by California Governors Office
