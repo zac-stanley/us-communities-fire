@@ -97,7 +97,7 @@ When a graduated symbol is hovered on at initial map scale a tooltip will displa
 When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a a sidebar popup holding a bar chart of four SVI weighted mean scores that make up the overall SVI. This capbility will also be available using a a dropdown search of all of CDPs on the map.
 
 **Dropdown Search Example:** 
-
+![Search](images/search.jpg) 
 
 ### F. Aesthetics and Design Considerations  
 
