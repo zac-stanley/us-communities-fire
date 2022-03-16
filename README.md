@@ -74,17 +74,34 @@ The final output polygon and point files are GeoJSON.
 
 The map will be a browser-based application accessible across mobile and desktop devices.  
 
-The technology stack will include HTML/CSS/JS using a combination of Leaflet and Mapbox JavaScript libraries and will most likely use an Assembly.css responsive framework. In addition, the map will include search bar functionality geolocating CDPs.
+The technology stack will include HTML/CSS/JS using a combination of Leaflet and Mapbox JavaScript libraries and will most likely use an Assembly.css responsive framework. In addition, the map will include search bar functionality geolocating CDPs.  
 
 ### C. Application Layout  
+
 ### D. Thematic Representation  
 
 The map will use different thematic representations at different scales. At maximum scale the map will use graduated symbols to display overall SVI by CDP broken up into 5 classes and graduated colors to display 3 class WFH potential resulting in a bi-variate map. 
 
-When a feature is clicked on it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a a sidebar popup holding a bar chart of four SVI weighted mean scores that make up the overall SVI. This capbility will also be available using a a dropdown search of all of the map CDPs.
+At a yet to be determined zoom scale the map will show actual CDP polygons classified using graduated color to show WHP.  
+
 ### E. User Interaction  
+
+The map will be a full screen map that requires user input to explore. These actions include panning, zooming, hovering and clicking on the features. 
+
+When a graduated symbol is hovered on at initial map scale a tooltip will display with some basic information about the feature.  
+
+**Tooltip Example:**  
+![Tooltip](images/gradTooltip.JPG)  
+
+
+When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a a sidebar popup holding a bar chart of four SVI weighted mean scores that make up the overall SVI. This capbility will also be available using a a dropdown search of all of CDPs on the map.
+
+
 ### F. Aesthetics and Design Considerations  
+
+
 ### G. Conclusion  
+
 
 ## References
 - [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf) ordered the by California Governors Office
