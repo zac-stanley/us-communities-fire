@@ -91,7 +91,7 @@ The map will be a full screen map that requires user input to explore. These act
 When a graduated symbol is hovered on at initial map scale a tooltip will display with some basic information about the feature.  
 
 **Tooltip Example:**  
-![Tooltip](images/gradTooltip.JPG)  
+![Tooltip](images/gradTooltip.jpg)  
 
 
 When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a a sidebar popup holding a bar chart of four SVI weighted mean scores that make up the overall SVI. This capbility will also be available using a a dropdown search of all of CDPs on the map.
