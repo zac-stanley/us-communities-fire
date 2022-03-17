@@ -29,7 +29,7 @@ At a general level the map will potentially reveal specific communities that cou
 ![Wire Frame 2](images/wireframe2.jpg)
 
 ## II: Methodology  
-First provide a general statement summarizing the following subsections (one or two sentences).
+The methods for the project involve 2 different types overlay analysis: zonal statistics and weighted mean, both of which are performed on the CDP polygons. The zonal statistics use a majority method with raster values for WHP in a CDP and weighted mean is used with SVI census tracts intersected with CDPs.
 
 ### A. Data  
 
@@ -43,7 +43,7 @@ First provide a general statement summarizing the following subsections (one or 
     - **Class 6:** Non-burnable  
     - **Class 7:** Water  
 
-2. [U.S. Census Designated Places (CDPs) ](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.    
+2. [U.S. Census Designated Places (CDPs)](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.    
 
 3. [Centers for Disease Control Social Vulnerability Index (SVIs)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability components plus an aggregate score:  
 
@@ -53,11 +53,12 @@ First provide a general statement summarizing the following subsections (one or 
     - **Housing Type & Transportation**
     - **Overall Vulnerability**  
 
-![SVI Classes](images/CDC-SVI-Variables.jpg)
+**Social Vulnerability Index Classes:**  
+![SVI Classes](images/CDC-SVI-Variables.jpg)  
 
 The process for exploring, processing and ultimately analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP.  
 
-**How majority zonal statistics work**  
+**How majority zonal statistics work:**  
 ![Majority](images/majority.JPG)  
 
 Additionally, classes 1, 2, 6, and 7 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) hazard potential were included in the final output.  
@@ -75,7 +76,7 @@ The final output polygon and point files are GeoJSON.
 
 The map will be a browser-based application accessible across mobile and desktop devices.  
 
-The technology stack will include HTML/CSS/JS using a combination of Leaflet and Mapbox JavaScript libraries and will most likely use an Assembly.css responsive framework. In addition, the map will include search bar functionality geolocating CDPs.  
+The technology stack will include HTML/CSS/JS using a combination of [Leaflet](https://leafletjs.com/) and [Mapbox JavaScript libraries](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and will most likely use an Assembly.css responsive framework. In addition, the map will include search bar functionality geolocating CDPs.  
 
 ### C. Application Layout  
 
@@ -94,8 +95,7 @@ When a graduated symbol is hovered on at initial map scale a tooltip will displa
 **Tooltip Example:**  
 ![Tooltip](images/gradTooltip.jpg)  
 
-
-When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a a sidebar popup holding a bar chart of four SVI weighted mean scores that make up the overall SVI. This capbility will also be available using a a dropdown search of all of CDPs on the map.
+When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a a sidebar popup holding a bar chart of four SVI weighted mean scores that make up the overall SVI. This capbility will also be available using a a dropdown search of all of CDPs on the map.  
 
 **Dropdown Search Example:**  
 ![Search](images/search.jpg)  
@@ -106,6 +106,6 @@ When a feature is clicked on at the initial map scale it will trigger a zoom eve
 ### G. Conclusion  
 
 
-## References
+### References
 - [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf) ordered the by California Governors Office
 - Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program. CDC/ATSDR Social Vulnerability Index 2018 Database United States.
