@@ -76,7 +76,7 @@ The final output polygon and point files are GeoJSON.
 
 The map will be a browser-based application accessible across mobile and desktop devices.  
 
-The technology stack will include HTML/CSS/JS using a combination of [Leaflet](https://leafletjs.com/) and [Mapbox JavaScript libraries](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and will most likely use an Assembly.css responsive framework. In addition, the map will include search bar functionality geolocating CDPs.  
+The technology stack will include HTML/CSS/JS using a combination of [Leaflet](https://leafletjs.com/) and [Mapbox JavaScript libraries](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and will most likely use an [Assembly.css](https://labs.mapbox.com/assembly/) responsive framework. In addition, the map will include search bar functionality geolocating CDPs.  
 
 ### C. Application Layout  
 
