@@ -1,5 +1,5 @@
-# United States Communities in Harms Way:
-## **Where are the Vulnerable in Relation to Wildfire Hazards**  
+# United States Communities in Harm's Way:
+## **Where are the Vulnerable in Relation to Wildfire Hazards?**  
 
 <!-- TOC -->
 
