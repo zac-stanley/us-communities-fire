@@ -59,7 +59,7 @@ The process for exploring, processing and ultimately analyzing the data used Pyt
 **How majority zonal statistics work:**  
 ![Majority](images/majority.JPG) 
 
- H Additionally, classes 1 and 2 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) hazard potential were included in the final output.  
+ Additionally, classes 1 and 2 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) hazard potential were included in the final output.  
 
 CDPs were the minimum mapping unit for the analysis yet the SVI data is available only at the tract level which is too detailed. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the average SVI values for each individual vulnerability and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each individual SVI and for the overall SVI for each CDP with a WHP class of 3, 4 or 5.
 
