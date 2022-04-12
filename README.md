@@ -57,7 +57,7 @@ The methods for the project involve two different types overlay analysis: zonal 
 The process for exploring, processing and ultimately analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP.  
 
 **How majority zonal statistics work:**  
-![Majority](images/majority.JPG)  
+![Majority](images/majority=01.JPG)  
 
 Additionally, classes 1 and 2 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) hazard potential were included in the final output.  
 
