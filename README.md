@@ -26,7 +26,7 @@ The user will be inspired to explore areas not traditionally thought of as areas
 At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts.
 
 ![Wire Frame 1](images/wireframe1.jpg)
-![Mockup 1](images/FullScreeenMockup_FullScreen_Small.jpg)
+![Mockup 1](images/FullScreeenMockup_Small.jpg)
 ![Wire Frame 2](images/wireframe2.jpg)
 
 ## II: Methodology  
