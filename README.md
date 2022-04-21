@@ -26,8 +26,8 @@ The user will be inspired to explore areas not traditionally thought of as areas
 At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts.
 
 ![Wire Frame 1](images/wireframe1.jpg)
-![Wire Frame 2](images/wireframe2.jpg)
 ![Mockup 1](images/FullScreeenMockup_FullScreen_Small.jpg)
+![Wire Frame 2](images/wireframe2.jpg)
 
 ## II: Methodology  
 The methods for the project involve two different types overlay analysis: zonal statistics and weighted mean, both of which are performed on the CDP polygons. The zonal statistics use a majority method with raster values for WHP in a CDP and weighted mean is used with SVI census tracts intersected with CDPs.
