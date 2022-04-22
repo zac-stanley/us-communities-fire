@@ -33,7 +33,8 @@ Resulting Mock-up:
 
 Zoomed Wire Frame:  
 ![Wire Frame 2](images/wireframe2.jpg)  
-Reaulting Mock-up:  
+
+Reasulting Mock-up:  
 ![Mockup 2](images/FullScreeenMockup_Zoomed_Small.jpg)  
 
 ## II: Methodology  
