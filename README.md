@@ -23,12 +23,15 @@ The map will appeal to those looking to understand not only how wildfire can aff
 
 The user will be inspired to explore areas not traditionally thought of as areas with high wildfire potential such as the southeast.
 
-At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts.
+At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts.  
+
 Full Scale Wire Frame:  
 ![Wire Frame 1](images/wireframe1.jpg)  
+
 Resulting Mock-up:  
 ![Mockup 1](images/FullScreeenMockup_Small.jpg)  
-Zoomed Wire Frame:
+
+Zoomed Wire Frame:  
 ![Wire Frame 2](images/wireframe2.jpg)  
 Reaulting Mock-up:  
 ![Mockup 2](images/FullScreeenMockup_Zoomed_Small.jpg)  
