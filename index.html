@@ -7,6 +7,12 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;500&family=League+Spartan:wght@100;500;800&display=swap" rel="stylesheet">
 
     <!-- My custom CSS -->
     <link rel="stylesheet" href="starter-template.css">
@@ -14,29 +20,38 @@
         /* Modify the background color */
          
         .navbar-custom {
-            background-color: #939290;
+            background-color: white;
         }
         /* Modify brand and text color */
          
         .navbar-custom .navbar-brand,
         .navbar-custom .navbar-text {
             color: black;
+            font-family: League Spartan;
+            font-weight: Medium;
+            letter-spacing: 3px;
+            font-size: 225%
+
+        }
+
+        .navbar-subtitle {
+
         }
     </style>
 
 
 
-    <title>Hello, world! My first starter template!!
+    <title>United States Communities in Harm's Way: Where are the Vulnerable in Relation to Wildfire Hazards?
     </title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-custom fixed-top">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-md navbar-custom fixed-top border border-dark">
+      <a class="navbar-brand" >United States Communities in Harm's Way:</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <!-- <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -55,7 +70,7 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
-        </ul>
+        </ul> -->
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
           <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
