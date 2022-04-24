@@ -53,8 +53,9 @@
             font-family: IBM Plex Mono;
             font-weight:390;
             letter-spacing: 3px;
-            font-size: 110%;
+            font-size: 95%;
             padding-right: 5px;
+            padding-left: 5px;
             display: inline-block;
         }
 
@@ -64,6 +65,11 @@
             font-weight:350;
             font-size: 90;
         }
+
+        #subtitle-1::after{
+          content: "\a";
+            white-space: pre;
+      }
 
         
     </style>
@@ -79,9 +85,13 @@
         <img id="community-icon" src="icons/community.svg">
       </div>
       <a class="navbar-title">United States Communities in Harm's Way:</a>
-      <a class="navbar-subtitle">Where are the Vulnerable in <span>Relation to Wildfire Hazards?</span></a>
+      <a class="navbar-subtitle">
+        <span id="subtitle-1">Where are the Vulnerable in</span><span id= "subtitle-2">Relation to Wildfire Hazards?</span></a>
       <div class="logo">
         <img id="fire-icon" src="icons/fire.svg">
+      </div>
+      <div class="logo">
+        <img id="info-icon" src="icons/info.svg">
       </div>
       <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
