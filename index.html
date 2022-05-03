@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
 
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="css/leaflet.css">
+
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;500&family=League+Spartan:wght@100;500;800&display=swap" rel="stylesheet">
 
@@ -23,7 +26,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-custom fixed-top border border-dark">
-      <div class="community">
+        <div class="community">
         <img id="community-icon" src="icons/community.svg">
       </div>
       <a class="navbar-title">United States Communities in Harm's Way:</a>
@@ -52,23 +55,30 @@
       </div>
     </nav>
     
-    <main role="main" class="container">
     
-      <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
-          mostly barebones HTML document.</p>
+    <!-- <main role="main" class="container"> -->
+    
+      <!-- <section class="row"> -->
+        <!-- <div class="col-md-8 col-lg-9 col-xl-10 order-md-2 px-0">
+          <div id="map"></div> -->
+        <!-- </div> -->
+      <!-- </section> -->
+
+      <div class="col-md-8" style='border: 1px solid red '>
+        <div id="map"></div>
       </div>
+
+     
     
     </main>
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS, Leaflet, and app.js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script>
-        console.log("Bring it on!")
-    </script>
-    </body>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="crossorigin=""></script>
+    <script src='js/app.js'></script>
+
+</body>
 </html>
