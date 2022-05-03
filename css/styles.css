@@ -43,7 +43,9 @@ content: "\a";
 }
 
 #map {
-  position: relative;
-  height: 400px;  /* or as desired */
-  width: 100%;  /* This means "100% of the width of its container", the .col-md-8 */
+  width: 100%;
+  height: 400px;
+  position:relative;
+  margin:0;
+  padding:0; 
 }
