@@ -45,7 +45,26 @@ content: "\a";
 #map {
   width:98vw;
   height: 100vh;
-  /* position:relative;
-  margin:0;
-  padding:0;  */
 }
+
+/* .starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+} */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+  aside {
+    height: 80vh;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
