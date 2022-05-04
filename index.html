@@ -12,7 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
 
     <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin="" />
 
     <!-- Google Web Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;500&family=League+Spartan:wght@100;500;800&display=swap" rel="stylesheet">
@@ -55,15 +57,21 @@
       </div>
     </nav>
     
-    
+    <div class="container-fluid">
+    <div class="row">
+			<div class="col">
+				<div id="map"></div>
+			</div>
+    </div>
 
-      <div class="container" width="100%">
-        <div class ="row"></div>
-        <div class ="col-md-8"></div>
-      <div class="col" width="100%" style='border: 1px solid red '>
-        <div id="map"></div>
-      </div>
-      </div>
+    <!-- COMMENTED OUT TO TEST ANOTHER APPROACH -->
+      <!-- <div class="container" width="100%">
+        <!-- <div class ="row"></div> -->
+        <!-- <div class ="col-md-8"></div> -->
+      <!-- <div class="col" width="100%"> -->
+        <!-- <div id="map"></div> -->
+      <!-- </div> -->
+      <!-- </div> -->
 
      
     

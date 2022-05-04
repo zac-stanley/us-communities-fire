@@ -2,8 +2,8 @@
 // initial Leaflet map options
 const options = {
     zoomSnap: .1,
-    // center: [40, -90], 
-    // zoom: 4,
+    center: [40, -90], 
+    zoom: 4,
     zoomControl: false
 }
 // create Leaflet map and apply options
