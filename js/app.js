@@ -18,6 +18,10 @@ L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl26t5a9k001e15o319at3j
 
 // jQuery method using AJAX request for GeoJSON data
 $.getJSON("data/cdps_svis_whp_ctr.json", function (data) {
-    console.log(data)
+   drawMap(data) 
+       
+   const pts = l.geoJson(data).addTo(map);
+   
+
 });
 })();
