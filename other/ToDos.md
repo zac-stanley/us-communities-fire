@@ -11,7 +11,10 @@
 
 #### HTML/CSS/LAYOUT
 1. Clean up hyperlink code for svg
-2. Push info svg furter to right so it's tight against search box
+2. Push info svg further to right so it's tight against search box
+3. What is the purple area in row class on right of screen
+4. Add mobile CSS including map centering
+
 
 #### Basemap
 1. Create basemap with mapbox

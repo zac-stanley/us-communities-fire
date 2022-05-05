@@ -1,79 +1,94 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-		crossorigin="" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
 
-    <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;500&family=League+Spartan:wght@100;500;800&display=swap" rel="stylesheet">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
 
-    <!-- My custom CSS -->
-    <link rel="stylesheet" href="starter-template.css">
-    <link href='css/styles.css' rel='stylesheet' />
+  <!-- Google Web Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;500&family=League+Spartan:wght@100;500;800&display=swap"
+    rel="stylesheet">
 
-    <title>United States Communities in Harm's Way: Where are the Vulnerable in Relation to Wildfire Hazards?
-    </title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-custom fixed-top border border-dark">
-        <div class="community">
-        <img id="community-icon" src="icons/community.svg">
+  <!-- My custom CSS -->
+  <link rel="stylesheet" href="starter-template.css">
+  <link href='css/styles.css' rel='stylesheet' />
+
+  <title>United States Communities in Harm's Way: Where are the Vulnerable in Relation to Wildfire Hazards?
+  </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-custom fixed-top border border-dark">
+    <div class="community">
+      <img id="community-icon" src="icons/community.svg">
+    </div>
+    <a class="navbar-title">United States Communities in Harm's Way:</a>
+    <a class="navbar-subtitle">
+      <span id="subtitle-1">Where are the Vulnerable in</span><span id="subtitle-2">Relation to Wildfire
+        Hazards?</span></a>
+    <div class="fire">
+      <img id="fire-icon" src="icons/fire.svg">
+    </div>
+    <!--NOT THE CLEANEST CODE HERE FOR HYPERLINKED SVG, SHOULD CHANGE-->
+    <div class="info ml-auto">
+      <!-- <img id="info-icon" src="icons/info.svg"> -->
+      <svg id="app-button" width="22pt" height="22pt" version="1.1" viewBox="0 0 1200 1200""
+                xmlns=" http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <a xlink:href="https://github.com/zac-stanley/us-communities-fire/blob/main/README.md" target="_blank">
+          <path
+            d="m600 0c-330 0-600 270-600 600s270 600 600 600 600-270 600-600-270-600-600-600zm0 1050c-247.5 0-450-202.5-450-450s202.5-450 450-450 450 202.5 450 450-202.5 450-450 450z" />
+          <path d="m675 300c0 41.422-33.578 75-75 75s-75-33.578-75-75 33.578-75 75-75 75 33.578 75 75" />
+          <path d="m600 450c-45 0-75 30-75 75v375c0 45 30 75 75 75s75-30 75-75v-375c0-45-30-75-75-75z" />
+        </a>
+      </svg>
+    </div>
+    <form class="form-inline ml-auto my-2 my-lg-0">
+      <input class="form-control pull-right mr-sm-2 border-dark" type="text" placeholder="Search for Community"
+        aria-label="Search">
+      <!-- <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> -->
+    </form>
+    </div>
+  </nav>
+
+  <main role="main" class="container-fluid">
+
+    <div class="starter-template">
+      <div class="row">
+        <div class="col-px-0 py-0">
+          <div id="map"></div>
+        </div>
       </div>
-      <a class="navbar-title">United States Communities in Harm's Way:</a>
-      <a class="navbar-subtitle">
-        <span id="subtitle-1">Where are the Vulnerable in</span><span id="subtitle-2">Relation to Wildfire
-          Hazards?</span></a>
-      <div class="fire">
-        <img id="fire-icon" src="icons/fire.svg">
-      </div>
-      <!--NOT THE CLEANEST CODE HERE FOR HYPERLINKED SVG, SHOULD CHANGE--> 
-      <div class="info ml-auto">
-        <!-- <img id="info-icon" src="icons/info.svg"> -->
-        <svg id="app-button" width="22pt" height="22pt" version="1.1" viewBox="0 0 1200 1200""
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <a xlink:href="https://github.com/zac-stanley/us-communities-fire/blob/main/README.md" target="_blank">
-              <path d="m600 0c-330 0-600 270-600 600s270 600 600 600 600-270 600-600-270-600-600-600zm0 1050c-247.5 0-450-202.5-450-450s202.5-450 450-450 450 202.5 450 450-202.5 450-450 450z"/>
-              <path d="m675 300c0 41.422-33.578 75-75 75s-75-33.578-75-75 33.578-75 75-75 75 33.578 75 75"/>
-              <path d="m600 450c-45 0-75 30-75 75v375c0 45 30 75 75 75s75-30 75-75v-375c0-45-30-75-75-75z"/>
-            </a>
-        </svg>
-      </div>
-      <form class="form-inline ml-auto my-2 my-lg-0">
-        <input class="form-control pull-right mr-sm-2 border-dark" type="text" placeholder="Search for Community" aria-label="Search">
-        <!-- <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> -->
-      </form>
-      </div>
-    </nav>
+  </main>
 
-    <main role="main" class="container-fluid">
-
-      <div class="starter-template">
-        <div class="row">
-          <div class="col-px-0 py-0">
-            <div id="map"></div>
-          </div>
-      </div>   
-    </main>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS, Leaflet, and app.js -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="crossorigin=""></script>
-    <script src='js/app.js'></script>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS, Leaflet, and app.js -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+  <script src='js/app.js'></script>
 
 </body>
 </html>
