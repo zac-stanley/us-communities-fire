@@ -16,11 +16,11 @@ L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl26t5a9k001e15o319at3j
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// jQuery method using AJAX request for GeoJSON data
+//jQuery method using AJAX request for GeoJSON data
 $.getJSON("data/cdps_svis_whp_ctr.json", function (data) {
-   drawMap(data) 
+   //drawMap(data) 
        
-   const pts = l.geoJson(data).addTo(map);
+//    const pts = l.geoJson(data).addTo(map);
    
 
 });
