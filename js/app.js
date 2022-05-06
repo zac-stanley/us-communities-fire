@@ -17,11 +17,23 @@ L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl26t5a9k001e15o319at3j
 }).addTo(map);
 
 //jQuery method using AJAX request for GeoJSON data
+// load, filter, and style the state outline 
 $.getJSON("data/cdps_svis_whp_ctr.json", function (data) {
-   //drawMap(data) 
-       
-//    const pts = l.geoJson(data).addTo(map);
-   
+    var pts = L.geoJson(data, {
+      style: function (feature) {
+        return {
+          color: '#20282e', // Gray
+          // Make line weight larger than the county outline
+          weight: 1.5,
+          fillOpacity: 0,
+          // This property allows us control interactivty of layer
+          interactive: false
+        };
+      }
+    });
+
+    // Add layer to map!
+    pts.addTo(map)
 
 });
 })();
