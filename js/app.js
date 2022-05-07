@@ -2,7 +2,7 @@
 // initial Leaflet map options
 const options = {
     zoomSnap: .1,
-    center: [39.82, -98.58], 
+    center: [39, -98.58], 
     zoom: 5.4,
     zoomControl: false
 }
@@ -36,7 +36,7 @@ $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
 
             pointToLayer: pointToLayer,
             style: style,
-            // onEachFeature: onEachFeature
+            onEachFeature: onEachFeature
         }
         L.geoJson(sviPoints, options).addTo(map);
     }
@@ -74,7 +74,6 @@ $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
             styleOptions.fillColor = '#f05449';
         }
 
-       
         return styleOptions;
     }
 
@@ -82,6 +81,43 @@ $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
 
         var radius = Math.sqrt(val / Math.PI);
         return radius * 25;
+
+    }
+
+    function onEachFeature(feature, layer) {
+
+        layer.on({
+            mouseover: function () {
+
+                layer.setStyle({
+                    color: "yellow",
+                    weight: 3
+                });
+
+            },
+            mouseout: function () {
+
+                layer.setStyle({
+                    fillOpacity: .6,
+                    color: "whitesmoke",
+                    weight: .1
+                });
+            }
+        });
+
+        // var typeCode = {
+        //     'fc': "fuel combustion",
+        //     'pe': "process emissions"
+        // }
+
+        // var popupInfo = feature.properties.CDP_STATE + "<br>" +
+        //     "Overall SVI Score: " + feature.properties.OVERALL_WM + "<br>" +
+        //     "Wildfire Hazard Potential: " + feature.properties.WHP_CLASS
+
+        var popupInfo = `<h3>${feature.properties.CDP_STATE}</h3>${feature.properties.OVERALL_WM}`
+
+
+        layer.bindPopup(popupInfo, { sticky: true });
 
     }
 
