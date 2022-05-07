@@ -3,7 +3,7 @@
 const options = {
     zoomSnap: .1,
     center: [39.82, -98.58], 
-    zoom: 5,
+    zoom: 5.4,
     zoomControl: false
 }
 // create Leaflet map and apply options
@@ -59,23 +59,29 @@ $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
 
             fillOpacity: .6,
             color: "whitesmoke",
-            weight: 1
+            weight: .1
+        }
 
+        if (feature.properties.WHP_CLASS === 'Very High') {
+            styleOptions.fillColor = '#ffc937';
         }
 
         if (feature.properties.WHP_CLASS === 'Moderate') {
-            styleOptions.fillColor = '#bd4932';
-        } else {
-            styleOptions.fillColor = '#105b63';
+            styleOptions.fillColor = '#384051';
+        } 
+
+        if (feature.properties.WHP_CLASS === 'High') {
+            styleOptions.fillColor = '#f05449';
         }
 
+       
         return styleOptions;
     }
 
     function calcRadius(val) {
 
         var radius = Math.sqrt(val / Math.PI);
-        return radius * 38;
+        return radius * 25;
 
     }
 
