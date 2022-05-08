@@ -105,19 +105,12 @@ $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
             }
         });
 
-        // var typeCode = {
-        //     'fc': "fuel combustion",
-        //     'pe': "process emissions"
-        // }
-
-        // var popupInfo = feature.properties.CDP_STATE + "<br>" +
-        //     "Overall SVI Score: " + feature.properties.OVERALL_WM + "<br>" +
-        //     "Wildfire Hazard Potential: " + feature.properties.WHP_CLASS
-
-        var popupInfo = `<h3>${feature.properties.CDP_STATE}</h3>${feature.properties.OVERALL_WM}`
+               var popupInfo = `<h3>${feature.properties.CDP_STATE}</h3>
+        <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4>
+        <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
 
 
-        layer.bindPopup(popupInfo, { sticky: true });
+        layer.bindPopup(popupInfo);
 
     }
 

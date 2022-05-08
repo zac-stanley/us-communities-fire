@@ -3,8 +3,16 @@ h3 {
   font-family: "League Spartan", sans-serif;
   font-size:medium;
   font-weight:400;
-  text-align: center;
+  text-align: left;
   letter-spacing: 1.5px;
+  margin: 0;
+}     
+
+h4 {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 1em;;
+  font-weight:lighter;
+  text-align: left;
   margin: 0;
 }     
 .navbar-custom {
@@ -16,7 +24,7 @@ h3 {
 
 .navbar-title {
   color: black;
-  font-family: League Spartan;
+  font-family: League Spartan, sans-serif;
   font-weight: Medium;
   letter-spacing: 3px;
   font-size: 225%;
