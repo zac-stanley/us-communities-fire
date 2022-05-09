@@ -1,7 +1,6 @@
 {
 "type": "FeatureCollection",
 "name": "cdps_svis_whp_ctr",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "GEOID": "0100100", "COUNTY": "Chambers", "FIPS": "01017953800", "LOCATION": "Census Tract 9538, Chambers County, Alabama", "AREA_SQMI": 199.11, "AFFGEOID_x": "1600000US0100100", "CDP": "Abanda", "ST_ABBR": "AL", "STATE": "Alabama", "ACRES": 1920.67, "WHP_CLASS_": 3.0, "SE_WM": 0.78, "HCD_WM": 0.67, "M_WM": 0.22, "HTT_WM": 0.7, "OVERALL_WM": 0.68, "WHP_CLASS": "Moderate", "SE_ST": 0.68, "HCD_ST": 0.68, "M_ST": 0.29, "HTT_ST": 0.48, "OVERALL_ST": 0.58, "CDP_STATE": "Abanda, AL" }, "geometry": { "type": "Point", "coordinates": [ -85.52322841260613, 33.090736716692028 ] } },
 { "type": "Feature", "properties": { "GEOID": "0100460", "COUNTY": "Jefferson", "FIPS": "01073011600", "LOCATION": "Census Tract 116, Jefferson County, Alabama", "AREA_SQMI": 40.83, "AFFGEOID_x": "1600000US0100460", "CDP": "Adamsville", "ST_ABBR": "AL", "STATE": "Alabama", "ACRES": 16974.33, "WHP_CLASS_": 3.0, "SE_WM": 0.81, "HCD_WM": 0.79, "M_WM": 0.34, "HTT_WM": 0.63, "OVERALL_WM": 0.74, "WHP_CLASS": "Moderate", "SE_ST": 0.68, "HCD_ST": 0.68, "M_ST": 0.29, "HTT_ST": 0.48, "OVERALL_ST": 0.58, "CDP_STATE": "Adamsville, AL" }, "geometry": { "type": "Point", "coordinates": [ -86.913594896327083, 33.603195374956556 ] } },
