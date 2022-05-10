@@ -8,6 +8,7 @@
     }
     // create Leaflet map and apply options
     const map = L.map('map', options);
+    let points,polygons;
     new L.control.zoom({ position: "bottomright" }).addTo(map)
 
     // request a basemap tile layer and add to the map
@@ -26,7 +27,7 @@
     // jQuery method using AJAX request for GeoJSON point data
     // add sviPoint data
     $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
-        console.log(sviPoints)
+        console.log('svipoints',sviPoints)
         drawMap(sviPoints);
 
         function drawMap(sviPoints) {
@@ -36,7 +37,8 @@
                 style: style,
                 onEachFeature: onEachFeature
             }
-            L.geoJson(sviPoints, options) .addTo(map);
+            points=L.geoJson(sviPoints, options);
+            points.addTo(map)
             
         }
 
@@ -128,7 +130,7 @@
                  style: style,
                 // onEachFeature: onEachFeature
             }
-            L.geoJson(sviPolys, options).addTo(map);
+           polygons= L.geoJson(sviPolys, options)
         }
 
         function style(feature) {
@@ -155,4 +157,16 @@
             return styleOptions;
         }
     });
+
+    map.on('zoom',()=>{
+       const currentZoom = map.getZoom();
+       if(currentZoom>=10){
+        polygons && polygons.addTo(map);
+        points && points.removeFrom(map);
+        }
+        else{
+    points&&points.addTo(map)
+    polygons&&polygons.removeFrom(map)
+        }
+    })
 })();
