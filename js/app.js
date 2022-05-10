@@ -16,8 +16,6 @@
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-
-
     // create styles common to all points
     const commonStyles = {
         weight: 1,
@@ -39,6 +37,7 @@
                 onEachFeature: onEachFeature
             }
             L.geoJson(sviPoints, options).addTo(map);
+            
         }
 
         function pointToLayer(feature, latlng) {
