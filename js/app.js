@@ -36,7 +36,7 @@
                 style: style,
                 onEachFeature: onEachFeature
             }
-            L.geoJson(sviPoints, options).addTo(map);
+            L.geoJson(sviPoints, options) .addTo(map);
             
         }
 
