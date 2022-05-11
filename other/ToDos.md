@@ -21,9 +21,10 @@
 
 #### JS
 1. ~~Plot graduated symbols~~
-2. Plot polygons with color symbology
+2. ~~Plot polygons with color symbology~~
 3. Create static legend for colors and graduated symbols - https://roh.engineering/posts/2021/05/map-symbols-and-size-legends-for-leaflet/
 4. Make search bar usable based on CDP input, might need to concatenate fields in Pandas to include CDP and State together
 5. ~~Create popups and format them for graduated symbols~~
+6. ~~Zoom change~~
 
 

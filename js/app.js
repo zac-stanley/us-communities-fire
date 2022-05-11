@@ -17,6 +17,8 @@
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+    map.fitBounds ([[ 24.396308, -124.848974],[51.384358, -66.885444]]);
+
     // create styles common to all points
     const commonStyles = {
         weight: 1,
@@ -138,8 +140,8 @@
             var styleOptions = {
 
                 fillOpacity: .6,
-                color: "whitesmoke",
-                weight: .1
+                color: "black",
+                weight: 1.5
             }
 
             if (feature.properties.WHP_CLASS === 'Very High') {
@@ -158,15 +160,18 @@
         }
     });
 
-    map.on('zoom',()=>{
-       const currentZoom = map.getZoom();
-       if(currentZoom>=10){
-        polygons && polygons.addTo(map);
-        points && points.removeFrom(map);
+    // get element from map
+    map.on('zoom', () => {
+        const currentZoom = map.getZoom();
+        if (currentZoom >= 10) {
+            // if polygons and points are present add to the map
+            polygons && polygons.addTo(map);
+            points && points.removeFrom(map);
         }
-        else{
-    points&&points.addTo(map)
-    polygons&&polygons.removeFrom(map)
+        else {
+            points && points.addTo(map)
+            polygons && polygons.removeFrom(map)
         }
     })
+
 })();
