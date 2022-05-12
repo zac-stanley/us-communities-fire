@@ -17,6 +17,7 @@
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+    // fit bounds to continental United States
     map.fitBounds ([[ 24.396308, -124.848974],[51.384358, -66.885444]]);
 
     // create styles common to all points
@@ -41,6 +42,8 @@
             }
             points=L.geoJson(sviPoints, options);
             points.addTo(map)
+
+            drawLegend(sviPoints)
             
         }
 
@@ -86,6 +89,44 @@
             return radius * 25;
 
         }
+
+        function drawLegend(sviPoints) {
+
+            var largeDiameter = calcRadius(sviPoints.features[0].properties.OVERALL_WM) * 2,
+                smallDiameter = largeDiameter/2;
+    
+            $("#legend").css('height', largeDiameter.toFixed());
+    
+            $('#legend-large').css({
+                'width': largeDiameter.toFixed(),
+                'height': largeDiameter.toFixed()
+            })
+    
+            $("#legend-large-label").html(sviPoints.features[0].properties.OVERALL_WM.toLocaleString());
+    
+            $("#legend-large-label").css({
+                'left': largeDiameter + 45,
+                'top' : -8
+            });
+    
+            $('#legend-small').css({
+                'width': smallDiameter.toFixed(),
+                'height': smallDiameter.toFixed(),
+                'top': largeDiameter - smallDiameter,
+                'left': smallDiameter/2
+            })
+    
+            $("#legend-small-label").html(('6').toLocaleString());
+    
+            $("#legend-small-label").css({
+                'top': smallDiameter - 8,
+                'left': largeDiameter + 45
+            });
+    
+            $("<hr class='large'>").insertBefore("#legend-large-label")
+            $("<hr class='small'>").insertBefore("#legend-small-label").css('top', largeDiameter - smallDiameter - 8);
+    
+       }
 
         function onEachFeature(feature, layer) {
 
@@ -173,5 +214,7 @@
             polygons && polygons.removeFrom(map)
         }
     })
+
+    
 
 })();

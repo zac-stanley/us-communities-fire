@@ -62,6 +62,39 @@ content: "\a";
   height: 100vh;
 }
 
+#side-panel {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+  width: 200px;
+  margin: 20px;
+  padding: 10px 10px;
+  background: rgba(256, 256, 256, .8);
+  border: 1px solid grey;
+  border-radius: 3px;
+  z-index: 800;
+}
+
+#legend {
+  position: relative;
+  margin: 20px 0;
+}
+#legend-large, #legend-small {
+  border: 2px solid grey;
+  border-radius: 50%;
+  background: whitesmoke;
+  position: absolute;
+}
+#legend-large-label, #legend-small-label {
+  position: absolute;
+}
+#legend hr.small, #legend hr.large {
+  width: 83px;
+  position: absolute;
+  top: -8px;
+  left: 66px;
+}
+
 /* .starter-template {
   padding: 3rem 1.5rem;
   text-align: center;
