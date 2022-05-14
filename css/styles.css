@@ -88,69 +88,20 @@ content: "\a";
 
   position: absolute;
   bottom: -5px;
-  right: -5px;
-  height: 500;
+  right: -65px;
+  height: 200;
   width: 280px;
-  padding: 5px 5px;
+  padding: 0px 0px;
   margin: 0;
   /* Add styles to match Leaflet UI elements */
-  background: rgba(256, 256, 256, 0);
+  background: whitesmoke;
+  background-size: auto;
+  opacity: .9;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
   border: 0px solid #ddd;
   border-radius: 5px;
   z-index: 800;
 }
-
-#legend {
-  position: relative;
-  margin: 20px 0;
-}
-
-#legend-large {
-  border: .2px solid black;
-  border-radius: 50%;
-  background: grey;
-  position: absolute;
-  left: 30px;
-}
-
-#legend-small {
-  border: .2px solid black;
-  border-radius: 50%;
-  background: grey;
-  position:relative;
-  top: 5px;
-}
-
-#legend-large-label {
-  position: absolute;
-  font-family: IBM Plex Mono;
-  font-weight:390;
-  letter-spacing: 3px;
-  font-size: 80%;
-  top: 1px;
-  left: 30px;
-}
-
-#legend-small-label {
-  position: absolute;
-  font-family: IBM Plex Mono;
-  font-weight:390;
-  letter-spacing: 3px;
-  font-size: 80%;
-}
-
-/* #legend hr.small, #legend hr.large {
-  width: 83px;
-  position: absolute;
-  top: -8px;
-  left: 66px;
-} */
-
-/* .starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
-} */
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {}
