@@ -9,7 +9,7 @@
     // create Leaflet map and apply options
     const map = L.map('map', options);
     let points,polygons;
-    new L.control.zoom({ position: "bottomright" }).addTo(map)
+    new L.control.zoom({ position: "topleft" }).addTo(map)
 
     // request a basemap tile layer and add to the map
     // L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -64,8 +64,8 @@
             var styleOptions = {
 
                 fillOpacity: .6,
-                color: "whitesmoke",
-                weight: .1
+                color: "black",
+                weight: .2
             }
 
             if (feature.properties.WHP_CLASS === 'Very High') {
@@ -134,7 +134,7 @@
                 mouseover: function () {
 
                     layer.setStyle({
-                        color: "yellow",
+                        color: "whitesmoke",
                         weight: 3
                     });
 
@@ -143,8 +143,8 @@
 
                     layer.setStyle({
                         fillOpacity: .6,
-                        color: "whitesmoke",
-                        weight: .1
+                        color: "black",
+                        weight: .2
                     });
                 }
             });
