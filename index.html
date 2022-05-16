@@ -18,6 +18,9 @@
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />
 
+  <!-- jQuery CSS -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+
   <!-- Google Web Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;500&family=League+Spartan:wght@100;500;800&display=swap"
@@ -55,15 +58,20 @@
         </a>
       </svg>
     </div>
-    <form class="form-inline ml-auto my-2 my-lg-0">
+    <!-- <form class="form-inline ml-auto my-2 my-lg-0">
       <input class="form-control pull-right mr-sm-2 border-dark" type="text" placeholder="Search for Community"
         aria-label="Search">
-      <!-- <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> -->
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> -->
     </form>
     </div>
+
+     <!--Add separate div for search bar-->
+   <div class="ui-widget"  style="text-align:left;">
+    <input id="autocomplete" placeholder="Search for Community">
+    </div> 
   </nav>
 
-  <main role="main" class="container-fluid">
+   <main role="main" class="container-fluid">
 
     <div class="starter-template">
       <div class="row">
@@ -72,6 +80,8 @@
         </div>
       </div>
   </main>
+
+  
 
   <!-- Add legend as SVG element -->
   <svg>
@@ -87,6 +97,7 @@
   <!-- jQuery first, Bootstrap JS, Leaflet, and app.js -->
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>

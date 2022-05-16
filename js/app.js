@@ -9,6 +9,9 @@
     // create Leaflet map and apply options
     const map = L.map('map', options);
     let points,polygons;
+    const url = "data/cdps_svis_whp.json"
+    const arr = [];
+    const arr1 = [];
     new L.control.zoom({ position: "topleft" }).addTo(map)
 
     // request a basemap tile layer and add to the map
@@ -159,7 +162,75 @@
 
             return styleOptions;
         }
+
+        $( "#autocomplete" ).autocomplete();
+
+        function forEachFeature(feature, layer) {
+            // Tagging each state poly with their name for the search control.
+            layer._leaflet_id = feature.properties.CDP_STATE;
+
+            // var popupContent = "<p><b>STATE: </b>"+ feature.properties.STATE_NAME +
+            //     "</br>REGION: "+ feature.properties.SUB_REGION +
+            //     "</br>STATE ABBR: "+ feature.properties.STATE_ABBR +
+            //     "</br>POP2010: "+ feature.properties.POP2010.toLocaleString() +
+            //     "</br>Pop 2010 per SQMI: "+ feature.properties.POP10_SQMI.toLocaleString() +
+            //     "</br>Males: "+ feature.properties.MALES.toLocaleString() +
+            //     "</br>Females: "+ feature.properties.FEMALES.toLocaleString() +
+            //     "</br>SQ Miles: "+ feature.properties.SQMI.toLocaleString() +'</p>';
+
+            // layer.bindPopup(popupContent);
+
+            // layer.on("click", function (e) { 
+            //     stateLayer.setStyle(style); //resets layer colors
+            //     layer.setStyle(highlight);  //highlights selected.
+            // }); 
+		}
+
+         // Null variable that will hold layer
+var cdpState = L.geoJson(null, {onEachFeature: forEachFeature});
+
+$.getJSON(url, function(data) {
+        cdpState.addData(data);
+	
+        for (i = 0; i < data.features.length; i++) {  //loads cdp name into an array for searching
+            arr1.push({label:data.features[i].properties.CDP_STATE, value:""});
+        }
+       addDataToAutocomplete(arr1);  //passes array for sorting and to load search control.
     });
+
+    cdpState.addTo(map);
+
+    // Autocomplete search
+	function addDataToAutocomplete(arr) {
+                 
+        arr.sort(function(a, b){ // sort object by Name
+            var nameA=a.label, nameB=b.label
+            if (nameA < nameB) //sort string ascending
+                return -1 
+            if (nameA > nameB)
+                return 1
+            return 0 //default return value (no sorting)
+        })
+
+   		// The source for autocomplete.  https://api.jqueryui.com/autocomplete/#method-option
+		$( "#autocomplete" ).autocomplete("option", "source", arr); 
+	
+		$( "#autocomplete" ).on( "autocompleteselect", function( event, ui ) {
+			polySelect(ui.item.label);  //grabs selected state name
+			ui.item.value='';
+		});
+	}	// Autocomplete search end
+
+    // fire off click event and zoom to polygon  
+  	function polySelect(a){
+		map._layers[a].fire('click');  // 'clicks' on state name from search
+		var layer = map._layers[a];
+		map.fitBounds(layer.getBounds());  // zooms to selected poly
+        }
+// END...fire off click event and zoom to polygon
+    });
+
+   
 
     // get element from map
     map.on('zoom', () => {
