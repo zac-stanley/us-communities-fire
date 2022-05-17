@@ -163,7 +163,7 @@
             return styleOptions;
         }
 
-        $( "#autocomplete" ).autocomplete();
+        $("#autocomplete").autocomplete();
 
         // Set style function that sets fill color property
         function style(feature) {
@@ -197,57 +197,57 @@
 
             // layer.bindPopup(popupContent);
 
-             layer.on("click", function (e) { 
-            //     stateLayer.setStyle(style); //resets layer colors
+            layer.on("click", function (e) {
+                //     stateLayer.setStyle(style); //resets layer colors
                 layer.setStyle(highlight);  //highlights selected.
-             }); 
-		}
-
-         // Null variable that will hold layer
-var cdpState = L.geoJson(null, {onEachFeature: forEachFeature});
-
-$.getJSON(url, function(data) {
-        cdpState.addData(data);
-	
-        for (i = 0; i < data.features.length; i++) {  //loads cdp name into an array for searching
-            arr1.push({label:data.features[i].properties.CDP_STATE, value:""});
+            });
         }
-       addDataToAutocomplete(arr1);  //passes array for sorting and to load search control.
+
+        // Null variable that will hold layer
+        var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
+
+        $.getJSON(url, function (data) {
+            cdpState.addData(data);
+
+            for (i = 0; i < data.features.length; i++) {  //loads cdp name into an array for searching
+                arr1.push({ label: data.features[i].properties.CDP_STATE, value: "" });
+            }
+            addDataToAutocomplete(arr1);  //passes array for sorting and to load search control.
+        });
+
+        cdpState.addTo(map);
+
+        // Autocomplete search
+        function addDataToAutocomplete(arr) {
+
+            arr.sort(function (a, b) { // sort object by Name
+                var nameA = a.label, nameB = b.label
+                if (nameA < nameB) //sort string ascending
+                    return -1
+                if (nameA > nameB)
+                    return 1
+                return 0 //default return value (no sorting)
+            })
+
+            // The source for autocomplete.  https://api.jqueryui.com/autocomplete/#method-option
+            $("#autocomplete").autocomplete("option", "source", arr);
+
+            $("#autocomplete").on("autocompleteselect", function (event, ui) {
+                polySelect(ui.item.label);  //grabs selected state name
+                ui.item.value = '';
+            });
+        }	// Autocomplete search end
+
+        // fire off click event and zoom to polygon  
+        function polySelect(a) {
+            map._layers[a].fire('click');  // 'clicks' on state name from search
+            var layer = map._layers[a];
+            map.fitBounds(layer.getBounds());  // zooms to selected poly
+        }
+        // END...fire off click event and zoom to polygon
     });
 
-    cdpState.addTo(map);
 
-    // Autocomplete search
-	function addDataToAutocomplete(arr) {
-                 
-        arr.sort(function(a, b){ // sort object by Name
-            var nameA=a.label, nameB=b.label
-            if (nameA < nameB) //sort string ascending
-                return -1 
-            if (nameA > nameB)
-                return 1
-            return 0 //default return value (no sorting)
-        })
-
-   		// The source for autocomplete.  https://api.jqueryui.com/autocomplete/#method-option
-		$( "#autocomplete" ).autocomplete("option", "source", arr); 
-	
-		$( "#autocomplete" ).on( "autocompleteselect", function( event, ui ) {
-			polySelect(ui.item.label);  //grabs selected state name
-			ui.item.value='';
-		});
-	}	// Autocomplete search end
-
-    // fire off click event and zoom to polygon  
-  	function polySelect(a){
-		map._layers[a].fire('click');  // 'clicks' on state name from search
-		var layer = map._layers[a];
-		map.fitBounds(layer.getBounds());  // zooms to selected poly
-        }
-// END...fire off click event and zoom to polygon
-    });
-
-   
 
     // get element from map
     map.on('zoom', () => {
