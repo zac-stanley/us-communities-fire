@@ -165,6 +165,23 @@
 
         $( "#autocomplete" ).autocomplete();
 
+        // Set style function that sets fill color property
+        function style(feature) {
+            return {
+                fillColor: 'green',
+                fillOpacity: 0.5,
+                weight: 2,
+                opacity: 1,
+                color: '#ffffff',
+                dashArray: '3'
+            };
+        }
+        var highlight = {
+            'fillColor': 'yellow',
+            'weight': 2,
+            'opacity': 1
+        };
+
         function forEachFeature(feature, layer) {
             // Tagging each state poly with their name for the search control.
             layer._leaflet_id = feature.properties.CDP_STATE;
@@ -180,10 +197,10 @@
 
             // layer.bindPopup(popupContent);
 
-            // layer.on("click", function (e) { 
+             layer.on("click", function (e) { 
             //     stateLayer.setStyle(style); //resets layer colors
-            //     layer.setStyle(highlight);  //highlights selected.
-            // }); 
+                layer.setStyle(highlight);  //highlights selected.
+             }); 
 		}
 
          // Null variable that will hold layer

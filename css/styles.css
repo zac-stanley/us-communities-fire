@@ -57,8 +57,9 @@ color: black;
   font-family: IBM Plex Mono;
   font-weight:350;
   font-size: 90;
-  z-index: 400;
+  z-index: 800;
   margin-bottom: 5px;
+
 }
 
 #subtitle-1::after{
@@ -69,6 +70,7 @@ content: "\a";
 #map {
   width:100vw;
   height: 100vh;
+  z-index: 300;
 }
 
 .leaflet-top {
@@ -90,7 +92,7 @@ content: "\a";
   background: rgba(256, 256, 256, .8);
   border: 1px solid grey;
   border-radius: 3px;
-  z-index: 800;
+  z-index: 300;
 }
 
 #logo {
@@ -109,7 +111,7 @@ content: "\a";
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
   border: 0px solid #ddd;
   border-radius: 5px;
-  z-index: 800;
+  z-index: 300;
 }
 
 /* Small devices (landscape phones, 576px and up) */
