@@ -8,7 +8,7 @@
     }
     // create Leaflet map and apply options
     const map = L.map('map', options);
-    let points, polygons;
+    let points,polygons;
     const url = "data/cdps_svis_whp.json"
     const arr = [];
     const arr1 = [];
@@ -21,7 +21,7 @@
     }).addTo(map);
 
     // fit bounds to continental United States
-    map.fitBounds([[24.396308, -124.848974], [51.384358, -66.885444]]);
+    map.fitBounds ([[ 24.396308, -124.848974],[51.384358, -66.885444]]);
 
     // create styles common to all points
     const commonStyles = {
@@ -33,7 +33,7 @@
     // jQuery method using AJAX request for GeoJSON point data
     // add sviPoint data
     $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
-        console.log('svipoints', sviPoints)
+        console.log('svipoints',sviPoints)
         drawMap(sviPoints);
 
         function drawMap(sviPoints) {
@@ -43,9 +43,9 @@
                 style: style,
                 onEachFeature: onEachFeature
             }
-            points = L.geoJson(sviPoints, options);
+            points=L.geoJson(sviPoints, options);
             points.addTo(map)
-
+            
         }
 
         function pointToLayer(feature, latlng) {
@@ -128,53 +128,62 @@
     $.getJSON("data/cdps_svis_whp.json", function (sviPolys) {
         console.log(sviPolys)
         drawMap(sviPolys);
-        
-        // Initialize autocomplete with empty source.
-        $("#autocomplete").autocomplete();
 
         function drawMap(sviPolys) {
             var options = {
 
                 // pointToLayer: pointToLayer,
-                style: style,
+                 style: style,
                 // onEachFeature: onEachFeature
             }
-            polygons = L.geoJson(sviPolys, options)
+           polygons= L.geoJson(sviPolys, options)
         }
-        
-        // set style function based on whp class, highligt selected feature
+
         function style(feature) {
 
             var styleOptions = {
 
                 fillOpacity: .6,
                 color: "black",
-                weight: .2
+                weight: 1.5
             }
 
             if (feature.properties.WHP_CLASS === 'Very High') {
                 styleOptions.fillColor = '#ffc937';
             }
 
-            if (feature.properties.WHP_CLASS === 'High') {
-                styleOptions.fillColor = '#f05449';
-            }
-
             if (feature.properties.WHP_CLASS === 'Moderate') {
                 styleOptions.fillColor = '#384051';
             }
 
+            if (feature.properties.WHP_CLASS === 'High') {
+                styleOptions.fillColor = '#f05449';
+            }
+
             return styleOptions;
-        };
-        var highlight = {
-            color: '#E01FFF',
-            weight: 3,
-            opacity: 500,
-            dashArray: 6
-        };
+        }
+
+        $("#autocomplete").autocomplete();
+
+        // Set style function that sets fill color property
+        // function style(feature) {
+        //     return {
+        //         fillColor: 'green',
+        //         fillOpacity: 0.5,
+        //         weight: 2,
+        //         opacity: 1,
+        //         color: '#ffffff',
+        //         dashArray: '3'
+        //     };
+        // }
+        // var highlight = {
+        //     'stroke': 'yellow',
+        //     'weight': 2,
+        //     // 'opacity': 1
+        // };
 
         function forEachFeature(feature, layer) {
-            // Tagging each CDP polygon with their name for the search control.
+            // Tagging each state poly with their name for the search control.
             layer._leaflet_id = feature.properties.CDP_STATE;
 
             // var popupContent = "<p><b>STATE: </b>"+ feature.properties.STATE_NAME +
@@ -189,17 +198,22 @@
             // layer.bindPopup(popupContent);
 
             layer.on("click", function (e) {
-                cdpState.setStyle(style); //resets layer colors
-                layer.setStyle(highlight);  //highlights selected.
+                //     stateLayer.setStyle(style); //resets layer colors
+                // layer.setStyle(highlight);  //highlights selected.
             });
         }
-        var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
-        cdpState.addData(sviPolys);
 
-        for (i = 0; i < sviPolys.features.length; i++) {  //loads cdp name into an array for searching
-            arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" });
-        }
-        addDataToAutocomplete(arr1);  //passes array for sorting and to load search control.
+        // Null variable that will hold layer
+        var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
+
+        $.getJSON(url, function (data) {
+            cdpState.addData(data);
+
+            for (i = 0; i < data.features.length; i++) {  //loads cdp name into an array for searching
+                arr1.push({ label: data.features[i].properties.CDP_STATE, value: "" });
+            }
+            addDataToAutocomplete(arr1);  //passes array for sorting and to load search control.
+        });
 
         cdpState.addTo(map);
 
@@ -219,14 +233,14 @@
             $("#autocomplete").autocomplete("option", "source", arr);
 
             $("#autocomplete").on("autocompleteselect", function (event, ui) {
-                polySelect(ui.item.label);  //grabs selected CDP name
+                polySelect(ui.item.label);  //grabs selected state name
                 ui.item.value = '';
             });
         }	// Autocomplete search end
 
         // fire off click event and zoom to polygon  
         function polySelect(a) {
-            map._layers[a].fire('click');  // 'clicks' on CDP name from search
+            map._layers[a].fire('click');  // 'clicks' on state name from search
             var layer = map._layers[a];
             map.fitBounds(layer.getBounds());  // zooms to selected poly
         }
@@ -245,5 +259,6 @@
             points && points.addTo(map)
             polygons && polygons.removeFrom(map)
         }
-    })
+    })   
+
 })();
