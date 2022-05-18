@@ -193,17 +193,19 @@
                 layer.setStyle(highlight);  //highlights selected.
             });
         }
+        
+        // Null variable that will hold the layer
         var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
         cdpState.addData(sviPolys);
 
-        for (i = 0; i < sviPolys.features.length; i++) {  //loads cdp name into an array for searching
-            arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" });
+        for (i = 0; i < sviPolys.features.length; i++) {  //for loop that loads cdp name into an array for searching
+            arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" }); // push values into empty array
         }
-        addDataToAutocomplete(arr1);  //passes array for sorting and to load search control.
+        addDataToAutocomplete(arr1);  // passes array for sorting and to load search control.
 
         cdpState.addTo(map);
 
-        // Autocomplete search
+        // Autocomplete search funtion
         function addDataToAutocomplete(arr) {
 
             arr.sort(function (a, b) { // sort object by Name
@@ -219,7 +221,7 @@
             $("#autocomplete").autocomplete("option", "source", arr);
 
             $("#autocomplete").on("autocompleteselect", function (event, ui) {
-                polySelect(ui.item.label);  //grabs selected CDP name
+                polySelect(ui.item.label);  // grabs selected CDP name
                 ui.item.value = '';
             });
         }	// Autocomplete search end
@@ -228,7 +230,7 @@
         function polySelect(a) {
             map._layers[a].fire('click');  // 'clicks' on CDP name from search
             var layer = map._layers[a];
-            map.fitBounds(layer.getBounds());  // zooms to selected poly
+            map.fitBounds(layer.getBounds().pad(.07));  // zooms to selected poly, creates space around poly using pad method
         }
         // END...fire off click event and zoom to polygon
     });
