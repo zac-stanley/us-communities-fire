@@ -100,20 +100,16 @@ content: "\a";
 
   position: absolute;
   bottom: -5px;
-  right: -65px;
-  height: 200;
-  width: 280px;
-  padding: 0px 0px;
-  margin: 0;
-  /* Add styles to match Leaflet UI elements */
-  background: whitesmoke;
-  background-size: auto;
+  left: 5px;
   opacity: .9;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0);
-  border: 0px solid #ddd;
-  border-radius: 5px;
+  background-color: whitesmoke;
+  background-size: 100vw; 
   z-index: 1;
 }
+
+
+
+
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {}
