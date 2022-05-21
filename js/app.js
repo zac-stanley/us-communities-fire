@@ -12,7 +12,7 @@
     const url = "data/cdps_svis_whp.json"
     const arr = [];
     const arr1 = [];
-    new L.control.zoom({ position: "topleft" }).addTo(map)
+    //new L.control.zoom({ position: "topleft" }).addTo(map)
 
     // request a basemap tile layer and add to the map
     // L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -29,6 +29,11 @@
         stroke: 1,
         fillOpacity: .8
     }
+
+    // add sidebar
+    var sidebar = L.control.sidebar('sidebar').addTo(map);
+    map.addControl(sidebar);
+  
 
     // jQuery method using AJAX request for GeoJSON point data
     // add sviPoint data
