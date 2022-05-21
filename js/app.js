@@ -167,72 +167,71 @@
             return styleOptions;
         };
         var highlight = {
-            color: '#E01FFF',
+            color: '#300133',
             weight: 3,
             opacity: 500,
             dashArray: 6
         };
 
-        // function forEachFeature(feature, layer) {
-        //     // Tagging each CDP polygon with their name for the search control.
-        //     layer._leaflet_id = feature.properties.CDP_STATE;
+        function forEachFeature(feature, layer) {
+            // Tagging each CDP polygon with their name for the search control.
+            layer._leaflet_id = feature.properties.CDP_STATE;
 
-        //     // var popupContent = "<p><b>STATE: </b>"+ feature.properties.STATE_NAME +
-        //     //     "</br>REGION: "+ feature.properties.SUB_REGION +
-        //     //     "</br>STATE ABBR: "+ feature.properties.STATE_ABBR +
-        //     //     "</br>POP2010: "+ feature.properties.POP2010.toLocaleString() +
-        //     //     "</br>Pop 2010 per SQMI: "+ feature.properties.POP10_SQMI.toLocaleString() +
-        //     //     "</br>Males: "+ feature.properties.MALES.toLocaleString() +
-        //     //     "</br>Females: "+ feature.properties.FEMALES.toLocaleString() +
-        //     //     "</br>SQ Miles: "+ feature.properties.SQMI.toLocaleString() +'</p>';
+             var popupContent = `<h3>${feature.properties.CDP_STATE}</h3>
+             <h4>Socioeconomic Score: <b>${feature.properties.SE_WM}</b></h4><br>
+             <h4>Composition & Disability Score: <b>${feature.properties.HCD_WM}</b></h4><br>
+             <h4>Minority Status Score: <b>${feature.properties.M_WM}</b></h4><br>
+             <h4>Housing and Transportation Score: <b>${feature.properties.HTT_WM}</b></h4><br>
+             <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4><br>
+             <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
 
-        //     // layer.bindPopup(popupContent);
+             layer.bindPopup(popupContent);
 
-        //     layer.on("click", function (e) {
-        //         cdpState.setStyle(style); //resets layer colors
-        //         layer.setStyle(highlight);  //highlights selected.
-        //     });
-        // }
+            layer.on("click", function (e) {
+                cdpState.setStyle(style); //resets layer colors
+                layer.setStyle(highlight);  //highlights selected.
+            });
+        }
         
-        // // Null variable that will hold the layer
-        // var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
-        // cdpState.addData(sviPolys);
+        // Null variable that will hold the layer
+        var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
+        cdpState.addData(sviPolys);
 
-        // for (i = 0; i < sviPolys.features.length; i++) {  //for loop that loads cdp name into an array for searching
-        //     arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" }); // push values into empty array
-        // }
-        // addDataToAutocomplete(arr1);  // passes array for sorting and to load search control.
+        for (i = 0; i < sviPolys.features.length; i++) {  //for loop that loads cdp name into an array for searching
+            arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" }); // push values into empty array
+        }
+        addDataToAutocomplete(arr1);  // passes array for sorting and to load search control.
 
-        // cdpState.addTo(map);
+        cdpState.addTo(map);
 
-        // // Autocomplete search funtion
-        // function addDataToAutocomplete(arr) {
+        // Autocomplete search funtion
+        function addDataToAutocomplete(arr) {
 
-        //     arr.sort(function (a, b) { // sort object by Name
-        //         var nameA = a.label, nameB = b.label
-        //         if (nameA < nameB) //sort string ascending
-        //             return -1
-        //         if (nameA > nameB)
-        //             return 1
-        //         return 0 //default return value (no sorting)
-        //     })
+            arr.sort(function (a, b) { // sort object by Name
+                var nameA = a.label, nameB = b.label
+                if (nameA < nameB) //sort string ascending
+                    return -1
+                if (nameA > nameB)
+                    return 1
+                return 0 //default return value (no sorting)
+            })
 
-        //     // The source for autocomplete.  https://api.jqueryui.com/autocomplete/#method-option
-        //     $("#autocomplete").autocomplete("option", "source", arr);
+            // The source for autocomplete.  https://api.jqueryui.com/autocomplete/#method-option
+            $("#autocomplete").autocomplete("option", "source", arr);
 
-        //     $("#autocomplete").on("autocompleteselect", function (event, ui) {
-        //         polySelect(ui.item.label);  // grabs selected CDP name
-        //         ui.item.value = '';
-        //     });
-        // }	// Autocomplete search end
+            $("#autocomplete").on("autocompleteselect", function (event, ui) {
+                polySelect(ui.item.label);  // grabs selected CDP name
+                ui.item.value = '';
+            });
+        }	// Autocomplete search end
 
-        // // fire off click event and zoom to polygon  
-        // function polySelect(a) {
-        //     map._layers[a].fire('click');  // 'clicks' on CDP name from search
-        //     var layer = map._layers[a];
-        //     map.fitBounds(layer.getBounds().pad(.1));  // zooms to selected poly, creates space around poly using pad method
-        // }
-        // // END...fire off click event and zoom to polygon
+        // fire off click event and zoom to polygon  
+        function polySelect(a) {
+            map._layers[a].fire('click');  // 'clicks' on CDP name from search
+            var layer = map._layers[a];
+            map.fitBounds(layer.getBounds().pad(.1));  // zooms to selected poly, creates space around poly using pad method
+        }
+        // END...fire off click event and zoom to polygon
     });
 
     // get element from map
