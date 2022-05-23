@@ -198,20 +198,11 @@
             polygons = L.geoJson(sviPolys, options)
         }
         
-        // set style function based on whp class, highligt selected feature
- 
-
-
- 
-        
-        // Null variable that will hold the layer
-      //  var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
-      //  cdpState.addData(sviPolys);
 
         for (i = 0; i < sviPolys.features.length; i++) {  //for loop that loads cdp name into an array for searching
             arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" }); // push values into empty array
         }
-        console.log('arr1',arr1)
+    
         addDataToAutocomplete(arr1);  // passes array for sorting and to load search control.
 
         //cdpState.addTo(map);
