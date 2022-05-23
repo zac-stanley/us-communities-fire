@@ -1,7 +1,7 @@
 .sidebar {
-    position: absolute;
-    top:-50px;
-    bottom: 50;
+    position: fixed;
+    top: 55px !important;
+    height: calc(100vh - 55px);
     width: 100%;
     overflow: hidden;
     z-index: 1000; }

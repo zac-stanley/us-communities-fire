@@ -128,6 +128,57 @@
 
     });
 
+    var highlight = {
+        color: '#300133',
+        weight: 3,
+        opacity: 500,
+        dashArray: 6
+    };
+
+    function forEachFeature(feature, layer) {
+        // Tagging each CDP polygon with their name for the search control.
+        layer._leaflet_id = feature.properties.CDP_STATE;
+
+         var popupContent = `<h3>${feature.properties.CDP_STATE}</h3>
+         <h4>Socioeconomic Score: <b>${feature.properties.SE_WM}</b></h4><br>
+         <h4>Composition & Disability Score: <b>${feature.properties.HCD_WM}</b></h4><br>
+         <h4>Minority Status Score: <b>${feature.properties.M_WM}</b></h4><br>
+         <h4>Housing and Transportation Score: <b>${feature.properties.HTT_WM}</b></h4><br>
+         <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4><br>
+         <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
+
+         layer.bindPopup(popupContent);
+
+        layer.on("click", function (e) {
+            polygons.setStyle(style); //resets layer colors
+            layer.setStyle(highlight);  //highlights selected.
+        });
+    }
+
+    function style(feature) {
+
+        var styleOptions = {
+
+            fillOpacity: .7,
+            color: "black",
+            weight: .2
+        }
+
+        if (feature.properties.WHP_CLASS === 'Very High') {
+            styleOptions.fillColor = '#941000';
+        }
+
+        if (feature.properties.WHP_CLASS === 'High') {
+            styleOptions.fillColor = '#BD4400';
+        }
+
+        if (feature.properties.WHP_CLASS === 'Moderate') {
+            styleOptions.fillColor = '#E68900';
+        }
+
+        return styleOptions;
+    };
+
     // jQuery method using AJAX request for GeoJSON polygon data
     // add sviPolys data
     $.getJSON("data/cdps_svis_whp.json", function (sviPolys) {
@@ -141,73 +192,29 @@
             var options = {
 
                 // pointToLayer: pointToLayer,
-                style: style,
-                // onEachFeature: onEachFeature
+                style,
+                onEachFeature: forEachFeature
             }
             polygons = L.geoJson(sviPolys, options)
         }
         
         // set style function based on whp class, highligt selected feature
-        function style(feature) {
+ 
 
-            var styleOptions = {
 
-                fillOpacity: .7,
-                color: "black",
-                weight: .2
-            }
-
-            if (feature.properties.WHP_CLASS === 'Very High') {
-                styleOptions.fillColor = '#941000';
-            }
-
-            if (feature.properties.WHP_CLASS === 'High') {
-                styleOptions.fillColor = '#BD4400';
-            }
-
-            if (feature.properties.WHP_CLASS === 'Moderate') {
-                styleOptions.fillColor = '#E68900';
-            }
-
-            return styleOptions;
-        };
-        var highlight = {
-            color: '#300133',
-            weight: 3,
-            opacity: 500,
-            dashArray: 6
-        };
-
-        function forEachFeature(feature, layer) {
-            // Tagging each CDP polygon with their name for the search control.
-            layer._leaflet_id = feature.properties.CDP_STATE;
-
-             var popupContent = `<h3>${feature.properties.CDP_STATE}</h3>
-             <h4>Socioeconomic Score: <b>${feature.properties.SE_WM}</b></h4><br>
-             <h4>Composition & Disability Score: <b>${feature.properties.HCD_WM}</b></h4><br>
-             <h4>Minority Status Score: <b>${feature.properties.M_WM}</b></h4><br>
-             <h4>Housing and Transportation Score: <b>${feature.properties.HTT_WM}</b></h4><br>
-             <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4><br>
-             <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
-
-             layer.bindPopup(popupContent);
-
-            layer.on("click", function (e) {
-                cdpState.setStyle(style); //resets layer colors
-                layer.setStyle(highlight);  //highlights selected.
-            });
-        }
+ 
         
         // Null variable that will hold the layer
-        var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
-        cdpState.addData(sviPolys);
+      //  var cdpState = L.geoJson(null, { onEachFeature: forEachFeature });
+      //  cdpState.addData(sviPolys);
 
         for (i = 0; i < sviPolys.features.length; i++) {  //for loop that loads cdp name into an array for searching
             arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" }); // push values into empty array
         }
+        console.log('arr1',arr1)
         addDataToAutocomplete(arr1);  // passes array for sorting and to load search control.
 
-        cdpState.addTo(map);
+        //cdpState.addTo(map);
 
         // Autocomplete search funtion
         function addDataToAutocomplete(arr) {
@@ -225,6 +232,7 @@
             $("#autocomplete").autocomplete("option", "source", arr);
 
             $("#autocomplete").on("autocompleteselect", function (event, ui) {
+                polygons && polygons.addTo(map);
                 polySelect(ui.item.label);  // grabs selected CDP name
                 ui.item.value = '';
             });
