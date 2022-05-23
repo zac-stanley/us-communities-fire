@@ -14,6 +14,10 @@
 2. Push info svg further to right so it's tight against search box
 3. ~~What is the purple area in row class on right of screen~~
 4. Put info SVG and search bar in same div so they always stay in the place.
+5.~~ Use greater arrow instead of values for SVI vulnerabilty legend?~~
+6. side bar content
+    * info
+    * legend
 
 
 #### Basemap
@@ -22,9 +26,13 @@
 #### JS
 1. ~~Plot graduated symbols~~
 2. ~~Plot polygons with color symbology~~
-3. Create static legend for colors and graduated symbols - https://roh.engineering/posts/2021/05/map-symbols-and-size-legends-for-leaflet/
-4. Make search bar usable based on CDP input, might need to concatenate fields in Pandas to include CDP and State together
-5. ~~Create popups and format them for graduated symbols~~
-6. ~~Zoom change~~
+3. Update static legend for colors and graduated symbols, fix colors, make background same greay as ocean - https://roh.engineering/posts/2021/05/map-symbols-and-size-legends-for-leaflet/
+4. ~~Make search bar usable based on CDP input, figure out why search list is below map and legend (#logo)  divs~~
+5. ~~might need to concatenate fields in Pandas to include CDP and State together~~
+6. ~~Create popups and format them for graduated symbols~~
+7. ~~Zoom change~~
+8. ~~Getbounds~~
+9. Label zoomed to polygons?
+10. Create charts in D3 or other based on zoom
 
 
