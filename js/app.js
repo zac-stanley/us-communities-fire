@@ -12,7 +12,7 @@
     const url = "data/cdps_svis_whp.json"
     const arr = [];
     const arr1 = [];
-    //new L.control.zoom({ position: "topleft" }).addTo(map)
+    new L.control.zoom({ position: "topleft" }).addTo(map)
 
     // request a basemap tile layer and add to the map
     // L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -35,6 +35,7 @@
     map.addControl(sidebar);
   
 
+
     // jQuery method using AJAX request for GeoJSON point data
     // add sviPoint data
     $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
@@ -52,6 +53,7 @@
             points.addTo(map)
 
         }
+
 
         function pointToLayer(feature, latlng) {
             // function will take Point Feature geometry
@@ -127,6 +129,9 @@
         }
 
     });
+
+  
+
 
     var highlight = {
         color: '#300133',
@@ -236,6 +241,10 @@
             map.fitBounds(layer.getBounds().pad(.1));  // zooms to selected poly, creates space around poly using pad method
         }
         // END...fire off click event and zoom to polygon
+
+        polygons.on("click", function (e) {
+            map.fitBounds(e.layer.getBounds().pad(.1)); 
+        });
     });
 
     // get element from map

@@ -102,7 +102,8 @@ content: "\a";
   }
   
   .leaflet-top .leaflet-control-zoom {
-  top:6%;
+
+  top:54px;
   transform: translateY(-6%);
   }
 
