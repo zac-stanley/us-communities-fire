@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
     crossorigin="" />
-  <link href='css/leaflet-sidebar.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/leaflet-sidebar.css" />
 
   <!-- jQuery CSS -->
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
@@ -54,23 +54,28 @@
     <div class="sidebar-content">
         <div class="sidebar-pane" id="home">
             <h1 class="sidebar-header">
-                sidebar-v2
+                About this map
                 <span class="sidebar-close"><i class="fa fa-caret-left"></i></span>
             </h1>
 
-            <p>A responsive sidebar for mapping libraries like <a href="http://leafletjs.com/">Leaflet</a> or <a href="http://openlayers.org/">OpenLayers</a>.</p>
+            <p>This map shows the intersection of wildfire hazard potential and socially vulnerable communities throughout the conterminous United States</a>.</p>
 
-            <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p class="lorem">Combining two symbology techniques; sequential colors and proportional symbols the map is a bivariate representation of census designated places with two phenomena simultaneously. The sequential colors represent wildfire hazard potential: moderate, high and very high. The proportional symbols represent the level of social vulnerability: 0-1.   </p>
 
-            <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <h1 class="lorem">How to use the map</h1>
 
-            <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p class="lorem">Hover over a point of interest to get retrieve the community name, its wildfire hazard potential class and an overall social vulnerability score (SVI)</p>
 
-            <p class="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p class="lorem">Click on a point of interest to zoom to that location see the community boundary with wildfire hazard potential colors a detailed breakdown of the individual values that make up the overall SVI value. You can also use the search bar in the upper right of the map to zoom to a community boundary and get the same detailed break you get by clicking on a point.</p>
         </div>
 
         <div class="sidebar-pane" id="profile">
-            <h1 class="sidebar-header">Profile<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            <h1 class="sidebar-header">Explanation of symbols<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
+            <div id="logo">
+              <svg width="200" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <image x="20" y="40" href="images\StaticLegend-03-03.png" height="250" width="170" />
+              </svg>
+            </div>
         </div>
 
         <div class="sidebar-pane" id="messages">
@@ -129,23 +134,16 @@
           <div id="map"></div>
         </div>
       </div>
-
   </main>
 
-  
-
-
-  
-
   <!-- Add legend as SVG element --> 
-    <div id="logo">
+    <!-- <div id="logo">
       <svg width="200" height="300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <image x="20" y="40" href="images\StaticLegend-03-03.png" height="250" width="170" />
       </svg>
-    </div>
+    </div> -->
 
   </section>
-  
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, Bootstrap JS, Leaflet, and app.js -->
@@ -158,9 +156,9 @@
   <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
     integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
     crossorigin=""></script>
-    <script src="https://unpkg.com/leaflet-sidebar-v2"></script>
-    <script src='js/app.js'></script>
+    <!-- <script src="https://unpkg.com/leaflet-sidebar-v2"></script> -->
     <script src='js/leaflet-sidebar.js'></script>
+    <script src='js/app.js'></script>
 
 </body>
 

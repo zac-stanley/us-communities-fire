@@ -117,12 +117,12 @@
                 }
             });
 
-            var popupInfo = `<h3>${feature.properties.CDP_STATE}</h3>
+            var tooltipInfo = `<h3>${feature.properties.CDP_STATE}</h3>
         <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4>
         <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
 
 
-            layer.bindPopup(popupInfo);
+            layer.bindTooltip(tooltipInfo);
 
         }
 

@@ -1,4 +1,13 @@
 /* Modify the background color */
+h1 {
+  font-family: "League Spartan", sans-serif;
+  font-size:medium;
+  font-weight:400;
+  text-align: left;
+  letter-spacing: 1.5px;
+  margin: 0;
+}   
+
 h3 {
   font-family: "League Spartan", sans-serif;
   font-size:medium;
@@ -15,6 +24,14 @@ h4 {
   text-align: left;
   margin: 0;
 }     
+
+p {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: .7em;;
+  font-weight:300;
+  text-align: left;
+
+}
 .navbar-custom {
   background-color: white;
   padding-top:0px;
@@ -105,10 +122,9 @@ content: "\a";
 #logo {
 
   position: absolute;
-  bottom: -5px;
-  left: 5px;
+  top: 20px;
+  left: 25px;
   opacity: .9;
-  background-color: whitesmoke;
   background-size: 100vw auto; 
   z-index: 1;
 }
