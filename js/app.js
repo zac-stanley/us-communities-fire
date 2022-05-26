@@ -51,6 +51,10 @@
             }
             points = L.geoJson(sviPoints, options);
             points.addTo(map)
+            points.on('click',e=>{
+                console.log('e',e.layer.feature.properties.CDP_STATE);
+                polySelect(e.layer.feature.properties.CDP_STATE);
+            })
 
         }
 
@@ -228,24 +232,26 @@
             $("#autocomplete").autocomplete("option", "source", arr);
 
             $("#autocomplete").on("autocompleteselect", function (event, ui) {
-                polygons && polygons.addTo(map);
                 polySelect(ui.item.label);  // grabs selected CDP name
                 ui.item.value = '';
             });
         }	// Autocomplete search end
 
         // fire off click event and zoom to polygon  
-        function polySelect(a) {
-            map._layers[a].fire('click');  // 'clicks' on CDP name from search
-            var layer = map._layers[a];
-            map.fitBounds(layer.getBounds().pad(.1));  // zooms to selected poly, creates space around poly using pad method
-        }
+
         // END...fire off click event and zoom to polygon
 
         polygons.on("click", function (e) {
             map.fitBounds(e.layer.getBounds().pad(.1)); 
         });
     });
+
+    function polySelect(a) {
+        polygons && polygons.addTo(map);
+        map._layers[a].fire('click');  // 'clicks' on CDP name from search
+        var layer = map._layers[a];
+        map.fitBounds(layer.getBounds().pad(.1));  // zooms to selected poly, creates space around poly using pad method
+    }
 
     // get element from map
     map.on('zoom', () => {
