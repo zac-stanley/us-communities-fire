@@ -133,18 +133,43 @@ content: "\a";
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
  .navbar-title{
-   font-size:100%;
+   font-size:70%;
  }
  .community{
    display:none;
  }
+ .fire{
+  display:none;
 }
+ .navbar-subtitle{
+   font-size: 50%;
+ }
+ #autocomplete {
+   display: none;
+ }
+
+} 
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 
   aside {
     height: 80vh;
+  }
+  .navbar-title{
+    font-size:100%;
+  }
+  .community{
+    size:none;
+  }
+  .fire{
+   display:none;
+ }
+  .navbar-subtitle{
+    font-size: 50%;
+  }
+  #autocomplete {
+    display: none;
   }
 }
 
