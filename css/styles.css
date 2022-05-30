@@ -11,7 +11,7 @@ h1 {
 h3 {
   font-family: "League Spartan", sans-serif;
   font-size:medium;
-  font-weight:400;
+  font-weight: 400;
   text-align: left;
   letter-spacing: 1.5px;
   margin: 0;
@@ -19,19 +19,27 @@ h3 {
 
 h4 {
   font-family: "IBM Plex Mono", sans-serif;
-  font-size: 1em;;
-  font-weight:lighter;
+  font-size: 1em;
+  font-weight:200;
   text-align: left;
   margin: 0;
 }     
+
+h5 {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-size: 1em;
+  font-weight:400;
+  text-align: right;
+  margin: 0;
+}
 
 p {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: .7em;;
   font-weight:300;
   text-align: left;
-
 }
+
 .navbar-custom {
   background-color: white;
   padding-top:0px;
@@ -83,7 +91,7 @@ color: black;
 .ui-front {
   font-family: IBM Plex Mono;
   font-weight:350;
-  font-size: 70;
+  font-size: 80%;
 }
 
 #subtitle-1::after{
@@ -197,108 +205,3 @@ content: "\a";
     display: none;
   }
  }
-
-
-
-/* Small devices (landscape phones, 576px and up) */
-/* @media (max-width: 576px) {
- .navbar-title{
-   font-size:70%;
- }
- .community{
-   display:none;
- }
- .fire{
-  display:none;
-}
- .navbar-subtitle{
-   font-size: 50%;
- }
- #autocomplete {
-   display: none;
- }
-
-} 
-
-/* Medium devices (tablets, up to 992px) */
-/* @media (max-width: 992px) {
-  .navbar-title{
-    font-size:80%;
-  }
-
-  .community{
-    display:none;
-  }
-  .fire{
-   display:none;
-  }
-   .navbar-subtitle{
-    font-size: 50%;
-  }
-  #autocomplete {
-    font-size: 60%;
-  }
-} */
-
-/* Medium devices (tablets, up to 1200px) */
-/* @media (max-width: 1200px) {
-  .navbar-title{
-    font-size:125%;
-  }
-
-  .community{
-    display:none;
-  }
-  .fire{
-   display:none;
-  }
-   .navbar-subtitle{
-    font-size: 60%;
-  }
-  #autocomplete {
-    font-size: 70%;
-  }
-} */ 
-
-/* Large devices (desktops, 992px and up) */
-/* @media (max-width: 992px) {
-  .navbar-title{
-    font-size:125%;
-  }
-   
-  .navbar-subtitle{
-    font-size: 60%;
-  }
-  #autocomplete {
-    font-size: 70%;
-  }
-} */
-
-  /* Large devices (desktops, 1200px and up) */
-/* @media (max-width: 1400px) { */
-  /* .navbar-title{
-    font-size:125%;
-  }
-   
-  .navbar-subtitle{
-    font-size: 60%;
-  }
-  #autocomplete {
-    font-size: 70%;
-  }
-} */
-
-/* Extra large devices (large desktops, 1400px and up) */
-/* @media (min-width: 1500px) {
-  .navbar-title{
-    font-size:225%;
-  }
-  .navbar-subtitle{
-    font-size: 95%;
-  }
-  #autocomplete {
-    font-size: 90%;
-  }
-}
-}
-} */

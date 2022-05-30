@@ -50,8 +50,8 @@
             }
             points = L.geoJson(sviPoints, options);
             points.addTo(map)
-            points.on('click',e=>{
-                console.log('e',e.layer.feature.properties.CDP_STATE);
+            points.on('click', e => {
+                console.log('e', e.layer.feature.properties.CDP_STATE);
                 polySelect(e.layer.feature.properties.CDP_STATE);
             })
 
@@ -121,9 +121,9 @@
                 }
             });
 
-            var tooltipInfo = `<h3>${feature.properties.CDP_STATE}</h3>
-        <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4>
-        <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
+            var tooltipInfo = `<h4><b>${feature.properties.CDP_STATE}</b><br>
+        has an overall social vulnerability of <b>${feature.properties.OVERALL_WM} <br></b>
+        and the wildfire hazard potential is <b>${feature.properties.WHP_CLASS}</b></h4>`
 
 
             layer.bindTooltip(tooltipInfo);
@@ -143,15 +143,15 @@
         // Tagging each CDP polygon with their name for the search control.
         layer._leaflet_id = feature.properties.CDP_STATE;
 
-         var popupContent = `<h3>${feature.properties.CDP_STATE}</h3>
-         <h4>Socioeconomic Score: <b>${feature.properties.SE_WM}</b></h4><br>
-         <h4>Composition & Disability Score: <b>${feature.properties.HCD_WM}</b></h4><br>
+        var popupContent = `<h3>${feature.properties.CDP_STATE}</h3><br>
+         <h4>Socioeconomic Score:</h4><h5>${feature.properties.SE_WM}</h5>
+         <h4>Composition & Disability Score:</h4><h5>${feature.properties.HCD_WM}</h5><br>
          <h4>Minority Status Score: <b>${feature.properties.M_WM}</b></h4><br>
          <h4>Housing and Transportation Score: <b>${feature.properties.HTT_WM}</b></h4><br>
          <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4><br>
          <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
 
-         layer.bindPopup(popupContent);
+        layer.bindPopup(popupContent);
 
         layer.on("click", function (e) {
             polygons.setStyle(style); //resets layer colors
@@ -188,7 +188,7 @@
     $.getJSON("data/cdps_svis_whp.json", function (sviPolys) {
         console.log(sviPolys)
         drawMap(sviPolys);
-        
+
         // Initialize autocomplete with empty source.
         $("#autocomplete").autocomplete();
 
@@ -201,12 +201,12 @@
             }
             polygons = L.geoJson(sviPolys, options)
         }
-        
+
 
         for (i = 0; i < sviPolys.features.length; i++) {  //for loop that loads cdp name into an array for searching
             arr1.push({ label: sviPolys.features[i].properties.CDP_STATE, value: "" }); // push values into empty array
         }
-    
+
         addDataToAutocomplete(arr1);  // passes array for sorting and to load search control.
 
         //cdpState.addTo(map);
@@ -237,7 +237,7 @@
         // END...fire off click event and zoom to polygon
 
         polygons.on("click", function (e) {
-            map.fitBounds(e.layer.getBounds().pad(.1)); 
+            map.fitBounds(e.layer.getBounds().pad(.1));
         });
     });
 
