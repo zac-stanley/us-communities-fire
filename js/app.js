@@ -33,7 +33,6 @@
     // add sidebar
     var sidebar = L.control.sidebar('sidebar').addTo(map);
     map.addControl(sidebar);
-  
 
 
     // jQuery method using AJAX request for GeoJSON point data
@@ -57,7 +56,6 @@
             })
 
         }
-
 
         function pointToLayer(feature, latlng) {
             // function will take Point Feature geometry
@@ -133,9 +131,6 @@
         }
 
     });
-
-  
-
 
     var highlight = {
         color: '#300133',
