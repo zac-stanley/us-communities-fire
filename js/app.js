@@ -144,7 +144,7 @@
         layer._leaflet_id = feature.properties.CDP_STATE;
 
         var popupContent = `<h3>${feature.properties.CDP_STATE}</h3><br>
-         <h4>Socioeconomic Score:</h4><h5>${feature.properties.SE_WM}</h5>
+         <h4>Socioeconomic Score:</h4><h5>${feature.properties.SE_WM}</h5><br>
          <h4>Composition & Disability Score:</h4><h5>${feature.properties.HCD_WM}</h5><br>
          <h4>Minority Status Score: <b>${feature.properties.M_WM}</b></h4><br>
          <h4>Housing and Transportation Score: <b>${feature.properties.HTT_WM}</b></h4><br>

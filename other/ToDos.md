@@ -10,19 +10,19 @@
 8. ~~fix zonal stats image~~
 
 #### HTML/CSS/LAYOUT
-1. Clean up hyperlink code for svg
-2. Push info svg further to right so it's tight against search box
+1. ~~Clean up hyperlink code for svg~~
+2. ~~Push info svg further to right so it's tight against search box~~
 3. ~~What is the purple area in row class on right of screen~~
 4. ~~Put info SVG and search bar in same div so they always stay in the place.~~
 5.~~ Use greater arrow instead of values for SVI vulnerabilty legend?~~
 6. side bar content 
     * info
     * legend - breakout and use CSS for text
-    * figure out why icons on side bar aren't working
+    * ~~figure out why icons on side bar aren't working~~
     * default state open
-    * refine text content
-7. Remove info svg icon from top
-8. Make search bar larger
+    * ~~refine text content~~
+7. ~~Remove info svg icon from top~~
+8. Push search bar to right in header
 
 
 #### Basemap
@@ -37,7 +37,6 @@
 6. ~~Create popups and format them for graduated symbols~~
 7. ~~Zoom change~~
 8. ~~Getbounds~~
-9. Label zoomed to polygons?
-10. Create charts in D3 or other based on zoom
+
 
 
