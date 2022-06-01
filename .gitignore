@@ -107,3 +107,7 @@ dist
 .ipynb_checkpoints
 __pycache__
 .env
+
+# folders to ignore
+other/
+unused/
