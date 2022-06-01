@@ -121,10 +121,8 @@
                 }
             });
 
-            var tooltipInfo = `<h4><b>${feature.properties.CDP_STATE}</b><br>
-        has an overall social vulnerability of <b>${feature.properties.OVERALL_WM} <br></b>
-        and the wildfire hazard potential is <b>${feature.properties.WHP_CLASS}</b></h4>`
-
+            var tooltipInfo = `<h5><b>${feature.properties.CDP_STATE}</b> has <b>${feature.properties.WHP_CLASS}</b> wildfire hazard potential <br> and an overall social vulnerability of <b>${feature.properties.OVERALL_WM}<br></b></h5>`
+   
 
             layer.bindTooltip(tooltipInfo);
 
@@ -144,12 +142,14 @@
         layer._leaflet_id = feature.properties.CDP_STATE;
 
         var popupContent = `<h3>${feature.properties.CDP_STATE}</h3><br>
-         <h4>Socioeconomic Score:</h4><h5>${feature.properties.SE_WM}</h5><br>
-         <h4>Composition & Disability Score:</h4><h5>${feature.properties.HCD_WM}</h5><br>
-         <h4>Minority Status Score: <b>${feature.properties.M_WM}</b></h4><br>
-         <h4>Housing and Transportation Score: <b>${feature.properties.HTT_WM}</b></h4><br>
-         <h4>Overall SVI Score: <b>${feature.properties.OVERALL_WM}</b></h4><br>
-         <h4>Wildfire Hazard Potential: <b>${feature.properties.WHP_CLASS}</b></h4>`
+         <h4>Socioeconomic: <b>${feature.properties.SE_WM}</b></h4><br>
+         <h4>Composition & Disability: <b>${feature.properties.HCD_WM}</b></h4><br>
+         <h4>Minority Status: <b>${feature.properties.M_WM}</b></h4><br>
+         <h4>Housing and Transportation: <b>${feature.properties.HTT_WM}</b></h4><br>
+         <h4>Overall: <b>${feature.properties.OVERALL_WM}</b></h4><br>
+         <h3>Wildfire Hazard Potential:</h3>
+         <h4><b>${feature.properties.WHP_CLASS}</b></h4>`
+
 
         layer.bindPopup(popupContent);
 

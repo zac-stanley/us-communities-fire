@@ -12,7 +12,7 @@ h3 {
   font-family: "League Spartan", sans-serif;
   font-size:medium;
   font-weight: 400;
-  text-align: left;
+  text-align: center;
   letter-spacing: 1.5px;
   margin: 0;
 }     
@@ -21,15 +21,15 @@ h4 {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 1em;
   font-weight:200;
-  text-align: left;
+  text-align: right;
   margin: 0;
 }     
 
 h5 {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 1em;
-  font-weight:400;
-  text-align: right;
+  font-weight:200;
+  text-align: left;
   margin: 0;
 }
 
