@@ -1,3 +1,10 @@
+#### General
+1. ~~Add old data to unused folder~~
+2. ~~Create a gitignore for unused folder~~
+3. Comment and format all code
+4. Presentation notes, explain SAVI percentile and wfh
+5. re-write / update README.md
+
 #### Notebooks
 1. Determine if zs_intersecting_projecting notebook is necessary - I DON'T THINK IT IS
 2. Make a markdown section headings normal sentence case and punctuation
@@ -8,6 +15,7 @@
 6. ~~convert whp class numbers to a text field for moderate, high and very high~~
 7. ~~round weighted mean values to two decimals~~
 8. ~~fix zonal stats image~~
+9. Histogram comparing SE to West
 
 #### HTML/CSS/LAYOUT
 1. ~~Clean up hyperlink code for svg~~
@@ -17,12 +25,12 @@
 5.~~ Use greater arrow instead of values for SVI vulnerabilty legend?~~
 6. side bar content 
     * info
-    * legend - breakout and use CSS for text
+    * ~~legend - breakout and use CSS for text~~
     * ~~figure out why icons on side bar aren't working~~
     * default state open
     * ~~refine text content~~
 7. ~~Remove info svg icon from top~~
-8. Push search bar to right in header
+8. ~~Push search bar to right in header~~
 
 
 #### Basemap
@@ -31,12 +39,13 @@
 #### JS
 1. ~~Plot graduated symbols~~
 2. ~~Plot polygons with color symbology~~
-3. Update static legend for colors and graduated symbols, fix colors, make background same greay as ocean - https://roh.engineering/posts/2021/05/map-symbols-and-size-legends-for-leaflet/
+3. ~~Update static legend for colors and graduated symbols, fix colors, make background same greay as ocean - https://roh.engineering/posts/2021/05/map-symbols-and-size-legends-for-leaflet/~~
 4. ~~Make search bar usable based on CDP input, figure out why search list is below map and legend (#logo)  divs~~
 5. ~~might need to concatenate fields in Pandas to include CDP and State together~~
 6. ~~Create popups and format them for graduated symbols~~
 7. ~~Zoom change~~
 8. ~~Getbounds~~
+9. Popup formatting
 
 
 

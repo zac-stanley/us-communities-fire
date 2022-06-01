@@ -17,7 +17,7 @@
 <!-- /TOC -->
 
 ## I. Introduction  
-This project examines where wildfire hazard potential intersects with socially vulnerable census designated places throughout the conterminous United States. The data sources span from 2018 to 2020. 
+This project examines where wildfire hazard potential (WHP) intersects with socially vulnerable census designated places throughout the conterminous United States. The data sources span from 2018 to 2020. 
 
 The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of additional support and planning both prior to and after wildland fires. 
 
@@ -63,7 +63,7 @@ The methods for the project involve two different types overlay analysis: zonal 
 **Social Vulnerability Index Classes:**  
 ![SVI Classes](images/CDC-SVI-Variables.jpg)  
 
-The process for exploring, processing and ultimately analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP.  
+The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP.  
 
 **How majority zonal statistics work:**  
 ![Majority](images/majority.JPG) 
@@ -81,9 +81,9 @@ The final output polygon and point files are GeoJSON.
 
 ### B. Medium for Delivery  
 
-The map will be a browser-based application accessible across mobile and desktop devices.  
+The map/front-end is a responsive browser-based application accessible across mobile and desktop devices.  
 
-The technology stack will include HTML/CSS/JS using a combination of [Leaflet](https://leafletjs.com/) and [Mapbox JavaScript libraries](https://docs.mapbox.com/mapbox.js/api/v3.3.1/) and will most likely use an [Assembly.css](https://labs.mapbox.com/assembly/) responsive framework. In addition, the map will include search bar functionality geolocating CDPs.  
+The technology stack will include HTML/CSS/JS that uses the [Leaflet](https://leafletjs.com/) mapping library with a [Bootstrap](https://getbootstrap.com/docs/4.0/examples/) responsive framework.   
 
 ### C. Application Layout  
 
@@ -91,7 +91,7 @@ Here you'll want to consider the general layout of the web page and how it will 
 
 ### D. Thematic Representation  
 
-The map will use different thematic representations at different scales. At maximum scale the map will use graduated symbols to display overall SVI by CDP broken up into five classes and diverging colors to display three class WFH potential resulting in a bi-variate map. 
+The map will use different thematic representations at different scales. At maximum scale the map will use graduated symbols to display overall SVI by CDP broken up into five classes and diverging colors to display three class whp resulting in a bi-variate map. 
 
 At a yet to be determined zoom scale the map will show actual CDP polygons classified using diverging color to show WHP.  
 
