@@ -46,7 +46,7 @@ The methods for the project involve two different types overlay analysis: zonal 
 
 2. [U.S. Census Designated Places (CDPs)](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.    
 
-3. [Centers for Disease Control Social Vulnerability Index (SVIs)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability indices plus an aggregate index score:  
+3. [Centers for Disease Control Social Vulnerability Index (SVIs)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability rankings plus an overall index score:  
 
     - **Socioeconomic**
     - **Household Composition & Disability**
@@ -58,14 +58,16 @@ The methods for the project involve two different types overlay analysis: zonal 
 
 ![SVI Classes](images/CDC-SVI-Variables.jpg)  
 
-The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each polygon. Based on the majority a WHP class was assigned to each CDP.  
+The vulnerability rankings in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0.
+
+The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each CDP polygon. Based on the majority, a WHP class was assigned to each CDP.  
 
 **How majority zonal statistics work:**  
 ![Majority](images/majority.JPG) 
 
- Additionally, classes 1 and 2 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) hazard potential were included in the final output.  
+Additionally, CDPs with classes of 1 and 2 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) wildfire hazard potential were included in the final output.  
 
-CDPs were the minimum mapping unit for the analysis yet the SVI data is available only at the tract level which is too detailed. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the average SVI values for each individual vulnerability and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each individual SVI and for the overall SVI for each CDP with a WHP class of 3, 4 or 5.
+CDPs were the minimum mapping unit for the analysis, yet the SVI data is available only at the tract level which is too detailed. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the SVI ranking values (0-1) for each vulnerability theme and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability ranking occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each individual SVI ranking and for the overall overall vulnerability for each CDP with a WHP class of 3, 4 or 5.
 
 **Sample results of analyzed and processed data:**  
 ![Table](images/cleanedTable.JPG)  
@@ -78,7 +80,7 @@ The final output polygon and point files are GeoJSON.
 
 The map/front-end is a responsive browser-based application accessible across mobile and desktop devices.  
 
-The technology stack includes HTML/CSS/JS that uses the [Leaflet](https://leafletjs.com/) mapping library with a [Bootstrap](https://getbootstrap.com/docs/4.0/examples/) responsive framework.   
+The technology stack includes HTML/CSS/JavaScript that uses the [Leaflet](https://leafletjs.com/) mapping library with a [Bootstrap](https://getbootstrap.com/docs/4.0/examples/) responsive framework.   
 
 ### C. Application Layout  
 
