@@ -2,7 +2,7 @@
 1. ~~Add old data to unused folder~~
 2. ~~Create a gitignore for unused folder~~
 3. Comment and format all code
-4. Presentation notes, explain SAVI percentile and wfh
+4. Presentation notes, explain SVI percentile and wfh
 5. re-write / update README.md
 
 #### Notebooks
@@ -36,7 +36,7 @@
 
 #### Basemap
 1. ~~Create basemap with mapbox~~
-2. Aerial at polygon scale?
+2. ~~Aerial at polygon scale?~~
 
 #### JS
 1. ~~Plot graduated symbols~~
@@ -47,7 +47,7 @@
 6. ~~Create popups and format them for graduated symbols~~
 7. ~~Zoom change~~
 8. ~~Getbounds~~
-9. Popup formatting
+9. ~~Popup formatting~~
 
 
 

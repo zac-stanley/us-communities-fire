@@ -17,25 +17,19 @@
 <!-- /TOC -->
 
 ## I. Introduction  
-This project examines where wildfire hazard potential (WHP) intersects with socially vulnerable census designated places throughout the conterminous United States. The data sources span from 2018 to 2020. 
+This project examines where wildfire hazard potential (WHP) intersects with socially vulnerable census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and are from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
 
-The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of additional support and planning both prior to and after wildland fires. 
+The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of additional support and planning both prior to and after wildland fires with the aim of mitigating human suffering and financial loss.
 
 The user will be inspired to explore areas not traditionally thought of as areas with high wildfire potential such as the southeast.
 
-At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts.  
+At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts as well as specific regions not commonly thought of as being at risk for wildfire.
 
 Full Scale Wire Frame:  
 ![Wire Frame 1](images/wireframe1.jpg)  
 
-Resulting Mock-up:  
-![Mockup 1](images/FullScreeenMockup_Small.jpg)  
-
 Zoomed Wire Frame:  
 ![Wire Frame 2](images/wireframe2.jpg)  
-
-Resulting Mock-up:  
-![Mockup 2](images/FullScreeenMockup_Zoomed_Small.jpg)  
 
 ## II: Methodology  
 The methods for the project involve two different types overlay analysis: zonal statistics and weighted mean, both of which are performed on the CDP polygons. The zonal statistics use a majority method with raster values for WHP in a CDP and weighted mean is used with SVI census tracts intersected with CDPs.
@@ -83,7 +77,7 @@ The final output polygon and point files are GeoJSON.
 
 The map/front-end is a responsive browser-based application accessible across mobile and desktop devices.  
 
-The technology stack will include HTML/CSS/JS that uses the [Leaflet](https://leafletjs.com/) mapping library with a [Bootstrap](https://getbootstrap.com/docs/4.0/examples/) responsive framework.   
+The technology stack includes HTML/CSS/JS that uses the [Leaflet](https://leafletjs.com/) mapping library with a [Bootstrap](https://getbootstrap.com/docs/4.0/examples/) responsive framework.   
 
 ### C. Application Layout  
 
