@@ -31,10 +31,12 @@
     * ~~refine text content~~
 7. ~~Remove info svg icon from top~~
 8. ~~Push search bar to right in header~~
+9. Center popup in polygon
 
 
 #### Basemap
 1. ~~Create basemap with mapbox~~
+2. Aerial at polygon scale?
 
 #### JS
 1. ~~Plot graduated symbols~~
