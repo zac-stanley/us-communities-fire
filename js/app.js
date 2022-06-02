@@ -15,10 +15,33 @@
     new L.control.zoom({ position: "topleft" }).addTo(map)
 
     // request a basemap tile layer and add to the map
-    // L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl26t5a9k001e15o319at3jeh/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemFjc3RhbmxleSIsImEiOiJCS20zaVR3In0._oaGhAVLz04gbE3M2HKHGA', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    var cartoLight = L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl26t5a9k001e15o319at3jeh/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemFjc3RhbmxleSIsImEiOiJCS20zaVR3In0._oaGhAVLz04gbE3M2HKHGA', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains: 'abcd',
+        maxZoom: 19
+    });
+
+    // request an imagery basemap tile layer and add to the map
+    var imagery = L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl3w9wmw3000115p9l95auy7q/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemFjc3RhbmxleSIsImEiOiJCS20zaVR3In0._oaGhAVLz04gbE3M2HKHGA', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+        subdomains: 'abcd',
+        maxZoom: 19
+    });
+
+    cartoLight.addTo(map); //initial layer according to initial zoom
+
+    map.on("zoomend", function (e) {
+        console.log("Zoom level: ", map.getZoom());
+        if (map.getZoom() > 10) { //Level 10 is the treshold 
+            map.removeLayer(cartoLight);
+            imagery.addTo(map);
+        } else {
+            map.removeLayer(imagery);
+            cartoLight.addTo(map);
+        }
+    });
+    
+    // .addTo(map);
 
     // fit bounds to continental United States
     map.fitBounds([[24.396308, -124.848974], [51.384358, -66.885444]]);
@@ -121,8 +144,8 @@
                 }
             });
 
-            var tooltipInfo = `<h5><b>${feature.properties.CDP_STATE}</b> has <b>${feature.properties.WHP_CLASS}</b> wildfire hazard potential <br> and an overall social vulnerability of <b>${feature.properties.OVERALL_WM}<br></b></h5>`
-   
+            var tooltipInfo = `<h4><b>${feature.properties.CDP_STATE}</b> has <b>${feature.properties.WHP_CLASS}</b> wildfire hazard potential <br> and an overall social vulnerability of <b>${feature.properties.OVERALL_WM}<br></b></h4>`
+
 
             layer.bindTooltip(tooltipInfo);
 
@@ -142,13 +165,13 @@
         layer._leaflet_id = feature.properties.CDP_STATE;
 
         var popupContent = `<h3>${feature.properties.CDP_STATE}</h3><br>
+         <h5><b>${feature.properties.WHP_CLASS}</b> wildfire hazard potential 
+         and the social vulnerability scores are:</h5><br>
          <h4>Socioeconomic: <b>${feature.properties.SE_WM}</b></h4><br>
          <h4>Composition & Disability: <b>${feature.properties.HCD_WM}</b></h4><br>
          <h4>Minority Status: <b>${feature.properties.M_WM}</b></h4><br>
          <h4>Housing and Transportation: <b>${feature.properties.HTT_WM}</b></h4><br>
-         <h4>Overall: <b>${feature.properties.OVERALL_WM}</b></h4><br>
-         <h3>Wildfire Hazard Potential:</h3>
-         <h4><b>${feature.properties.WHP_CLASS}</b></h4>`
+         <h4>Overall: <b>${feature.properties.OVERALL_WM}</b></h4><br>`
 
 
         layer.bindPopup(popupContent);

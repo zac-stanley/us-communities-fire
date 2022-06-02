@@ -21,7 +21,8 @@ h4 {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 1em;
   font-weight:200;
-  text-align: right;
+  text-align: justify;
+  vertical-align: bottom;
   margin: 0;
 }     
 
@@ -29,7 +30,8 @@ h5 {
   font-family: "IBM Plex Mono", sans-serif;
   font-size: 1em;
   font-weight:200;
-  text-align: left;
+  text-align: justify;
+  vertical-align: bottom;
   margin: 0;
 }
 
