@@ -15,7 +15,7 @@
     new L.control.zoom({ position: "topleft" }).addTo(map)
 
     // request a basemap tile layer and add to the map
-    var cartoLight = L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl26t5a9k001e15o319at3jeh/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemFjc3RhbmxleSIsImEiOiJCS20zaVR3In0._oaGhAVLz04gbE3M2HKHGA', {
+    var lightBase = L.tileLayer('https://api.mapbox.com/styles/v1/zacstanley/cl26t5a9k001e15o319at3jeh/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiemFjc3RhbmxleSIsImEiOiJCS20zaVR3In0._oaGhAVLz04gbE3M2HKHGA', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         subdomains: 'abcd',
         maxZoom: 19
@@ -28,20 +28,20 @@
         maxZoom: 19
     });
 
-    cartoLight.addTo(map); //initial layer according to initial zoom
+    lightBase.addTo(map); //initial layer according to initial zoom
 
     map.on("zoomend", function (e) {
         console.log("Zoom level: ", map.getZoom());
         if (map.getZoom() > 10) { //Level 10 is the treshold 
-            map.removeLayer(cartoLight);
+            map.removeLayer(lightBase);
             imagery.addTo(map);
         } else {
             map.removeLayer(imagery);
-            cartoLight.addTo(map);
+            lightBase.addTo(map);
         }
     });
-    
-    // .addTo(map);
+
+
 
     // fit bounds to continental United States
     map.fitBounds([[24.396308, -124.848974], [51.384358, -66.885444]]);
