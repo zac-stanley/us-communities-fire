@@ -38,10 +38,10 @@ The methods for the project involve two different types overlay analysis: zonal 
 
 1. [2020 Wildfire Hazard Potential (WHP) for the United States](https://www.fs.usda.gov/rmrs/datasets/wildfire-hazard-potential-united-states-270-m-version-2020-3rd-edition). This is a 270-m spatial resolution raster dataset that classifies wildfire hazard potential in the conterminous United States into 5-discrete classes based on percentile breaks:   
        
-    - **Class 1:** Very Low
-    - **Class 2:** Low
-    - **Class 3:** Moderate
-    - **Class 4:** High
+    - **Class 1:** Very Low  
+    - **Class 2:** Low  
+    - **Class 3:** Moderate  
+    - **Class 4:** High  
     - **Class 5:** Very High   
 
 2. [U.S. Census Designated Places (CDPs)](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.    
@@ -91,11 +91,11 @@ The map uses different thematic representations at different scales. At maximum 
 The vulnerability themes in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped ranged from 0-1 and have a 5 value ordinal classification assigned:  
 
 **Ordinal Classification:**  
-    - **0-0.2:**   Low
-    - **0.2-0.4:** Low/Moderate
-    - **0.4-0.6:** Moderate
-    - **0.6-0.8:** High/Moderate
-    - **0.8-1:**   High 
+    - **0-0.2:**   Low  
+    - **0.2-0.4:** Low/Moderate  
+    - **0.4-0.6:** Moderate  
+    - **0.6-0.8:** High/Moderate  
+    - **0.8-1:**   High  
 
 At a yet to be determined zoom scale the map will show actual CDP polygons classified using diverging color to show WHP.  
 
