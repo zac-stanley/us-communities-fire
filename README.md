@@ -110,16 +110,12 @@ Hovering over a point on the map results in getting some basic information about
 
 Click on a point of interest to zoom to that location and see the community boundary with WHP classified colors and details including the ordinal classification of vulnerability themes and the actual theme values for that CDP. At this scale the basemap will change to an aerial image so users can get a sense of conditions on the ground. Users can also use the search bar in the upper right of the map to zoom to a community boundary and get the same results as clicking on a feature. This can be useful if the user already has a place in mind to look for. 
 
+**Dropdown Search Example:**  
+![Search](images/search.jpg) 
+
 Users can ascertain additional details about the map by clicking the sidebar which opens up two different panels, one with a brief explanation about the map and another with a static legend.
 
-
-**Tooltip Example:**  
-![Tooltip](images/gradTooltip.jpg)  
-
 When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a popup showing ordinal classes and actual values of four vulnerability theme weighted mean values and the overall vulnerability value. 
-
-**Dropdown Search Example:**  
-![Search](images/search.jpg)  
 
 ### F. Aesthetics and Design Considerations  
 
