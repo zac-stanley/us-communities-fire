@@ -56,29 +56,21 @@ The methods for the project involve two different types overlay analysis: zonal 
 
 **Social Vulnerability Index Classes:**  
 
-![SVI Classes](images/CDC-SVI-Variables.jpg)  
-
-The vulnerability rankings in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped SVI ranged from 0-1 and ordinal classification has been assigned:
-
-    - **0-0.2:**Low
-    - **0.2-0.4:** Low/Moderate
-    - **0.4-0.6:** Moderate
-    - **0.6-0.8:** High/Moderate
-    - **0.8-1:** High   
+![SVI Classes](images/CDC-SVI-Variables.jpg)   
 
 The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each CDP polygon. Based on the majority, a WHP class was assigned to each CDP.  
 
 **How majority zonal statistics work:**  
 ![Majority](images/majority.JPG) 
 
-Additionally, CDPs with classes of 1 and 2 were removed so that only only CDPs with moderate to very high (classes 3, 4 and 5) wildfire hazard potential were included in the final output.  
+Additionally, CDPs with classes of 1 and 2 were removed so that only CDPs with moderate to very high (classes 3, 4 and 5) wildfire hazard potential were included in the final output.  
 
-CDPs were the minimum mapping unit for the analysis, yet the SVI data is available only at the tract level which is too detailed. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the SVI ranking values (0-1) for each vulnerability theme and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability ranking occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each individual SVI ranking and for the overall overall vulnerability for each CDP with a WHP class of 3, 4 or 5.
+CDPs were the minimum mapping unit for the analysis, yet the SVI data is available only at the tract level which is too detailed for this analysis. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the vulnerability theme values (0-1) for each vulnerability theme and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability theme occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each vulnerability theme and for the overall vulnerability for each CDP with a WHP class of 3, 4 or 5.
 
 **Sample results of analyzed and processed data:**  
 ![Table](images/cleanedTable.JPG)  
 
-Lastly, the geometric center or centroids of the polygons were taken so that the small or maximum scale mapping described above could be achieved. This process ensured that the attributes in the polygon were retained in the point output.  
+Lastly, the geometric center or centroids of the polygons were taken so that the small or maximum scale mapping could be achieved. This process ensured that the attributes in the polygon were retained in the point output.  
 
 The final output polygon and point files are GeoJSON.  
 
@@ -90,11 +82,19 @@ The technology stack includes HTML/CSS/JavaScript that uses the [Leaflet](https:
 
 ### C. Application Layout  
 
-Here you'll want to consider the general layout of the web page and how it will "respond" to different device sizes. It's probably easiest to include 2 or three very simple wireframes showing mobile, tablet, and desktop layouts (not detailed mockups).
+The web page is laid out using a simple title bar w/ icons that represent community and fire, and includes a text based search tool with autocomplete functionality. In addition, there is a hidden sidebar that contains a description of the map, instructions on how to use it and a static legend. All of these components are resized or removed responsively using CSS media queries.
 
 ### D. Thematic Representation  
 
 The map will use different thematic representations at different scales. At maximum scale the map will use graduated symbols to display overall SVI by CDP broken up into five classes and diverging colors to display three class whp resulting in a bi-variate map. 
+
+The vulnerability rankings in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped SVI ranged from 0-1 and an 5 value ordinal classification has been assigned:  
+
+    **0-0.2:**Low
+    - **0.2-0.4:** Low/Moderate
+    - **0.4-0.6:** Moderate
+    - **0.6-0.8:** High/Moderate
+    - **0.8-1:** High 
 
 At a yet to be determined zoom scale the map will show actual CDP polygons classified using diverging color to show WHP.  
 
