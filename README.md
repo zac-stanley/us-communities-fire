@@ -95,11 +95,11 @@ The map uses different thematic representations at different scales. At maximum 
 The vulnerability themes in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped ranged from 0-1 and have a 5 value ordinal classification assigned:  
 
 **Vulnerability Theme Ordinal Classification:**  
-    * **0-0.2:**&nbsp;&nbsp;&nbsp;&nbsp;Low  
-    - **0.2-0.4:**&nbsp;Low/Moderate  
-    - **0.4-0.6:** Moderate  
-    - **0.6-0.8:**&nbsp;High/Moderate  
-    - **0.8-1:**&nbsp;&nbsp;&nbsp;&nbsp;High  
+    **0-0.2:**&nbsp;&nbsp;&nbsp;&nbsp;Low  
+    **0.2-0.4:**&nbsp;Low/Moderate  
+    **0.4-0.6:** Moderate  
+    **0.6-0.8:**&nbsp;High/Moderate  
+    **0.8-1:**&nbsp;&nbsp;&nbsp;&nbsp;High  
 
 When zoomed to level 10 or greater CDP polygons classified using sequential color replace the graduated symbols showing the extent of the actual CDP as mapped along with its WHP.  
 
