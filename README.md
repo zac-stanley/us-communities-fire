@@ -17,7 +17,7 @@
 <!-- /TOC -->
 
 ## I. Introduction  
-This project examines where wildfire hazard potential (WHP) and census tracts that measure relative social vulnerbaility (SVI) intersect census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and are from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
+This project examines where wildfire hazard potential (WHP) and census tracts that measure relative social vulnerbaility (SVI) and their intersection with census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and are from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
 
 The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of additional support and planning both prior to and after wildland fires with the aim of mitigating human suffering and financial loss.
 
