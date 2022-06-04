@@ -131,9 +131,9 @@ The fonts are League Spartan for headings/titles and IBM Plex Mono for most of t
 ### G. Conclusion  
 This intent of this map is simple, to locate and identify where specific communities have some level of wildfire risk and social vulnerability. With this information planners, emergency responders and other public officials can locate communities and work to allocate additional funding, estimate needed supplies, where shelters may be needed, create evacuation plans and identify places where long term support following a fire event may be needed.
 
-The map is meant to be intuitive, easy to navigate and understand while adhering to design considerations that are neutral and not overly persuasive. 
+In addition it uncovers regions that are surprising in terms of their WHP, such as the southeast. In this regards the map raise more questions than it answers. What about the characteritics of the landscape in the southeast make it fire prone, what role is climate change playing in this level of increased risk are some of the questions the map results raise. 
 
-
+Overall, he map is meant to be general tool that is intuitive, easy to navigate and understand while adhering to design considerations that are neutral and not overly persuasive. 
 
 ### References
 - [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf)
