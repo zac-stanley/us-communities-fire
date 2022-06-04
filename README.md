@@ -82,11 +82,11 @@ The technology stack includes HTML/CSS/JavaScript that uses the [Leaflet](https:
 
 ### C. Application Layout  
 
-The web page is laid out using a simple title bar w/ icons that represent community and fire, and includes a text based search tool with autocomplete functionality. In addition, there is a hidden sidebar that contains a description of the map, instructions on how to use it and a static legend. All of these components are resized or removed responsively using CSS media queries.
+The web page is laid out using a simple title bar w/ icons that represent community and fire, and include a text based search tool with autocomplete functionality. In addition, there is a hidden sidebar that contains a description of the map, instructions on how to use it and a static legend. All of these components are resized or removed responsively using CSS media queries.
 
 ### D. Thematic Representation  
 
-The map will use different thematic representations at different scales. At maximum scale the map will use graduated symbols to display overall SVI by CDP broken up into five classes and diverging colors to display three class whp resulting in a bi-variate map. 
+The map uses different thematic representations at different scales. At maximum scale the map will use graduated symbols to display overall SVI by CDP broken up into five classes and diverging colors to display three class whp resulting in a bi-variate map. 
 
 The vulnerability rankings in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped SVI ranged from 0-1 and an 5 value ordinal classification has been assigned:  
 
