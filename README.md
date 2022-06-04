@@ -58,7 +58,13 @@ The methods for the project involve two different types overlay analysis: zonal 
 
 ![SVI Classes](images/CDC-SVI-Variables.jpg)  
 
-The vulnerability rankings in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0.
+The vulnerability rankings in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped SVI ranged from 0-1 and ordinal classification has been assigned:
+
+    - **0-0.2:**Low
+    - **0.2-0.4:** Low/Moderate
+    - **0.4-0.6:** Moderate
+    - **0.6-0.8:** High/Moderate
+    - **0.8-1:** High   
 
 The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each CDP polygon. Based on the majority, a WHP class was assigned to each CDP.  
 
