@@ -17,7 +17,7 @@
 <!-- /TOC -->
 
 ## I. Introduction  
-This project examines where wildfire hazard potential (WHP) intersects with socially vulnerable census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and are from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
+This project examines where wildfire hazard potential (WHP) and census tracts that measure relative social vulnerbaility (SVI) intersect census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and are from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
 
 The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of additional support and planning both prior to and after wildland fires with the aim of mitigating human suffering and financial loss.
 
@@ -46,7 +46,7 @@ The methods for the project involve two different types overlay analysis: zonal 
 
 2. [U.S. Census Designated Places (CDPs)](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.    
 
-3. [Centers for Disease Control Social Vulnerability Index (SVIs)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability rankings plus an overall index score:  
+3. [Centers for Disease Control Social Vulnerability Index (SVIs)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability themes plus an overall theme:  
 
     - **Socioeconomic**
     - **Household Composition & Disability**
@@ -86,9 +86,9 @@ The web page is laid out using a simple title bar w/ icons that represent commun
 
 ### D. Thematic Representation  
 
-The map uses different thematic representations at different scales. At maximum scale the map will use graduated symbols to display overall SVI by CDP broken up into five classes and diverging colors to display three class whp resulting in a bi-variate map. 
+The map uses different thematic representations at different scales. At maximum scale the map uses graduated symbols to display overall vulnerability theme by CDP broken up into five classes and sequential colors to display the three class WHP resulting in a bi-variate map. 
 
-The vulnerability rankings in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped SVI ranged from 0-1 and an 5 value ordinal classification has been assigned:  
+The vulnerability themes in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped  ranged from 0-1 and an 5 value ordinal classification has been assigned:  
 
     **0-0.2:**Low
     - **0.2-0.4:** Low/Moderate
