@@ -115,14 +115,12 @@ Click on a point of interest to zoom to that location and see the community boun
 
 Users can ascertain additional details about the map by clicking the sidebar which opens up two different panels, one with a brief explanation about the map and another with a static legend.
 
-When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a popup showing ordinal classes and actual values of four vulnerability theme weighted mean values and the overall vulnerability value. 
-
 ### F. Aesthetics and Design Considerations  
+The tone of the map is simple and high contrast, using black text and a white/light background and basemap (excluding the aerial image at => 10 zoom scale).
 
-The tone of the map will challenge the normal aesthetic of fire mapping, that is it won't be a black basemap with graduated colors from yellow to deep red. It will instead use colors that suggest hope and resilence and some degree of lightness. 
+The tone of the map on some level challenges the some of the normal aesthetic of fire mapping, that is it doesn't have a black basemap with deep red symbology. It still users colors that are suggestive of fire but the intent is that the lighter design elements suggest some degree hope and resilence and not pure darkness.
 
-The font choices will be sans serif and consistently applied throughout the map
-in tooltips, charts and title/sub-title etc. 
+The fonts are League Spartan for headings/titles and IBM Plex Mono for most of the body text including tooltips and paragraphs.
 
 ### G. Conclusion  
 
