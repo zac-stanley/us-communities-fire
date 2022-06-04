@@ -25,10 +25,12 @@ The user will be inspired to explore areas not traditionally thought of as areas
 
 At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts as well as specific regions not commonly thought of as being at risk for wildfire.
 
-Full Scale Wire Frame:  
+**Full Scale Wire Frame:**   
+
 ![Wire Frame 1](images/wireframe1.jpg)  
 
-Zoomed Wire Frame:  
+**Zoomed Wire Frame:**  
+
 ![Wire Frame 2](images/wireframe2.jpg)  
 
 ## II: Methodology  
@@ -61,6 +63,7 @@ The methods for the project involve two different types overlay analysis: zonal 
 The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each CDP polygon. Based on the majority, a WHP class was assigned to each CDP.  
 
 **How majority zonal statistics work:**  
+
 ![Majority](images/majority.JPG) 
 
 Additionally, CDPs with classes of 1 and 2 were removed so that only CDPs with moderate to very high (classes 3, 4 and 5) wildfire hazard potential were included in the final output.  
@@ -68,6 +71,7 @@ Additionally, CDPs with classes of 1 and 2 were removed so that only CDPs with m
 CDPs were the minimum mapping unit for the analysis, yet the SVI data is available only at the tract level which is too detailed for this analysis. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the vulnerability theme values (0-1) for each vulnerability theme and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability theme occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each vulnerability theme and for the overall vulnerability for each CDP with a WHP class of 3, 4 or 5.
 
 **Sample results of analyzed and processed data:**  
+
 ![Table](images/cleanedTable.JPG)  
 
 Lastly, the geometric center or centroids of the polygons were taken so that the small or maximum scale mapping could be achieved. This process ensured that the attributes in the polygon were retained in the point output.  
