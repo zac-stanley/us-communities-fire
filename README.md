@@ -19,7 +19,7 @@
 ## I. Introduction  
 This project examines where wildfire hazard potential (WHP) and census tracts that measure relative social vulnerbaility (SVI) intersect.  The areal unit is defined by census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and include data from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
 
-The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants, but can also serve to potantially mitigate human suffering and financial loss through the identificaation of developed areas that may be in greater need of additional support and planning both prior to and after wildfires.
+The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants, but can also serve to potentially mitigate human suffering and financial loss through the identificaation of developed areas that may be in greater need of additional support and planning both prior to and after wildfires.
 
 Through the use of thoughtful design the map will inpire the user to explore areas not traditionally thought of as having high wildfire potential, such as the southeast.
 
@@ -45,7 +45,7 @@ The methods for the project involve two different types overlay analysis: zonal 
     - **Class 4:** High  
     - **Class 5:** Very High   
 
-2. [U.S. Census Designated Places (CDPs)](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB). These boundary files are specifically designed for small-scale thematic mapping.    
+2. [U.S. Census Designated Places (CDPs)](https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_place_500k.zip). These are simplified representations of selected geographic areas from the U.S. Census Bureau's Master Address File / Topologically Integrated Geographic Encoding and Referencing (MAF/TIGER) Database (MTDB).      
 
 3. [Centers for Disease Control Social Vulnerability Index (SVIs)](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/SVI_documentation_2018.html). This data is available at the tract level and has four individual vulnerability themes plus an overall theme:  
 
@@ -59,13 +59,13 @@ The methods for the project involve two different types overlay analysis: zonal 
 
 ![SVI Classes](images/CDC-SVI-Variables.jpg)   
 
-The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each CDP polygon. Based on the majority, a WHP class was assigned to each CDP.  
+The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the WHP raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each CDP polygon. Based on the majority, a WHP class was assigned to each CDP.  
 
 **How majority zonal statistics work:**  
 
 ![Majority](images/majority.JPG) 
 
-Additionally, CDPs with classes of 1 and 2 were removed so that only CDPs with moderate to very high (classes 3, 4 and 5) wildfire hazard potential were included in the final output.  
+Additionally, CDPs with classes of 1 and 2 were removed so that only CDPs with moderate to very high (classes 3, 4 and 5) WHP were included in the final output.  
 
 CDPs were the minimum mapping unit for the analysis, yet the SVI data is available only at the tract level which is too detailed for this analysis. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the vulnerability theme values (0-1) for each vulnerability theme and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability theme occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each vulnerability theme and for the overall vulnerability for each CDP with a WHP class of 3, 4 or 5.
 
@@ -73,7 +73,7 @@ CDPs were the minimum mapping unit for the analysis, yet the SVI data is availab
 
 ![Table](images/cleanedTable.JPG)  
 
-Lastly, the geometric center or centroids of the polygons were taken so that the small or maximum scale mapping could be achieved. This process ensured that the attributes in the polygon were retained in the point output.  
+Lastly, the geometric center or centroids of the polygons were taken so that the graduated symbol thematic mapping could be used at maximum scale . This process ensured that the attributes in the polygon were retained in the point output.  
 
 The final output polygon and point files are GeoJSON.  
 
@@ -81,7 +81,7 @@ The final output polygon and point files are GeoJSON.
 
 The map/front-end is a responsive browser-based application accessible across mobile and desktop devices.  
 
-The technology stack includes HTML/CSS/JavaScript that uses the [Leaflet](https://leafletjs.com/) mapping library with a [Bootstrap](https://getbootstrap.com/docs/4.0/examples/) responsive framework.   
+The technology stack includes HTML/CSS/JavaScript that uses the [Leaflet](https://leafletjs.com/) mapping library, [Mapbox Studio](https://www.mapbox.com/mapbox-studio) for basemaps, and a [Bootstrap](https://getbootstrap.com/docs/4.0/examples/) responsive framework.   
 
 ### C. Application Layout  
 
