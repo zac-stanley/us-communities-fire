@@ -133,7 +133,7 @@ This intent of this map is simple, to locate and identify where specific communi
 
 In addition it uncovers regions that are surprising in terms of their WHP, such as the southeast. In this regards the map raise more questions than it answers. What about the characteritics of the landscape in the southeast make it fire prone, what role is climate change playing in this level of increased risk are some of the questions the map results raise. 
 
-Overall, he map is meant to be general tool that is intuitive, easy to navigate and understand while adhering to design considerations that are neutral and not overly persuasive. 
+Overall, the map is meant to be general tool that is intuitive, easy to navigate and understand while adhering to design considerations that are neutral and not overly persuasive. 
 
 ### References
 - [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf)
