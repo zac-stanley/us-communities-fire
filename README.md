@@ -123,10 +123,12 @@ The tone of the map on some level challenges the some of the normal aesthetic of
 The fonts are League Spartan for headings/titles and IBM Plex Mono for most of the body text including tooltips and paragraphs.
 
 ### G. Conclusion  
+This intent of this map is simple, to locate and identify where specific communities have some level of wildfire risk and social vulnerability. With this information planners, emergency responders and other public officials can locate communities and work to allocate additional funding, estimate needed supplies, where shelters may be needed, create evacuation plans and identify places where long term support following a fire event may be needed.
 
-Provide a brief (one or two paragraphs) statement to conclude the proposal. This will likely be restating what you said in the introduction, but also (re)consider the format we used in the first assignment (a topic with a motivating question).
+The map is meant to be intuitive, easy to navigate and understand while adhering to design considerations that are neutral and not overly persuasive. 
+
 
 
 ### References
 - [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf) ordered the by California Governors Office
-- Centers for Disease Control and Prevention/ Agency for Toxic Substances and Disease Registry/ Geospatial Research, Analysis, and Services Program. CDC/ATSDR Social Vulnerability Index 2018 Database United States.
+- [CDC SVI Documentation 2018](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/pdf/SVI2018Documentation_01192022_1.pdf)
