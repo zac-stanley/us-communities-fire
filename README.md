@@ -97,18 +97,26 @@ The vulnerability themes in the top 10% (the 90th percentile of values) are give
     - **0.6-0.8:**&nbsp;High/Moderate  
     - **0.8-1:**&nbsp;&nbsp;&nbsp;&nbsp;High  
 
-At a yet to be determined zoom scale the map will show actual CDP polygons classified using diverging color to show WHP.  
+When zoomed to level 10 or greater CDP polygons classified using sequential color replace the graduated symbols showing the extent of the actual CDP as mapped along with its WHP.  
 
 ### E. User Interaction  
 
-The map will be a full screen map that requires user input to explore. These actions include panning, zooming, hovering and clicking on the features. 
+The map is full screen map and requires user input to explore. These actions include panning, zooming, hovering, using search text and clicking on the features. 
 
-When a graduated symbol is hovered on at initial map scale a tooltip will display with some basic information about the feature.  
+Hovering over a point on the map results in getting some basic information about the about that feature.
 
 **Tooltip Example:**  
 ![Tooltip](images/gradTooltip.jpg)  
 
-When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a a sidebar popup holding a bar chart of four SVI weighted mean scores that make up the overall SVI. This capbility will also be available using a a dropdown search of all of CDPs on the map.  
+Click on a point of interest to zoom to that location and see the community boundary with WHP classified colors and details including the ordinal classification of vulnerability themes and the actual theme values for that CDP. At this scale the basemap will change to an aerial image so users can get a sense of conditions on the ground. Users can also use the search bar in the upper right of the map to zoom to a community boundary and get the same results as clicking on a feature. This can be useful if the user already has a place in mind to look for. 
+
+Users can ascertain additional details about the map by clicking the sidebar which opens up two different panels, one with a brief explanation about the map and another with a static legend.
+
+
+**Tooltip Example:**  
+![Tooltip](images/gradTooltip.jpg)  
+
+When a feature is clicked on at the initial map scale it will trigger a zoom event where the map will zoom to that feature and a polygon of the CDP will be displayed along with a popup showing ordinal classes and actual values of four vulnerability theme weighted mean values and the overall vulnerability value. 
 
 **Dropdown Search Example:**  
 ![Search](images/search.jpg)  
