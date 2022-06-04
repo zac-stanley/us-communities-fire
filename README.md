@@ -17,13 +17,12 @@
 <!-- /TOC -->
 
 ## I. Introduction  
-This project examines where wildfire hazard potential (WHP) and census tracts that measure relative social vulnerbaility (SVI) and their intersection with census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and are from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
+This project examines where wildfire hazard potential (WHP) and census tracts that measure relative social vulnerbaility (SVI) intersect.  The areal unit is defined by census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and include data from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
 
-The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants but what developed area may be in greater need of additional support and planning both prior to and after wildland fires with the aim of mitigating human suffering and financial loss.
+The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants, but can also serve to potantially mitigate human suffering and financial loss through the identificaation of developed areas that may be in greater need of additional support and planning both prior to and after wildfires.
 
-The user will be inspired to explore areas not traditionally thought of as areas with high wildfire potential such as the southeast.
+Through the use of thoughtful design the map will inpire the user to explore areas not traditionally thought of as having high wildfire potential, such as the southeast.
 
-At a general level the map will potentially reveal specific communities that could benefit from additional emergency response planning efforts as well as specific regions not commonly thought of as being at risk for wildfire.
 
 **Full Scale Wire Frame:**   
 
