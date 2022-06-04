@@ -16,6 +16,7 @@
 7. ~~round weighted mean values to two decimals~~
 8. ~~fix zonal stats image~~
 9. Histogram comparing SE to West
+10. Update data with ordinal scale values
 
 #### HTML/CSS/LAYOUT
 1. ~~Clean up hyperlink code for svg~~
@@ -32,6 +33,7 @@
 7. ~~Remove info svg icon from top~~
 8. ~~Push search bar to right in header~~
 9. Center popup in polygon
+10. Update legend with ordinal scale
 
 
 #### Basemap
@@ -48,6 +50,7 @@
 7. ~~Zoom change~~
 8. ~~Getbounds~~
 9. ~~Popup formatting~~
+
 
 
 
