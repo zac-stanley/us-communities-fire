@@ -88,13 +88,14 @@ The web page is laid out using a simple title bar w/ icons that represent commun
 
 The map uses different thematic representations at different scales. At maximum scale the map uses graduated symbols to display overall vulnerability theme by CDP broken up into five classes and sequential colors to display the three class WHP resulting in a bi-variate map. 
 
-The vulnerability themes in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped  ranged from 0-1 and an 5 value ordinal classification has been assigned:  
+The vulnerability themes in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped ranged from 0-1 and have a 5 value ordinal classification assigned:  
 
-    **0-0.2:**Low
+**Ordinal Classification:**  
+    - **0-0.2:**   Low
     - **0.2-0.4:** Low/Moderate
     - **0.4-0.6:** Moderate
     - **0.6-0.8:** High/Moderate
-    - **0.8-1:** High 
+    - **0.8-1:**   High 
 
 At a yet to be determined zoom scale the map will show actual CDP polygons classified using diverging color to show WHP.  
 
