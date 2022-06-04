@@ -95,6 +95,7 @@ The map uses different thematic representations at different scales. At maximum 
 The vulnerability themes in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped ranged from 0-1 and have a 5 value ordinal classification assigned:  
 
 **Vulnerability Theme Ordinal Classification:**  
+
     - **0-0.2:**&nbsp;&nbsp;&nbsp;&nbsp;Low  
     - **0.2-0.4:**&nbsp;Low/Moderate  
     - **0.4-0.6:** Moderate  
@@ -136,6 +137,6 @@ The map is meant to be intuitive, easy to navigate and understand while adhering
 
 
 ### References
-- [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf) ordered the by California Governors Office
+- [Community Wildfire Prevention & Mitigation Report](https://www.fire.ca.gov/media/5584/45-day-report-final.pdf)
 - [CDC SVI Documentation 2018](https://www.atsdr.cdc.gov/placeandhealth/svi/documentation/pdf/SVI2018Documentation_01192022_1.pdf)
 - [Wildfire Hazard Potential for the United States (270-m), version 2020 (3rd Edition)](https://www.fs.usda.gov/rds/archive/Catalog/RDS-2015-0047-3)
