@@ -63,7 +63,7 @@ CDPs were the minimum mapping unit for the analysis, yet the SVI data is availab
 
 **How weighted mean works:**  
 
-![Weighted Mean](images/weightedmean.JPG) 
+![Weighted Mean](images/weightedmean.jpg) 
 
 **Sample results of analyzed and processed data:**  
 
