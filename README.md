@@ -49,6 +49,7 @@ The methods for the project involve two different types overlay analysis: zonal 
 **Social Vulnerability Index Classes:**  
 
 ![SVI Classes](images/CDC-SVI-Variables.jpg)   
+*(Image from CDC SVI Documentation, 2018)*
 
 The process for exploring, processing and analyzing the data used Python / Jupyter Notebooks with the the following libraries: Pandas, Matplotlib and GeoPandas. The WHP data was analyzed using zonal statistics where the WHP raster dataset was overlayed with the CDPs to calculate the 'majority' of pixels in each CDP polygon. Based on the majority, a WHP class was assigned to each CDP.  
 
