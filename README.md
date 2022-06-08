@@ -23,15 +23,6 @@ The map will appeal to those looking to understand not only how wildfire can aff
 
 Through the use of thoughtful design the map will inpire the user to explore areas not traditionally thought of as having high wildfire potential, such as the southeast.
 
-
-**Full Scale Wire Frame:**   
-
-![Wire Frame 1](images/wireframe1.jpg)  
-
-**Zoomed Wire Frame:**  
-
-![Wire Frame 2](images/wireframe2.jpg)  
-
 ## II: Methodology  
 The methods for the project involve two different types overlay analysis: zonal statistics and weighted mean, both of which are performed on the CDP polygons. The zonal statistics use a majority method with raster values for WHP in a CDP and weighted mean is used with SVI census tracts intersected with CDPs.
 
@@ -67,7 +58,7 @@ The process for exploring, processing and analyzing the data used Python / Jupyt
 
 Additionally, CDPs with classes of 1 and 2 were removed so that only CDPs with moderate to very high (classes 3, 4 and 5) WHP were included in the final output.  
 
-CDPs were the minimum mapping unit for the analysis, yet the SVI data is available only at the tract level which is too detailed for this analysis. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the vulnerability theme values (0-1) for each vulnerability theme and the overall vulnerability are averaged again based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability theme occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each vulnerability theme and for the overall vulnerability for each CDP with a WHP class of 3, 4 or 5.
+CDPs were the minimum mapping unit for the analysis, yet the SVI data is available only at the tract level which is too detailed for this analysis. To mitigate this issue another type of overlay analysis was performed; weighted mean area analysis. In this operation the vulnerability theme values (0-1) for each vulnerability theme and the overall vulnerability are averaged based on the area inside the CDP polygon they intersect with. The larger the area a particular vulnerability theme occupies the greater value or weight it is given in calculating the vulnerability score of the CDP. This operation was performed for each vulnerability theme and for the overall vulnerability for each CDP with a WHP class of 3, 4 or 5.
 
 **Sample results of analyzed and processed data:**  
 
@@ -89,7 +80,11 @@ The web page is laid out using a simple title bar w/ icons that represent commun
 
 ### D. Thematic Representation  
 
-The map uses different thematic representations at different scales. At maximum scale the map uses graduated symbols to display overall vulnerability theme by CDP broken up into five classes and sequential colors to display the three class WHP resulting in a bi-variate map. 
+The map uses different thematic representations at different scales. At maximum scale the map uses graduated symbols to display overall vulnerability theme by CDP broken up into five classes and sequential colors to display the three class WHP resulting in a bi-variate map.  
+
+**Full Scale Wire Frame:**   
+
+![Wire Frame 1](images/wireframe1.jpg)  
 
 The vulnerability themes in the top 10% (the 90th percentile of values) are given a value of 1 to indicate high vulnerability. Tracts below the 90th percentile are given a value of 0. Thus, when mapped ranged from 0-1 and have a 5 value ordinal classification assigned:  
 
@@ -101,6 +96,10 @@ The vulnerability themes in the top 10% (the 90th percentile of values) are give
     **0.8-1:**&nbsp;&nbsp;&nbsp;&nbsp;High  
 
 When zoomed to level 10 or greater CDP polygons classified using sequential color replace the graduated symbols showing the extent of the actual CDP as mapped along with its WHP.  
+
+**Zoomed Wire Frame:**  
+
+![Wire Frame 2](images/wireframe2.jpg)  
 
 ### E. User Interaction  
 
@@ -130,7 +129,7 @@ The fonts are League Spartan for headings/titles and IBM Plex Mono for most of t
 ### G. Conclusion  
 This intent of this map is simple, to locate and identify where specific communities have some level of wildfire risk and social vulnerability. With this information planners, emergency responders and other public officials can locate communities and work to allocate additional funding, estimate needed supplies, where shelters may be needed, create evacuation plans and identify places where long term support following a fire event may be needed.
 
-In addition it uncovers regions that are surprising in terms of their WHP, such as the southeast. In this regards the map raises more questions than it answers. What about the characteritics of the landscape in the southeast make it fire prone, what role is climate change playing in this level of increased risk are some of the questions the map results bring up. 
+In addition it uncovers regions that are surprising in terms of their WHP, such as the southeast. In this regards the map raises more questions than it answers. What about the characteristics of the landscape in the southeast make it fire prone, what role is climate change playing in this level of increased risk are some of the questions the map results bring up. 
 
 Overall, the map is meant to be general tool that is intuitive, easy to navigate and understand while adhering to design considerations that are neutral and not overly persuasive. 
 
