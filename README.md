@@ -21,7 +21,7 @@ This project examines where wildfire hazard potential (WHP) and census tracts th
 
 The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants, but can also serve to potentially mitigate human suffering and financial loss through the identificaation of developed areas that may be in greater need of additional support and planning both prior to and after wildfires.
 
-Through the use of thoughtful design the map will inpire the user to explore areas not traditionally thought of as having high wildfire potential, such as the southeast.
+Through the use of thoughtful design the map will inspire the user to explore areas not traditionally thought of as having high wildfire potential, such as the southeast.
 
 ## II: Methodology  
 The methods for the project involve two different types overlay analysis: zonal statistics and weighted mean, both of which are performed on the CDP polygons. The zonal statistics use a majority method with raster values for WHP in a CDP and weighted mean is used with SVI census tracts intersected with CDPs.
