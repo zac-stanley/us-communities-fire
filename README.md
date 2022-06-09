@@ -19,12 +19,12 @@
 ## I. Introduction  
 This project examines where wildfire hazard potential (WHP) and census tracts that measure relative social vulnerbaility (SVI) intersect.  The areal unit is defined by census designated places (CDPs) throughout the conterminous United States. The data sources span from 2018 to 2020 and include data from the U.S. Forest Service, the U.S. Census Bureau and the Centers for Disease Control and Prevention.
 
-The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants, but can also serve to potentially mitigate human suffering and financial loss through the identificaation of developed areas that may be in greater need of additional support and planning both prior to and after wildfires.
+The map will appeal to those looking to understand not only how wildfire can affect developed areas and their inhabitants, but can also serve to potentially mitigate human suffering and financial loss through the identification of developed areas that may be in greater need of additional support and planning both prior to and after wildfires.
 
 Through the use of thoughtful design the map will inspire the user to explore areas not traditionally thought of as having high wildfire potential, such as the southeast.
 
 ## II: Methodology  
-The methods for the project involve two different types overlay analysis: zonal statistics and weighted mean, both of which are performed on the CDP polygons. The zonal statistics use a majority method with raster values for WHP in a CDP and weighted mean is used with SVI census tracts intersected with CDPs.
+The methods for the project involve two different types of overlay analysis: zonal statistics and spatially weighted mean, both of which are performed on the CDP polygons. The zonal statistics use a majority method with raster values for WHP in a CDP and spatially weighted mean is used with SVI census tracts intersected with CDPs.
 
 ### A. Data  
 
@@ -127,14 +127,14 @@ Users can ascertain additional details about the map by clicking the sidebar whi
 ### F. Aesthetics and Design Considerations  
 The tone of the map is simple and high contrast, using black text and a white/light background and basemap (excluding the aerial image at => 10 zoom scale).
 
-The tone of the map on some level challenges the some of the normal aesthetic of fire mapping, that is it doesn't have a black basemap with deep red symbology. It still users colors that are suggestive of fire but the intent is that the lighter design elements suggest some degree hope and resilence and not pure darkness.
+The tone of the map on some level challenges the some of the normal aesthetic of fire mapping, that is it doesn't have a black basemap with deep red symbology. It still uses colors that are suggestive of fire but the intent is that the lighter design elements suggest some degree hope and resilence and not pure darkness.
 
 The fonts are League Spartan for headings/titles and IBM Plex Mono for most of the body text including tooltips and paragraphs.
 
 ### G. Conclusion  
-This intent of this map is simple, to locate and identify where specific communities have some level of wildfire risk and social vulnerability. With this information planners, emergency responders and other public officials can locate communities and work to allocate additional funding, estimate needed supplies, where shelters may be needed, create evacuation plans and identify places where long term support following a fire event may be needed.
+The intent of this map is simple, to locate and identify where specific communities have some level of wildfire risk and social vulnerability. With this information planners, emergency responders and other public officials can locate communities and work to allocate additional funding, estimate needed supplies, where shelters may be needed, create evacuation plans and identify places where long term support following a fire event may be needed.
 
-In addition it uncovers regions that are surprising in terms of their WHP, such as the southeast. In this regards the map raises more questions than it answers. What about the characteristics of the landscape in the southeast make it fire prone, what role is climate change playing in this level of increased risk are some of the questions the map results bring up. 
+In addition it uncovers regions that are surprising in terms of their WHP, such as the southeast. In this regards the map raises more questions than it answers. What about the characteristics of the landscape in the southeast make it fire prone? What role is climate change playing in this level of increased risk? These are just some of the questions the map results will raise. 
 
 Overall, the map is meant to be general tool that is intuitive, easy to navigate and understand while adhering to design considerations that are neutral and not overly persuasive. 
 
