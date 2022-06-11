@@ -62,6 +62,11 @@
     // add sviPoint data
     $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
         console.log('svipoints', sviPoints)
+        
+        //  sort svi point so the smaller point show up on top
+        sviPoints.features.sort(function (a, b) {
+            return b.properties.OVERALL_WM - a.properties.OVERALL_WM    
+        });
         drawMap(sviPoints);
 
         function drawMap(sviPoints) {
@@ -77,6 +82,8 @@
                 console.log('e', e.layer.feature.properties.CDP_STATE);
                 polySelect(e.layer.feature.properties.CDP_STATE);
             })
+
+            drawLegend(sviPoints)
 
         }
 
@@ -113,15 +120,56 @@
                 styleOptions.fillColor = '#BD4400';
             }
 
+       
+
             return styleOptions;
         }
 
         function calcRadius(val) {
 
             var radius = Math.sqrt(val / Math.PI);
-            return radius * 25;
+            return radius * 35;
 
         }
+
+        function drawLegend(sviPoints) {
+
+            var largeDiameter = calcRadius(sviPoints.features[0].properties.OVERALL_WM) * 2,
+                smallDiameter = largeDiameter/2;
+
+            $("#legend").css('height', largeDiameter.toFixed());
+
+            $('#legend-large').css({
+                'width': largeDiameter.toFixed(),
+                'height': largeDiameter.toFixed()
+            })
+
+            $("#legend-large-label").html(sviPoints.features[0].properties.OVERALL_WM.toLocaleString());
+
+            $("#legend-large-label").css({
+                'left': largeDiameter + 30,
+                'top' : -8
+            });
+
+            $('#legend-small').css({
+                'width': smallDiameter.toFixed(),
+                'height': smallDiameter.toFixed(),
+                'top': largeDiameter - smallDiameter,
+                'left': smallDiameter/2
+            })
+
+            $("#legend-small-label").html((sviPoints.features[0].properties.OVERALL_WM/2).toLocaleString());
+
+            $("#legend-small-label").css({
+                'top': smallDiameter - 8,
+                'left': largeDiameter + 30
+            });
+
+            $("<hr class='large'>").insertBefore("#legend-large-label")
+            $("<hr class='small'>").insertBefore("#legend-small-label").css('top', largeDiameter - smallDiameter - 8);
+
+      }
+
 
         function onEachFeature(feature, layer) {
 
