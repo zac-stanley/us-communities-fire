@@ -265,7 +265,7 @@
         // END...fire off click event and zoom to polygon
 
         polygons.on("click", function (e) {
-            map.fitBounds(e.layer.getBounds().pad(.1));
+            map.flyToBounds(e.layer.getBounds().pad(.1));
         });
     });
 
@@ -273,7 +273,7 @@
         polygons && polygons.addTo(map);
         map._layers[a].fire('click');  // 'clicks' on CDP name from search
         var layer = map._layers[a];
-        map.fitBounds(layer.getBounds().pad(.1));  // zooms to selected poly, creates space around poly using pad method
+        map.flyToBounds(layer.getBounds().pad(.1));  // zooms to selected poly, creates space around poly using pad method
     }
 
     // get element from map
