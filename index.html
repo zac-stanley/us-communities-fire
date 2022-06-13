@@ -97,12 +97,63 @@
             <image x="10" y="40" href="images/StaticLegend.png" height="350" width="220" />
           </svg>
         </div> -->
-        <div id='legend'>
-          <div id="legend-large"></div>
-          <div id="legend-small"></div>
-          <div id="legend-large-label"></div>
-          <div id="legend-small-label"></div>
-      </div>
+        <!-- <div id="legend">
+          <ul style="list-style-type:none">
+            <li>
+              <svg width="24" height="24">
+                <circle cx="12" cy="20" r="3" stroke="black" stroke-width="3%" fill="black" fill-opacity="0" />
+              </svg>
+              <text>Low (0 - 0.2)</text>
+            </li>
+            <li>
+              <svg width="24" height="24">
+                <circle cx="12" cy="18" r="4" stroke="black" stroke-width="3%"fill="black" fill-opacity="0"/>
+              </svg>
+              <text>Low to Moderate (0.21 - 0.4)</text>
+            </li>
+            <li>
+              <svg width="24" height="24">
+                <circle cx="12" cy="14" r="6" stroke="black" stroke-width="3%" fill="black" fill-opacity="0"/>
+              </svg>
+              <text>Moderate (0.41 - 0.6)</text>
+            </li>
+            <li>
+              <svg width="24" height="24">
+                <circle cx="12" cy="12" r="10" stroke="black" stroke-width="3%" fill="black" fill-opacity="0"/>
+              </svg>
+              <text x="0" y="0)">Moderate to High (0.61 - 0.8)</text>
+            <li>
+              <svg width="24" height="24">
+                <circle cx="12" cy="22" r="10" stroke="black" stroke-width="3%" fill="black" fill-opacity="0"/>
+              </svg>
+              <text x="0" y="0)">High (0.81 - 1)</text>
+            </li>
+            </li>
+          </ul> -->
+        	<div id="legend">
+            <h3><center>Wildfire Hazard Potential</center></h3>
+            <svg height="100" width="100%">
+              <rect x="16" y="30" width="90" height="30" style="fill: #E68900" />
+						  <text x="33" y="48" style="font-size: 13px; font-family:'IBM Plex Mono';">Moderate</text>
+              <rect x="108" y="30" width="90" height="30" style="fill: #BD4400" />
+						  <text x="138" y="48" style="font-size: 13px; font-family:'IBM Plex Mono';">High</text>
+              <rect x="200" y="30" width="90" height="30" style="fill: #941000" />
+						  <text x="212" y="48" style="font-size: 13px; font-family:'IBM Plex Mono';">Very High</text>
+            </svg>  
+        
+            <h3><center>Social Vulnerability</center></h3>
+            <svg height="100" width="100%">
+              <circle cx="50" cy="20" r="3" stroke="black" stroke-width=".2%" fill="black" fill-opacity="0" />   
+              <text x="78" y="24" style="font-size: 13px; font-family:'IBM Plex Mono';">Low</text>
+              <circle cx="50" cy="55" r="16" stroke="black" stroke-width=".2%" fill="black" fill-opacity="0" />   
+              <text x="78" y="57" style="font-size: 13px; font-family:'IBM Plex Mono';">High</text>
+            </svg>
+            <h3><center>Community Boundary</center></h3>
+            <svg height="200" width="500%">
+              <rect x="72" y="30" width="180" height="90" stroke="black" stroke-width=".2%" fill="black" fill-opacity="0"/>
+            </svg>
+        </div>
+      
       </div>
 
       <div class="sidebar-pane" id="messages">
@@ -151,16 +202,16 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, Bootstrap JS, Leaflet, and app.js -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
-    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
-    crossorigin=""></script>
-  <!-- <script src="https://unpkg.com/leaflet-sidebar-v2"></script> -->
+  <!-- <script src="https://unpkg.com/leaflet-sidebar-v2"></script> --> 
   <script src='js/leaflet-sidebar.js'></script>
   <script src='js/app.js'></script>
 

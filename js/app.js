@@ -57,7 +57,6 @@
     var sidebar = L.control.sidebar('sidebar').addTo(map);
     map.addControl(sidebar);
 
-
     // jQuery method using AJAX request for GeoJSON point data
     // add sviPoint data
     $.getJSON("data/cdps_svis_whp_ctr.json", function (sviPoints) {
@@ -82,9 +81,6 @@
                 console.log('e', e.layer.feature.properties.CDP_STATE);
                 polySelect(e.layer.feature.properties.CDP_STATE);
             })
-
-            drawLegend(sviPoints)
-
         }
 
         function pointToLayer(feature, latlng) {
@@ -131,45 +127,6 @@
             return radius * 35;
 
         }
-
-        function drawLegend(sviPoints) {
-
-            var largeDiameter = calcRadius(sviPoints.features[0].properties.OVERALL_WM) * 2,
-                smallDiameter = largeDiameter/2;
-
-            $("#legend").css('height', largeDiameter.toFixed());
-
-            $('#legend-large').css({
-                'width': largeDiameter.toFixed(),
-                'height': largeDiameter.toFixed()
-            })
-
-            $("#legend-large-label").html(sviPoints.features[0].properties.OVERALL_WM.toLocaleString());
-
-            $("#legend-large-label").css({
-                'left': largeDiameter + 30,
-                'top' : -8
-            });
-
-            $('#legend-small').css({
-                'width': smallDiameter.toFixed(),
-                'height': smallDiameter.toFixed(),
-                'top': largeDiameter - smallDiameter,
-                'left': smallDiameter/2
-            })
-
-            $("#legend-small-label").html((sviPoints.features[0].properties.OVERALL_WM/2).toLocaleString());
-
-            $("#legend-small-label").css({
-                'top': smallDiameter - 8,
-                'left': largeDiameter + 30
-            });
-
-            $("<hr class='large'>").insertBefore("#legend-large-label")
-            $("<hr class='small'>").insertBefore("#legend-small-label").css('top', largeDiameter - smallDiameter - 8);
-
-      }
-
 
         function onEachFeature(feature, layer) {
 
